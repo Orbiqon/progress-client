@@ -1,0 +1,134 @@
+.heading {
+  @apply text-blue font-display font-medium sm:text-heading 2xl:text-3xl text-center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#parentdiv {
+  position: relative;
+  background-color: white;
+  /* border-radius: 80px; */
+  margin: 46px;
+}
+
+#childishDiv {
+  position: relative;
+  background-color: white;
+  /* border-radius: 80px; */
+  margin: 46px;
+}
+.div1 {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #d9d9d9;
+  border-radius: 100px;
+}
+.div2 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #d9d9d9;
+  border-radius: 100px;
+}
+
+.div3 {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #d9d9d9;
+  border-radius: 100px;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.-indent-59 {
+  text-indent: 59px;
+}
+
+.number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 59px;
+
+  /* or 78px */
+
+  /* display: flex;
+align-items: center;
+text-align: center; */
+
+  /* #93C01F */
+
+  color: #93c01f;
+}
+
+.or {
+}
+
+.or::before,
+.or::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #233670;
+  opacity: 0.1;
+}
+.or::before {
+  margin-right: 8px;
+}
+.or::after {
+  margin-left: 8px;
+}
+
+.-indent-20 {
+  text-indent: 20px;
+}
+
+.h-border-bottom {
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    160.92deg,
+    #a2d126 -8.33%,
+    #81b01b 101.53%
+  );
+}
+
+.center-abs {
+  @apply m-auto absolute top-0 left-0 right-0 bottom-0;
+}
+
+.transform-x {
+  transform: translate(-50%, 0);
+}
+
+.transform-y {
+  transform: translate(0, 50%);
+}
+
+.transform-xy {
+  transform: translate(-50%, 70%);
+}
+
+.sub-heading {
+  @apply 2xl:font-display font-medium text-xl;
+}
+
+.content {
+  @apply text-dark-grey font-display text-base;
+}
+
+.footer-label {
+  @apply text-base  text-white  font-display;
+}
+
+.label {
+  @apply text-sm  font-display;
+}
