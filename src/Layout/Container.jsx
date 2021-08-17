@@ -12,7 +12,7 @@ function Container({ children }) {
       {window.innerWidth > 1024 ? (
         <div className="sm:hidden ">
           <DesktopHeader />
-          <div className="max-w-lg m-auto">{children}</div>
+          <div className="">{children}</div>
 
           <DesktopFooter />
         </div>

@@ -118,7 +118,7 @@ text-align: center; */
 }
 
 .sub-heading {
-  @apply 2xl:font-display font-medium text-xl;
+  @apply font-display font-medium text-xl;
 }
 
 .content {

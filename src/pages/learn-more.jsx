@@ -8,7 +8,7 @@ function LearnMore() {
   return (
     <Container>
       <div className="pt-60 ">
-        <div className="2xl:flex w-100% 2xl:justify-between">
+        <div className="2xl:flex w-100% 2xl:justify-between 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="sm:w-100% 2xl:w-50%">
             <div className="2xl:text-3xl 2xl:text-left 2xl: heading pb-20 mx-20">
               Learn more
@@ -39,7 +39,7 @@ function LearnMore() {
           </picture>
         </div>
         <div className="sm:pb-80 2xl:pt-100 sm:pt-40 2xl:pb-120">
-          <BookCallVideo />
+          <BookCallVideo step={false} />
         </div>
         <div className="flex">
           <div className="bg-gradient-blue rounded-r-md ">hghgh</div>
@@ -58,9 +58,10 @@ function LearnMore() {
             </div>
           </div>
         </div>
-        <div></div>
-        <div className="mb-_40 mt-80 2xl:mx-auto 2xl:max-w-lg">
-          <MobileForm />
+        <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+          <div className="mb-_40 mt-80 ">
+            <MobileForm />
+          </div>
         </div>
       </div>
     </Container>
