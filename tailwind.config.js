@@ -81,7 +81,6 @@ module.exports = {
     },
     spacing: {
       px: '1px',
-      auto: 'auto',
       _70: '-70px',
       _40: '-40px',
       _30: '-30px',
