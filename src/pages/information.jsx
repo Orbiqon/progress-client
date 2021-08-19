@@ -7,7 +7,7 @@ function Information() {
   return (
     <Container>
       <>
-        <div className="2xl:pt-80 sm:pt-60 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+        <div className="2xl:pt-80 sm:pt-60 2xl:max-w-lg 2xl:m-auto 2xl:px-100 sm:mx-38">
           <div className="heading pb-13">Testimonials & FAQ</div>
           <div className="content 2xl:text-18 text-center sm:mb-40 2xl:mb-60">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac

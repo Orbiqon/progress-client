@@ -1,13 +1,5 @@
-import { MobileFooter, DesktopFooter } from 'components/Footer';
-import { MobileForm } from 'components/Form';
-
 import React from 'react';
-import {
-  Switch,
-  Route,
-  withRouter,
-  BrowserRouter as Router,
-} from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Information from 'pages/information';
 import LearnMore from 'pages/learn-more';
 import Precautions from 'pages/precautions';

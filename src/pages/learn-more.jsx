@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'Layout';
 import { MobileForm } from 'components/Form';
 import { BookCallVideo } from 'components/BookCallVideo';
-import { bookCallVideo } from 'components/BookCallVideo/BookCallVideo.stories';
 
 function LearnMore() {
   return (

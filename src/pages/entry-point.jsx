@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { VideoCard } from 'components/VideoCard';
 import { Button } from 'components/Button';
+import { Modal } from 'components/Modal';
+import { Link } from 'react-router-dom';
 
-function EntryPoint() {
+function EntryPoint({ open, setOpen }) {
   return (
-    <>
+    <Modal open={open} setOpen={setOpen}>
       <div className="pt-33 pb-270 ">
         <VideoCard />
       </div>
@@ -15,15 +17,17 @@ function EntryPoint() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </div>
-      <div className="flex justify-center">
-        <Button
-          value=" Start making progress"
-          color="green"
-          width="200"
-          height="66"
-        />
+      <div className="flex justify-center mb-40">
+        <Link to="/questionare">
+          <Button
+            value=" Start making progress"
+            color="green"
+            width="200"
+            height="66"
+          />
+        </Link>
       </div>
-    </>
+    </Modal>
   );
 }
 

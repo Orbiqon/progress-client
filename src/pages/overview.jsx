@@ -24,6 +24,8 @@ function Overview() {
                   color="blue"
                   width={200}
                   height={66}
+                  DeWidth="200"
+                  DeHeight="66"
                 />
               </div>
               <div className="sm:invisible 2xl:ml-10">
@@ -56,7 +58,14 @@ function Overview() {
             </picture>
             <div className="2xl:pl-100 sm:w-100% 2xl:w-50% sm:pt-20 2xl:mt-80">
               <div className="pb-10">
-                <Button value="step 1" color="green" width="70" height="32" />
+                <Button
+                  value="step 1"
+                  color="green"
+                  width="70"
+                  height="32"
+                  DeWidth="92"
+                  DeHeight="46"
+                />
               </div>
               <div className="sub-heading 2xl:text-36 text-blue pb-20">
                 Take our Free Health Questionnaire
@@ -77,7 +86,14 @@ function Overview() {
         <div></div>
         <div className="mx-20 ">
           <div className="pb-10">
-            <Button value="step 3" color="green" width="70" height="32" />
+            <Button
+              value="step 3"
+              color="green"
+              width="70"
+              height="32"
+              DeWidth="92"
+              DeHeight="46"
+            />
           </div>
           <div className="sub-heading 2xl:text-36 text-blue pb-20">
             Get Your DNA Sequenced
@@ -93,7 +109,14 @@ function Overview() {
         <div className="mx-20 mt-80 2xl:flex 2xl:flex-row-reverse 2xl:max-w-lg 2xl:m-auto 2xl:px-10">
           <div className="2xl:pl-100 2xl:w-50% ">
             <div className="pb-10 ">
-              <Button value="step 5" color="green" width="70" height="32" />
+              <Button
+                value="step 5"
+                color="green"
+                width="70"
+                height="32"
+                DeWidth="92"
+                DeHeight="46"
+              />
             </div>
             <div className="sub-heading 2xl:text-36 text-blue pb-20 2xl:w-50%">
               Start making progress!
@@ -137,6 +160,8 @@ function Overview() {
                 color="blue"
                 width="200"
                 height="66"
+                DeWidth="200"
+                DeHeight="66"
               />
             </div>
           </div>

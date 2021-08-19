@@ -67,7 +67,14 @@ function Form() {
           </div>
         </div>
         <div className="flex justify-center pb-40">
-          <Button width="200" height="66" color="blue" value="Send request" />
+          <Button
+            width="200"
+            height="66"
+            DeWidth="200"
+            DeHeight="66"
+            color="blue"
+            value="Send request"
+          />
         </div>
       </div>
     </div>
