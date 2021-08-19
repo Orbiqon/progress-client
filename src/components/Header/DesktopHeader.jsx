@@ -14,7 +14,7 @@ function DesktopHeader({ questionaire }) {
         </Link>
 
         {questionaire ? (
-          <div className="flex">
+          <div className="flex cursor-pointer">
             <div className="m-10 uppercase text-xs font-semibold font-display flex items-center text-green">
               Back
             </div>
