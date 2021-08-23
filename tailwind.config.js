@@ -14,6 +14,7 @@ module.exports = {
       }),
       spacing: {
         17: '17px',
+        _17: '-17px',
         38: '38px',
         47: '47px',
         43: '43px',
@@ -36,6 +37,8 @@ module.exports = {
         '14%': '14%',
         85: '85px',
         62: '62px',
+        '56%': '59%',
+        '1%': '1%',
         100: '100px',
         129: '129px',
         582: '582px',
@@ -43,6 +46,7 @@ module.exports = {
         693: '693px',
         637: '637px',
         '52%': '52%',
+        270: '270px',
         272: '272px',
         200: '200px',
         41: '41px',
@@ -68,8 +72,10 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       black: '#383838',
+      'light-grey': '#6D6A65',
       white: colors.white,
       'grey-white': '#F9F9F9',
+      'black-grey': '#342712',
       gray: '#D9D9D9',
       'gray-black': '#212121',
       orange: '#F29100',
@@ -287,7 +293,7 @@ module.exports = {
       sm: '8px',
       DEFAULT: '12px',
       md: '20px',
-      lg: '0.5rem',
+      lg: '10px',
       xl: '0.75rem',
       '2xl': '1rem',
       '3xl': '1.5rem',
@@ -302,8 +308,7 @@ module.exports = {
     },
     boxShadow: {
       sm: '0px 20px 40px rgba(0, 0, 0, 0.1)',
-      DEFAULT:
-        '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+      DEFAULT: '0 9px 9px 9px rgba(0, 0, 0, 0.05)',
       md:
         '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       lg:
@@ -688,7 +693,7 @@ module.exports = {
       sm: '24rem',
       md: '28rem',
       lg: '1440px',
-      xl: '880px',
+      xl: '100px',
       '2xl': '42rem',
       '3xl': '48rem',
       '4xl': '56rem',

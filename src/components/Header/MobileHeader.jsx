@@ -44,7 +44,7 @@ function MobileHeader({ questionaire }) {
       >
         {/* <a onClick={() => setIsOpenMenu(false)}>Home</a> */}
         <div className="bg-green pl-20 h-100% ">
-          <div className="text-18 py-40 font-white font-medium text-white">
+          <div className="text-18 py-40 font-white font-medium font-display text-white">
             <Link to="/overview">
               <div className="mb-10">Programme Overview</div>
             </Link>

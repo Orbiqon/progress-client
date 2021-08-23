@@ -3,8 +3,22 @@ import { Container } from 'Layout';
 import { MobileForm } from 'components/Form';
 import { Button } from 'components/Button';
 import { BookCallVideo } from 'components/BookCallVideo';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Arrow from 'components/Arrow/arrow';
 
 function Overview() {
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <Arrow dir="right" />,
+    prevArrow: <Arrow dir="left" />,
+    centerMode: true,
+    centerPadding: '25%',
+  };
   return (
     <Container>
       <>
@@ -165,6 +179,140 @@ function Overview() {
               />
             </div>
           </div>
+        </div>
+        <div className="slider1">
+          <Slider {...settings} className="m-100">
+            <div className="rounded-sm h-200 text-base">
+              <div className="shadow mx-20 mb-38 text-base text-black p-35 relative">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                et nisl dignissim, elementum nulla tempor, semper dui.
+                Pellentesque habitant morbi tristique senectus. Lorem ipsum
+                dolor sit amet, consectetur adipiscnisl dignissim, elementum
+                nulla tempor, semper dui. Pellentesque habitant morbi tristique
+                senectus. Lorem ipsum dolor sit amet, consectetur adipiscinga
+                dui. Pellentesque habitant morbi tristique senectus.
+                <img
+                  src="/images/home/vector.svg"
+                  className="absolute bottom-_17 left-20"
+                />
+              </div>
+              <div className="flex">
+                <img src="/images/home/slider.svg" />
+                <div className="ml-35">
+                  <div className="text-18 font-display text-blue font-display">
+                    Patrick Lindbark
+                  </div>
+                  <div className="text-16 font-display text-light-grey">
+                    Expert
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-sm h-200 text-base">
+              <div className="shadow mx-20 mb-38 text-base text-black p-35 relative">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                et nisl dignissim, elementum nulla tempor, semper dui.
+                Pellentesque habitant morbi tristique senectus. Lorem ipsum
+                dolor sit amet, consectetur adipiscnisl dignissim, elementum
+                nulla tempor, semper dui. Pellentesque habitant morbi tristique
+                senectus. Lorem ipsum dolor sit amet, consectetur adipiscinga
+                dui. Pellentesque habitant morbi tristique senectus.
+                <img
+                  src="/images/home/vector.svg"
+                  className="absolute bottom-_17 left-20"
+                />
+              </div>
+              <div className="flex">
+                <img src="/images/home/slider.svg" />
+                <div className="ml-35">
+                  <div className="text-18 font-display text-blue font-display">
+                    Patrick Lindbark
+                  </div>
+                  <div className="text-16 font-display text-light-grey">
+                    Expert
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-sm h-200 text-base">
+              <div className="shadow mx-20 mb-38 text-base text-black p-35 relative">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                et nisl dignissim, elementum nulla tempor, semper dui.
+                Pellentesque habitant morbi tristique senectus. Lorem ipsum
+                dolor sit amet, consectetur adipiscnisl dignissim, elementum
+                nulla tempor, semper dui. Pellentesque habitant morbi tristique
+                senectus. Lorem ipsum dolor sit amet, consectetur adipiscinga
+                dui. Pellentesque habitant morbi tristique senectus.
+                <img
+                  src="/images/home/vector.svg"
+                  className="absolute bottom-_17 left-20"
+                />
+              </div>
+              <div className="flex">
+                <img src="/images/home/slider.svg" />
+                <div className="ml-35">
+                  <div className="text-18 font-display text-blue font-display">
+                    Patrick Lindbark
+                  </div>
+                  <div className="text-16 font-display text-light-grey">
+                    Expert
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-sm h-200 text-base">
+              <div className="shadow mx-20 mb-38 text-base text-black p-35 relative">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                et nisl dignissim, elementum nulla tempor, semper dui.
+                Pellentesque habitant morbi tristique senectus. Lorem ipsum
+                dolor sit amet, consectetur adipiscnisl dignissim, elementum
+                nulla tempor, semper dui. Pellentesque habitant morbi tristique
+                senectus. Lorem ipsum dolor sit amet, consectetur adipiscinga
+                dui. Pellentesque habitant morbi tristique senectus.
+                <img
+                  src="/images/home/vector.svg"
+                  className="absolute bottom-_17 left-20"
+                />
+              </div>
+              <div className="flex">
+                <img src="/images/home/slider.svg" />
+                <div className="ml-35">
+                  <div className="text-18 font-display text-blue font-display">
+                    Patrick Lindbark
+                  </div>
+                  <div className="text-16 font-display text-light-grey">
+                    Expert
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-sm h-200 text-base">
+              <div className="shadow mx-20 mb-38 text-base text-black p-35 relative">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                et nisl dignissim, elementum nulla tempor, semper dui.
+                Pellentesque habitant morbi tristique senectus. Lorem ipsum
+                dolor sit amet, consectetur adipiscnisl dignissim, elementum
+                nulla tempor, semper dui. Pellentesque habitant morbi tristique
+                senectus. Lorem ipsum dolor sit amet, consectetur adipiscinga
+                dui. Pellentesque habitant morbi tristique senectus.
+                <img
+                  src="/images/home/vector.svg"
+                  className="absolute bottom-_17 left-20"
+                />
+              </div>
+              <div className="flex">
+                <img src="/images/home/slider.svg" />
+                <div className="ml-35">
+                  <div className="text-18 font-display text-blue font-display">
+                    Patrick Lindbark
+                  </div>
+                  <div className="text-16 font-display text-light-grey">
+                    Expert
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div>
         <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="mb-_40 mt-80 ">

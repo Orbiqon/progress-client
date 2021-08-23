@@ -2,8 +2,20 @@ import React from 'react';
 import { Container } from 'Layout';
 import { Box } from 'components/Box';
 import { MobileForm } from 'components/Form';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Arrow from 'components/Arrow/arrow';
 
 function Information() {
+  const settings1 = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <Arrow dir="right" />,
+    prevArrow: <Arrow dir="left" />,
+  };
   return (
     <Container>
       <>
@@ -53,7 +65,27 @@ scelerisque nisl. Sed ac elit "
           </div>
         </div>
         <div className="bg-gradient-light-blue 2xl:mt-100 px-20 pt-40 pb-20">
-          <div className="text-white h-230 rounded-sm bg-white">s</div>
+          <div className="slider2 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+            <Slider {...settings1} className="mb-100">
+              {[...Array(4)].map(() => (
+                <div className="rounded-sm  w-270 text-base">
+                  <img src="/images/support/slider-pic.jpeg" />
+
+                  <div className="w-270 rounded-lg py-20  relative">
+                    <div className="bg-white p-20 rounded-lg">
+                      Lorem ipsum dolor sit amet, consectetur solser adipiscing
+                      elit. Nullam et nisl dignissim, salalaks kakas elementum
+                      nulla tempor
+                    </div>
+                    <img
+                      src="/images/home/vector.svg"
+                      className="absolute bottom-3 left-20"
+                    />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
         <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="mb-_40 mt-80 ">
