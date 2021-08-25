@@ -1,35 +1,35 @@
 export const bubblesCircle = ({
-  radius,
-  parentDiv,
+  parentClass,
   noOfBubbles,
-  childDiv,
+  childClass,
+  childHeight,
   value,
 }) => {
   let div = 360 / noOfBubbles;
-  let radius1 = radius;
-  let parentdiv = document.getElementById(parentDiv);
-  let abc = colorLoader(value);
-  console.log('ali', abc);
+  let radius1 = (childHeight * ((noOfBubbles/2)) / 2) - 5;
+  let parentdiv = document.getElementById(parentClass);
+  parentdiv.style.height = (childHeight * ((noOfBubbles/2) + 1))+'px';
+  parentdiv.style.width = (childHeight * ((noOfBubbles/2) + 1))+'px';
 
   if (parentdiv) {
-    var offsetToParentCenter = parseInt(parentdiv.offsetWidth / 2); //assumes parent is square
-    var offsetToChildCenter = 20;
-    var totalOffset = offsetToParentCenter - offsetToChildCenter;
-    for (var i = 1; i <= 20; ++i) {
+    for (var i = 1; i <= noOfBubbles; ++i) {
       var childdiv = document.createElement('div');
-      if (i > value) {
-        childdiv.className = `bg-${colorLoader(value)} ${childDiv}`;
+      var circleToBeFilled = Math.ceil(value / 4);
+      if (i < circleToBeFilled) {
+        childdiv.className = `bg-${colorLoader(i)} ${childClass}`;
       } else {
-        childdiv.className = childDiv;
+        childdiv.className = childClass;
       }
-
       childdiv.style.position = 'absolute';
-      var y = Math.sin(div * i * (Math.PI / 180)) * radius1;
-      var x = Math.cos(div * i * (Math.PI / 180)) * radius1;
-      childdiv.style.top = (y + totalOffset).toString() + 'px';
-      childdiv.style.left = (x + totalOffset).toString() + 'px';
+      var y = Math.sin(div * i * (Math.PI / 180)) * radius1 + radius1;
+      var x = Math.cos(div * i * (Math.PI / 180)) * radius1 + radius1;
+      childdiv.style.top = (y).toString() + 'px';
+      childdiv.style.left = (x).toString() + 'px';
+      childdiv.style.height = childHeight + 'px';
+      childdiv.style.width = childHeight + 'px';
       parentdiv.appendChild(childdiv);
     }
+
   }
 };
 

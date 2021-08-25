@@ -3,18 +3,18 @@ import { bubblesCircle } from 'utils';
 
 function BubbleLoading({
   children,
-  radius,
   noOfBubbles,
-  childDiv,
-  parentDiv,
+  childClass,
+  childHeight,
+  parentClass,
   value,
 }) {
   useEffect(() => {
     bubblesCircle({
-      radius,
       noOfBubbles,
-      childDiv,
-      parentDiv,
+      childClass,
+      childHeight,
+      parentClass,
       value,
     });
   }, []);

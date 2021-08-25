@@ -26,17 +26,25 @@ function DnaQuestionare({ mcqs = true }) {
   ];
   return (
     <Container questionaire={true}>
-      {/* <div className="sm:hidden">
+      <div className="sm:hidden">
           <BubbleLoading
-            radius="108"
             noOfBubbles="20"
-            parentDiv="parentdiv"
-            childDiv="div1"
-            value={14}
+            parentClass="parentdiv"
+            childClass="child_div"
+            childHeight="22"
+            value={35}
           >
-            <div id="parentdiv"></div>
+            <div id="parentdiv">
+              <div className="centerText text-center flex flex-col justify-center h-100%">
+                <div>Text1</div>
+                <div>Text2</div>
+                <div>Text3</div>
+                <div>Text4</div>
+                <div>Text5</div>
+              </div>
+            </div>
           </BubbleLoading>
-        </div> */}
+        </div>
       <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
         <div className="mt-40 sub-heading text-blue text-center 2xl:mb-40 sm:pb-20">
           DNA Questionnaire
