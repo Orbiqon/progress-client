@@ -2,8 +2,22 @@ import React from 'react';
 import { Container } from 'Layout';
 import { MobileForm } from 'components/Form';
 import { BookCallVideo } from 'components/BookCallVideo';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Arrow from 'components/Arrow/arrow';
 
 function LearnMore() {
+  const settings1 = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    nextArrow: <Arrow dir="right" />,
+    prevArrow: <Arrow dir="left" />,
+
+    // centerPadding: '25%',
+  };
   return (
     <Container>
       <div className="pt-60 ">
@@ -40,9 +54,28 @@ function LearnMore() {
         <div className="sm:pb-80 2xl:pt-100 sm:pt-40 2xl:pb-120">
           <BookCallVideo step={false} />
         </div>
-        <div className="flex">
-          <div className="bg-gradient-blue rounded-r-md ">hghgh</div>
-          <div>
+        <div className="flex ">
+          <div className="bg-gradient-blue rounded-r-md py-40 w-50%">
+            <div className="slider4">
+              <Slider {...settings1}>
+                {[...Array(4)].map(() => (
+                  <div className="rounded-sm  text-base">
+                    <img
+                      src="/images/learn-more/final-report1.jpg"
+                      className="rounded-sm"
+                    />
+
+                    <div className=" mt-10">
+                      <div className="text-base  font-display text-white  font-display pb-10">
+                        Menus / Final report
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+          <div className="ml-100 w-30%">
             <div className="sub-heading mx-20 text-blue 2xl:text-2xl sm:text-center pb-20">
               Lorem ipsum dolor sit amet
             </div>

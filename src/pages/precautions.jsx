@@ -17,6 +17,7 @@ function Precautions() {
     centerMode: true,
     centerPadding: '25%',
   };
+
   const settings1 = {
     dots: false,
     infinite: false,
@@ -27,6 +28,7 @@ function Precautions() {
 
     // centerPadding: '25%',
   };
+
   return (
     <Container>
       <>

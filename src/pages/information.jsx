@@ -65,11 +65,14 @@ scelerisque nisl. Sed ac elit "
           </div>
         </div>
         <div className="bg-gradient-light-blue 2xl:mt-100 px-20 pt-40 pb-20">
-          <div className="slider2 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+          <div className="slider3 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
             <Slider {...settings1} className="mb-100">
               {[...Array(4)].map(() => (
-                <div className="rounded-sm  w-270 text-base">
-                  <img src="/images/support/slider-pic.jpeg" />
+                <div className="rounded-sm  w-370 text-base">
+                  <img
+                    src="/images/support/slider-pic.jpeg"
+                    className="w-370"
+                  />
 
                   <div className="w-270 rounded-lg py-20  relative">
                     <div className="bg-white p-20 rounded-lg">

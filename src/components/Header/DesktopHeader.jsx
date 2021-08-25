@@ -14,12 +14,14 @@ function DesktopHeader({ questionaire }) {
         </Link>
 
         {questionaire ? (
-          <div className="flex cursor-pointer">
-            <div className="m-10 uppercase text-xs font-semibold font-display flex items-center text-green">
-              Back
+          <Link to="/">
+            <div className="flex cursor-pointer">
+              <div className="m-10 uppercase text-xs font-semibold font-display flex items-center text-green">
+                Back
+              </div>
+              <img src="images/back.svg" />
             </div>
-            <img src="images/back.svg" />
-          </div>
+          </Link>
         ) : (
           <div className="label text-gray-black flex items-center">
             <Link to="/overview">

@@ -3,6 +3,7 @@ import { Container } from 'Layout';
 import { Button } from 'components/Button';
 import { BubbleLoading } from 'components/Loading';
 import Complete from './complete';
+import InitDataCollect from './init-data-collect';
 
 function DnaQuestionare({ mcqs = true }) {
   const [index, setIndex] = useState(0);
@@ -113,7 +114,7 @@ function DnaQuestionare({ mcqs = true }) {
           </div>
         </div>
       </div>
-      <Complete open={complete} setOpen={setComplete} />
+      <InitDataCollect open={complete} setOpen={setComplete} />
     </Container>
   );
 }
