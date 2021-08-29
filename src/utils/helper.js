@@ -14,10 +14,10 @@ export const bubblesCircle = ({
   if (parentdiv) {
     for (var i = 1; i <= noOfBubbles; ++i) {
       var childdiv = document.createElement('div');
-      var circleToBeFilled = Math.ceil(value / 4);
+      var circleToBeFilled = Math.ceil(value / 5);
       var positionToBe = i - 11;
       if (i <= circleToBeFilled) {
-        childdiv.className = `bg-${colorLoader(i)} ${childClass}`;
+        childdiv.className = `bg-${colorLoader(i * 5)} ${childClass}`;
       } else {
         childdiv.className = childClass;
       }
@@ -35,17 +35,24 @@ export const bubblesCircle = ({
   }
 };
 
+export const camelCasetoNormal = (word) => {
+  return word
+    .split(/(?=[A-Z])/)
+    .map((s) => s[0].toUpperCase() + s.slice(1) + ' ')
+    .join('');
+};
+
 export const colorLoader = (value) => {
   switch (true) {
-    case value > 0 && value <= 4:
+    case value > 0 && value <= 20:
       return 'primary-red';
-    case value > 4 && value <= 8:
+    case value > 20 && value <= 40:
       return 'primary-orange';
-    case value > 8 && value <= 12:
+    case value > 40 && value <= 60:
       return 'primary-yellow';
-    case value > 12 && value <= 16:
+    case value > 60 && value <= 80:
       return 'primary-green-light';
-    case value > 16 && value <= 20:
+    case value > 80 && value <= 100:
       return 'primary-green';
   }
 };

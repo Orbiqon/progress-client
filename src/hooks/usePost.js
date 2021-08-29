@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-function UseLazyFetch(query) {
-  let [data, setData] = useState();
-  let [loading, setLoading] = useState(true);
-  let [error, setError] = useState();
-  let [status, setStatus] = useState();
+function UsePost(query) {
+  const [data, setData] = useState();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
+  const [status, setStatus] = useState();
 
   let calling = async (params) => {
     let result;
@@ -13,14 +13,14 @@ function UseLazyFetch(query) {
     } else {
       result = await query();
     }
-    // setResult(result);
+
     setLoading(false);
+    setStatus(result.status);
     setData(result.data);
     setError(result.data.error);
-    setStatus(result.status);
   };
 
   return [calling, { data, error, loading, status }];
 }
 
-export default UseLazyFetch;
+export default UsePost;

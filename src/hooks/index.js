@@ -1,3 +1,3 @@
-export { default as UseLazyFetch } from './UseLazyFetch';
-export { default as UseFetch } from './UseFetch';
-export { default as UsePost } from './UsePost';
+export { default as useLazyFetch } from './useLazyFetch';
+export { default as useFetch } from './useFetch';
+export { default as usePost } from './usePost';

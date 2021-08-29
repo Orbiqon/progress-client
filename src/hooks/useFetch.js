@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function UseFetch(query, params) {
+function useFetch(query, params) {
   let [data, setData] = useState();
   let [fetchMoreResult, setFetchMoreResult] = useState();
   let [loading, setLoading] = useState(true);
@@ -25,7 +25,7 @@ function UseFetch(query, params) {
     refetch();
   }, []);
 
-  let fetchMore = async params => {
+  let fetchMore = async (params) => {
     let result;
     if (params) {
       result = await query(params.variables);
@@ -41,4 +41,4 @@ function UseFetch(query, params) {
   return { data, error, loading, status, fetchMore, fetchMoreResult, refetch };
 }
 
-export default UseFetch;
+export default useFetch;

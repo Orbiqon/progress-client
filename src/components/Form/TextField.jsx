@@ -2,7 +2,6 @@ import React from 'react';
 
 function TextField({
   icon,
-  placeholder,
   height,
   indent,
   pb,
@@ -11,19 +10,32 @@ function TextField({
   ml,
   mr,
   dpb,
+  name,
+  placeholder,
+  type,
+  onChange,
+  handleBlur,
+  value,
+  error,
 }) {
   return (
     <div className={`relative sm:mx-15 2xl:ml-${ml} 2xl:mr-${mr}`}>
       <input
         className={` w-100% rounded-sm box-${border} bg-white outline-none ${border} ${border}-solid ${border}-border h-${height} 2xl:pb-${dpb} pb-${pb} pt-${pt} -indent-${indent} placeholder-dark-grey`}
+        name={name}
         placeholder={placeholder}
+        type={type}
+        onChange={onChange}
+        handleBlur={handleBlur}
+        value={value}
       />
-      {icon ? (
+      {icon && (
         <img
           className="absolute left-20 top-18"
           src={`images/textField/${icon}.svg`}
         />
-      ) : null}
+      )}
+      {error && <div className="mt-10 ml-10 text-sm text-red">{error}</div>}
     </div>
   );
 }

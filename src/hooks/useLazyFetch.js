@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-function UsePost(query) {
+function useLazyFetch(query) {
   let [data, setData] = useState();
   let [loading, setLoading] = useState(true);
   let [error, setError] = useState();
   let [status, setStatus] = useState();
 
-  let calling = async params => {
+  let calling = async (params) => {
     let result;
     if (params) {
       result = await query(params.variables);
@@ -23,4 +23,4 @@ function UsePost(query) {
   return [calling, { data, error, loading, status }];
 }
 
-export default UsePost;
+export default useLazyFetch;

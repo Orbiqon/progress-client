@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Questions({
   prevQuestion,
@@ -9,6 +9,7 @@ function Questions({
   totalQuestionLength,
   finalResponse,
   setFinalResponse,
+  currentCategory,
 }) {
   const {
     id,
@@ -19,22 +20,19 @@ function Questions({
     is_published,
     question_text,
   } = question;
-  const { question_text: prevQuestionText } = prevQuestion;
 
-  const questionResponse = () => {
+  const [answer, setAnswer] = useState();
+  const questionResponse = (item) => {
+    const { answer_text, point } = item;
+    setAnswer(item.answer_text);
+
     const copyResponse = [...finalResponse];
-    let indexCheck = copyResponse.findIndex((x) => x.question_id == id);
-    let finalArray = [];
-
-    answers.forEach((item, i) => {
-      finalArray.push({ answer: item.answer, response: `s` });
-    });
-
+    const indexCheck = copyResponse.findIndex((x) => x.question_id == id);
     const selectedAnswer = {
-      answer_text: 'lorem ipsum',
+      answer_text: answer_text,
       question_id: id,
-      points: 3,
-      total_points: 1,
+      points: point,
+      total_points: highest_point,
     };
 
     if (indexCheck !== -1) {
@@ -43,8 +41,20 @@ function Questions({
       copyResponse.push(selectedAnswer);
     }
 
-    setFinalResponse(copyResponse);
+    if (index + 1 < totalQuestionLength) {
+      setIndex(index + 1);
+    }
+
+    setFinalResponse((prev) =>
+      prev.map((row, index) =>
+        index === currentCategory
+          ? { ...prev[index], answers: copyResponse }
+          : row
+      )
+    );
+    // setFinalResponse();
   };
+
   return (
     <div className="flex flex-col items-center">
       <div>
@@ -54,7 +64,7 @@ function Questions({
             onClick={() => setIndex(index - 1)}
           >
             {`${index}.`}
-            {prevQuestionText}
+            {prevQuestion.question_text}
           </div>
         ) : null}
         <div className="mx-20 content font-bold 2xl:mb-20 sm:mb-10">
@@ -67,13 +77,16 @@ function Questions({
               <div
                 className="flex  mr-40 label text-dark-grey mb-10"
                 onClick={() => {
-                  if (index + 1 < totalQuestionLength) {
-                    setIndex(index + 1);
-                  } else {
-                  }
+                  questionResponse(item);
                 }}
               >
-                <input type="radio" className="mt-4 mr-10" />
+                <input
+                  name="radio"
+                  value={item.answer_text}
+                  checked={answer == item.answer_text}
+                  type="radio"
+                  className="mt-4 mr-10"
+                />
                 <div>{item.answer_text}</div>
               </div>
             ))}

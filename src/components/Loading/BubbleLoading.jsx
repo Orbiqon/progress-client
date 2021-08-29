@@ -10,14 +10,16 @@ function BubbleLoading({
   value,
 }) {
   useEffect(() => {
-    bubblesCircle({
-      noOfBubbles,
-      childClass,
-      childHeight,
-      parentClass,
-      value,
-    });
-  }, []);
+    if (value) {
+      bubblesCircle({
+        noOfBubbles,
+        childClass,
+        childHeight,
+        parentClass,
+        value,
+      });
+    }
+  }, [value]);
 
   return <>{children}</>;
   // <div className="relative mt-60 ml-50% pb-50%">

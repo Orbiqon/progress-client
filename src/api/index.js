@@ -1,1 +1,6 @@
-export { getQuestionsService, getCategoriesService } from './questions';
+export {
+  getQuestionsService,
+  getCategoriesService,
+  signInService,
+  attemptService,
+} from './api-services';
