@@ -11,6 +11,7 @@ import InitDataCollect from 'pages/init-data-collect';
 import QuestionareVideo from 'pages/questionare-video';
 import EntryPoint from 'pages/entry-point';
 import HealthScore from 'pages/health-score';
+import IFrame from 'pages/i-frame';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/precautions" component={Precautions} />
         <Route exact path="/overview" component={OverView} />
         <Route exact path="/" component={Home} />
+        <Route exact path="/booking" component={IFrame} />
         <Route exact path="/complete" component={Complete} />
         <Route exact path="/questionare" component={DnaQuestionare} />
         <Route exact path="/init-data" component={InitDataCollect} />

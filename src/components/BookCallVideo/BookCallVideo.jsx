@@ -5,6 +5,7 @@ function BookCallVideo({
   step = true,
   title = 'Book a Free 30 minute call',
   description = true,
+  onClick,
 }) {
   return (
     <div className=" 2xl:bg-video-call-desk bg-cover h-602 bg-no-repeat sm:bg-video-call-mbl sm:h-724">
@@ -39,7 +40,7 @@ function BookCallVideo({
                 : '2xl:pt-120 2xl:w-50% 2xl:text-2xl sm:text-xl sm:ml-97 sm:mr-76 text-white text-center'
             }
           >
-            {title}
+            Lorem ipsum dolor
           </div>
         </div>
       </div>
@@ -64,7 +65,7 @@ function BookCallVideo({
             could be tailored to help you.
           </div>
         ) : (
-          <div className="flex">
+          <div className="flex pb-40">
             <div className="flex items-center mr-20%">
               <BackButton value="Back" />
             </div>
@@ -72,10 +73,11 @@ function BookCallVideo({
               <Button
                 value="watch Video"
                 color="green"
-                width={70}
-                height={32}
+                width={120}
+                height={50}
                 DeWidth="120"
                 DeHeight="66"
+                onClick={onClick}
               />
             </div>
           </div>

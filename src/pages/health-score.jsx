@@ -5,12 +5,14 @@ import { camelCasetoNormal, colorLoader } from 'utils';
 import { CategoryScore } from 'components/CategoryScore';
 import { useLocation } from 'react-router-dom';
 import BookCallVideo from 'components/BookCallVideo/BookCallVideo';
+import HealthVideo from 'pages/videoplayer';
 
 function HealthScore() {
   const [bubbleValue, setBubbleValue] = useState(20);
   const location = useLocation();
   const [scores, setScores] = useState();
   const [videos, setVideos] = useState();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (location) {
@@ -48,7 +50,7 @@ function HealthScore() {
               Your health score
             </div>
             <div className="flex justify-center">
-              <div className="w-30% font-display text-base text-dark-grey  text-center">
+              <div className="sm:w-90% 2xl:w-30% font-display text-base text-dark-grey  text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus ultricies sem orci, ac pellentesque nunc viverra sed.
                 Curabitur luctus ligula quam, ut accumsan lectus efficitur eu.
@@ -68,71 +70,18 @@ function HealthScore() {
                 />
               </div>
             ))}
-            {/* <div className="grid-item">
-              <CategoryScore
-                parentClass="environment-score"
-                childClass="bubble-environment"
-                title="Lorem ipsum dolor"
-                description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            pharetra orci et facilisis dictum. Praesent eu convallis turpis.
-            Donec vitae accumsan risus."
-                score={5}
-              />
-            </div>
-            <div className="grid-item">
-              <CategoryScore
-                parentClass="neurological-score"
-                childClass="bubble-neurological"
-                title="Lorem ipsum dolor"
-                description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            pharetra orci et facilisis dictum. Praesent eu convallis turpis.
-            Donec vitae accumsan risus."
-                score={5}
-              />
-            </div>
-            <div className="grid-item">
-              <CategoryScore
-                parentClass="exercise-score"
-                childClass="bubble-exercise"
-                title="Lorem ipsum dolor"
-                description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            pharetra orci et facilisis dictum. Praesent eu convallis turpis.
-            Donec vitae accumsan risus."
-                score={5}
-              />
-            </div>
-            <div className="grid-item">
-              <CategoryScore
-                parentClass="diet-score"
-                childClass="bubble-diet"
-                title="Lorem ipsum dolor"
-                description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            pharetra orci et facilisis dictum. Praesent eu convallis turpis.
-            Donec vitae accumsan risus."
-                score={5}
-              />
-            </div>
-            <div className="grid-item">
-              <CategoryScore
-                parentClass="sleep-score"
-                childClass="bubble-sleep"
-                title="Lorem ipsum dolor"
-                description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            pharetra orci et facilisis dictum. Praesent eu convallis turpis.
-            Donec vitae accumsan risus."
-                score={5}
-              />
-            </div> */}
           </div>
-          <div>
+          <div className="">
             <BookCallVideo
               step={false}
               title={videos.description}
               description={false}
+              onClick={() => setOpen(true)}
             />
           </div>
         </>
       )}
+      <HealthVideo open={open} setOpen={setOpen} />
     </Container>
   );
 }
