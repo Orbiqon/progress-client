@@ -703,6 +703,7 @@ module.exports = {
       xs: '20rem',
       sm: '500px',
       md: '400px',
+      700: '700px',
       lg: '1440px',
       xl: '100px',
       '2xl': '42rem',
