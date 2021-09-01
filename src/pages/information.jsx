@@ -15,6 +15,14 @@ function Information() {
     slidesToScroll: 1,
     nextArrow: <Arrow dir="right" />,
     prevArrow: <Arrow dir="left" />,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <Container>
@@ -74,7 +82,7 @@ scelerisque nisl. Sed ac elit "
                     className="w-370"
                   />
 
-                  <div className="w-270 rounded-lg py-20  relative">
+                  <div className="sm:98% 2xl:w-270 rounded-lg py-20  relative">
                     <div className="bg-white p-20 rounded-lg">
                       Lorem ipsum dolor sit amet, consectetur solser adipiscing
                       elit. Nullam et nisl dignissim, salalaks kakas elementum
