@@ -70,7 +70,7 @@ function Overview() {
                 odio rutrum dignissim sed ac felis. Mauris convallis magna
                 lectus, id blandit metus volutpat non.
               </div>
-              <div className="sm:invisible pb-60">
+              <div className="sm:hidden pb-60">
                 <Button
                   value="Start making progress"
                   color="blue"
@@ -80,7 +80,7 @@ function Overview() {
                   DeHeight="66"
                 />
               </div>
-              <div className="sm:invisible 2xl:ml-10">
+              <div className="sm:hidden 2xl:ml-10">
                 <img src="/images/scroll-down.svg" />
               </div>
             </div>
@@ -135,8 +135,8 @@ function Overview() {
         <section className="2xl:mt-100 sm:pb-80">
           <BookCallVideo />
         </section>
-        <div className="flex font-display text-white mt-160 mb-120">
-          <div className="2xl:mt-168 bg-gradient-blue rounded-r-md pt-515 w-50% relative">
+        <div className="flex sm:flex-col-reverse font-display text-white 2xl:mt-160 mb-120">
+          <div className="2xl:mt-168 bg-gradient-blue rounded-r-md sm:pt-270 2xl:pt-515 2xl:w-50% mr-20 relative">
             <div className="slider5 absolute w-80% right-0 top-_78 ">
               <Slider {...settings1}>
                 <img src="/images/overview/slider/pic1.jpg" className="w--80" />
@@ -144,11 +144,22 @@ function Overview() {
                 <img src="/images/overview/slider/pic1.jpg" className="w--80" />
               </Slider>
             </div>
-            <img
-              src="/images/overview/step3.svg"
-              className="absolute right-_518"
-            />
-            <div className="max-w-md m-auto ">
+            <picture>
+              <source
+                media="(min-width:651px)"
+                srcset="/images/overview/step3.svg"
+              />
+              <source
+                media="(max-width:650px)"
+                srcset="/images/overview/step3-mbl.svg"
+              />
+              <img
+                src="/images/overview/step3.svg"
+                className="absolute 2xl:right-_518 sm:right-_20 sm:bottom-_158"
+              />
+            </picture>
+
+            <div className="2xl:max-w-md 2xl:m-auto sm:mx-20">
               <div className="pt-60">
                 <Button
                   value="step 4"
@@ -159,10 +170,10 @@ function Overview() {
                   DeHeight="46"
                 />
               </div>
-              <div className="2xl:text-36 font-medium my-20">
+              <div className="2xl:text-36 sm:text-xl font-display font-medium sm:mb-20 sm:mt-10 2xl:my-20">
                 Set up all your tech
               </div>
-              <div className="2xl:text-16 2xl:mb-60 ">
+              <div className="2xl:text-16 font-display sm:text-base  2xl:mb-60 ">
                 If you are interested to learn more you can watch a video
                 explaining the programme and who it is deigned for. At this
                 point you can book a free, no obligation call with one of our
@@ -172,11 +183,11 @@ function Overview() {
                 questions and learn how the programme could be tailored to help
                 you.
               </div>
-              <div className="2xl:mb-160">
+              <div className="2xl:mb-160 sm:mt-40 sm:pb-398">
                 {techs.map((item) => (
-                  <div className="2xl:flex ">
+                  <div className="flex ">
                     <img src={item.image} className="self-start" />
-                    <div className="2xl:text-base 2xl:ml-30 mb-30 2xl:w-370">
+                    <div className="2xl:text-base sm:text-sm sm:ml-20 2xl:ml-30 mb-30 2xl:w-370">
                       {item.description}
                     </div>
                   </div>
@@ -184,7 +195,7 @@ function Overview() {
               </div>
             </div>
           </div>
-          <div className="2xl:mx-70 w-40%">
+          <div className="2xl:mx-70 2xl:w-40% sm:mx-20">
             <div className="pb-10">
               <Button
                 value="step 3"
@@ -209,7 +220,7 @@ function Overview() {
             </div>
           </div>
         </div>
-        <div className="mx-20 2xl:flex 2xl:flex-row-reverse 2xl:max-w-lg 2xl:m-auto 2xl:px-10">
+        <div className="mx-20 sm:pt-60 2xl:flex 2xl:flex-row-reverse 2xl:max-w-lg 2xl:m-auto 2xl:px-10">
           <div className="2xl:pl-100 2xl:w-50% ">
             <div className="pb-10 ">
               <Button
