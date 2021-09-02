@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Container } from 'Layout';
 import { MobileForm } from 'components/Form';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
+import { useEffect } from 'react';
 
 function Precautions() {
   const settings = {
@@ -31,10 +32,14 @@ function Precautions() {
   const settings1 = {
     dots: false,
     infinite: false,
+    draggable: false,
+    swipeToSlide: false,
+    touchMove: false,
     slidesToShow: 2,
     slidesToScroll: 1,
-    nextArrow: <Arrow dir="right" />,
-    prevArrow: <Arrow dir="left" />,
+    arrow: false,
+    // nextArrow: <Arrow dir="right" />,
+    // prevArrow: <Arrow dir="left" />,
     responsive: [
       {
         breakpoint: 576,
@@ -45,11 +50,131 @@ function Precautions() {
     ],
     // centerPadding: '25%',
   };
+  const sliderRef = useRef();
+  const sliderRef1 = useRef();
+
+  // const x = document.gdetElementById('mbl-slider');
+  const [slider, setSlider] = useState();
+  const [changeEvent, setChangeEvent] = useState(0);
+  const [totalLength, setTotalLength] = useState(0);
+  useEffect(() => {
+    let imgSlider =
+      sliderRef.current.children[0].children[1].children[0].children[
+        changeEvent
+      ].children[0].children[0].children[0];
+
+    let containerSlider =
+      sliderRef.current.children[0].children[1].children[0].children[
+        changeEvent
+      ].children[0].children[0];
+
+    imgSlider.style.height = '158px';
+    imgSlider.style.borderRadius = '8px';
+    containerSlider.style.marginTop = '0px';
+    console.log(
+      sliderRef.current.children[0].children[1].children[0].children[
+        changeEvent
+      ],
+      'abch',
+      sliderRef.current.children[0].children[1].children[0].children.length
+    );
+    setTotalLength(
+      sliderRef.current.children[0].children[1].children[0].children.length
+    );
+  }, [sliderRef]);
+
+  const prevSlide = () => {
+    slider.slickPrev();
+
+    if (changeEvent - 1 >= 0) {
+      let imgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent - 1
+        ].children[0].children[0].children[0];
+
+      let containerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent - 1
+        ].children[0].children[0];
+
+      let prevImgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0].children[0];
+
+      let prevContainerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0];
+
+      imgSlider.style.height = '158px';
+      imgSlider.style.borderRadius = '8px';
+      containerSlider.style.marginTop = '0px';
+
+      prevImgSlider.style.height = '122px';
+      prevImgSlider.style.borderRadius = '8px';
+      prevContainerSlider.style.marginTop = '18px';
+
+      setChangeEvent((prev) => prev - 1);
+    }
+    console.log('shhs');
+  };
+
+  const nextSlide = () => {
+    slider.slickNext();
+
+    if (changeEvent + 1 < totalLength) {
+      let imgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent + 1
+        ].children[0].children[0].children[0];
+
+      let containerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent + 1
+        ].children[0].children[0];
+
+      let prevImgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0].children[0];
+
+      let prevContainerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0];
+
+      imgSlider.style.height = '158px';
+      imgSlider.style.borderRadius = '8px';
+      containerSlider.style.marginTop = '0px';
+
+      prevImgSlider.style.height = '122px';
+      prevImgSlider.style.borderRadius = '8px';
+      prevContainerSlider.style.marginTop = '18px';
+
+      console.log(
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ],
+        'length',
+        sliderRef.current.children[0].children[1].children[0].children.length
+      );
+      setChangeEvent((prev) => {
+        if (prev + 1 < totalLength) {
+          return prev + 1;
+        } else {
+          return 0;
+        }
+      });
+    } else {
+    }
+    console.log('shhs');
+  };
 
   return (
     <Container>
       <>
-        <div className="pt-60 mx-20 mb-272">
+        <div className="pt-60 mx-20 2xl:mb-272 sm:mb-100">
           <div className="2xl:flex w-100% 2xl:justify-between 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
             <div className="sm:w-100% 2xl:w-50%">
               <div className="2xl:text-3xl 2xl:text-left 2xl: heading pb-20 sm:mx-20">
@@ -161,11 +286,22 @@ function Precautions() {
                 </div>
               </div>
             </div>
-            <div className="slider2 2xl:hidden sm:pb-40">
-              <Slider {...settings1} className="2xl:m-100 ">
+            <div
+              className="slider2 2xl:hidden sm:pb-30 sm:mr-_20"
+              id="mbl-slider"
+              ref={sliderRef}
+            >
+              <Slider
+                ref={(c) => setSlider(c)}
+                {...settings1}
+                className="2xl:m-100 "
+              >
                 {[...Array(4)].map(() => (
-                  <div className="rounded-sm h-200 w-270 text-base">
-                    <img src="/images/support/slider-pic.jpeg" />
+                  <div className="rounded-sm h-200 w-270 text-base mt-18">
+                    <img
+                      src="/images/support/slider-pic.jpeg"
+                      className="rounded-sm h-120 my-auto"
+                    />
 
                     <div className="w-270 mt-20">
                       <div>
@@ -181,6 +317,12 @@ function Precautions() {
                   </div>
                 ))}
               </Slider>
+              <div className="flex justify-end mr-40">
+                <div className="mr-10">
+                  <Arrow dir="left" onClick={() => prevSlide()} />
+                </div>
+                <Arrow dir="right" onClick={() => nextSlide()} />
+              </div>
             </div>
           </div>
         </div>

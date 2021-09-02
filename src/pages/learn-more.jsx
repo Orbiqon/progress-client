@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Container } from 'Layout';
 import { MobileForm } from 'components/Form';
 import { BookCallVideo } from 'components/BookCallVideo';
@@ -18,6 +18,138 @@ function LearnMore() {
 
     // centerPadding: '25%',
   };
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrow: false,
+    // nextArrow: <Arrow dir="right" />,
+    // prevArrow: <Arrow dir="left" />,
+
+    // centerPadding: '25%',
+  };
+
+  const [slider, setSlider] = useState();
+  const [changeEvent, setChangeEvent] = useState(0);
+  const [totalLength, setTotalLength] = useState(0);
+  const sliderRef = useRef();
+
+  useEffect(() => {
+    let imgSlider =
+      sliderRef.current.children[0].children[1].children[0].children[
+        changeEvent
+      ].children[0].children[0].children[0];
+
+    let containerSlider =
+      sliderRef.current.children[0].children[1].children[0].children[
+        changeEvent
+      ].children[0].children[0];
+
+    imgSlider.style.height = '305px';
+    imgSlider.style.borderRadius = '8px';
+    containerSlider.style.marginTop = '0px';
+    console.log(
+      sliderRef.current.children[0].children[1].children[0].children[
+        changeEvent
+      ],
+      'abch',
+      sliderRef.current.children[0].children[1].children[0].children.length
+    );
+    setTotalLength(
+      sliderRef.current.children[0].children[1].children[0].children.length
+    );
+  }, [sliderRef]);
+
+  const prevSlide = () => {
+    slider.slickPrev();
+
+    if (changeEvent - 1 >= 0) {
+      let imgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent - 1
+        ].children[0].children[0].children[0];
+
+      let containerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent - 1
+        ].children[0].children[0];
+
+      let prevImgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0].children[0];
+
+      let prevContainerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0];
+
+      imgSlider.style.height = '305px';
+      imgSlider.style.borderRadius = '8px';
+      containerSlider.style.marginTop = '0px';
+
+      prevImgSlider.style.height = '239px';
+      prevImgSlider.style.borderRadius = '8px';
+      prevContainerSlider.style.marginTop = '26px';
+
+      setChangeEvent((prev) => prev - 1);
+    }
+    console.log('shhs');
+  };
+
+  const nextSlide = () => {
+    slider.slickNext();
+
+    if (changeEvent + 1 < totalLength) {
+      let imgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent + 1
+        ].children[0].children[0].children[0];
+
+      let containerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent + 1
+        ].children[0].children[0];
+
+      let prevImgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0].children[0];
+
+      let prevContainerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0];
+
+      imgSlider.style.height = '305px';
+      imgSlider.style.borderRadius = '8px';
+      containerSlider.style.marginTop = '0px';
+
+      prevImgSlider.style.height = '239px';
+      prevImgSlider.style.borderRadius = '8px';
+      prevContainerSlider.style.marginTop = '26px';
+
+      console.log(
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ],
+        'length',
+        sliderRef.current.children[0].children[1].children[0].children.length
+      );
+      setChangeEvent((prev) => {
+        if (prev + 1 < totalLength) {
+          return prev + 1;
+        } else {
+          return 0;
+        }
+      });
+    } else {
+    }
+    console.log('shhs');
+  };
+
   return (
     <Container>
       <div className="pt-60 ">
@@ -54,18 +186,45 @@ function LearnMore() {
         <div className="sm:pb-80 2xl:pt-100 sm:pt-40 2xl:pb-120">
           <BookCallVideo step={false} />
         </div>
-        <div className="flex ">
-          <div className="bg-gradient-blue rounded-r-md py-40 w-50%">
-            <div className="slider4">
-              <Slider {...settings1}>
+        <div className="flex sm:flex-col-reverse ">
+          <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 2xl:w-50%">
+            <div
+              className="2xl:hidden slider4 sm:ml-20 sm:mr-_20"
+              ref={sliderRef}
+            >
+              <Slider {...settings} ref={(c) => setSlider(c)}>
                 {[...Array(4)].map(() => (
-                  <div className="rounded-sm  text-base">
+                  <div className="rounded-sm  text-base sm:pl-20 mt-26">
                     <img
                       src="/images/learn-more/final-report1.jpg"
-                      className="rounded-sm"
+                      className="rounded-sm h-239"
                     />
 
-                    <div className=" mt-10">
+                    <div className="pl-20 mt-10">
+                      <div className="text-base  font-display text-white  font-display pb-10">
+                        Menus / Final report
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+              <div className="flex justify-end mr-40">
+                <div className="mr-10">
+                  <Arrow dir="left" onClick={() => prevSlide()} />
+                </div>
+                <Arrow dir="right" onClick={() => nextSlide()} />
+              </div>
+            </div>
+            <div className="sm:hidden slider4 ">
+              <Slider {...settings1}>
+                {[...Array(4)].map(() => (
+                  <div className="rounded-sm  text-base ">
+                    <img
+                      src="/images/learn-more/final-report1.jpg"
+                      className="rounded-sm sm:pl-20"
+                    />
+
+                    <div className="pl-20 mt-10">
                       <div className="text-base  font-display text-white  font-display pb-10">
                         Menus / Final report
                       </div>
@@ -75,7 +234,7 @@ function LearnMore() {
               </Slider>
             </div>
           </div>
-          <div className="ml-100 w-30%">
+          <div className="2xl:ml-100 2xl:w-30% sm:mb-100">
             <div className="sub-heading mx-20 text-blue 2xl:text-2xl sm:text-center pb-20">
               Lorem ipsum dolor sit amet
             </div>

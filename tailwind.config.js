@@ -26,6 +26,7 @@ module.exports = {
         '87%': '87%',
         87: '87px',
         22: '22px',
+        26: '26px',
         '30%': '30%',
         196: '196px',
         '173%': '173%',
@@ -46,6 +47,7 @@ module.exports = {
         '56%': '59%',
         '1%': '1%',
         100: '100px',
+        239: '239px',
         370: '370px',
         129: '129px',
         582: '582px',
@@ -105,6 +107,7 @@ module.exports = {
       _40: '-40px',
       _30: '-30px',
       _20: '-20px',
+      _10: '-10px',
       _1: '-1px',
       _16: '-16px',
       _31: '-31px',
@@ -695,6 +698,7 @@ module.exports = {
     maxHeight: (theme) => ({
       ...theme('spacing'),
       full: '100%',
+      sm: '122px',
       screen: '100vh',
     }),
     maxWidth: (theme, { breakpoints }) => ({
