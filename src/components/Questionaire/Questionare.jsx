@@ -203,11 +203,13 @@ function Questionare({
                 onClick={() => {
                   if (
                     index + 1 == data1.payload.length &&
+                    data &&
                     data.payload.length == currentCategory + 1
                   ) {
                     onComplete();
                   } else if (index + 1 == data1.payload.length) {
-                    onComplete();
+                    console.log('skhika', response);
+                    onComplete(response);
                   } else {
                     submit();
                   }

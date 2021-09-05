@@ -23,9 +23,12 @@ function DnaQuestionare() {
   );
 
   useEffect(() => {
-    if (dataAttempt) {
+    if (dataAttempt && dataAttempt.payload) {
       console.log('attempts', dataAttempt);
+
       setComplete(true);
+    } else if (dataAttempt && dataAttempt.error && dataAttempt.error.detail) {
+      alert(dataAttempt.error.detail);
     }
   }, [dataAttempt]);
 
@@ -37,9 +40,13 @@ function DnaQuestionare() {
 
   let { id } = useParams();
 
-  const onComplete = () => {
-    attempt({ variables: id });
+  const onComplete = (response) => {
+    // finalResponse[0].exam_type_id = 1;
+    // finalResponse[0].category_id = 0;
+    console.log('finally', response);
+    attempt({ variables: { exam_type_id: 2, data: response, user_id: 1 } });
   };
+  console.log(finalResponse, 'aqwe');
 
   return (
     <>
@@ -58,7 +65,7 @@ function DnaQuestionare() {
         questionType={'dna'}
         totalQuestions={totalQuestions}
         setTotalQuestions={setTotalQuestions}
-        onComplete={() => onComplete()}
+        onComplete={onComplete}
       />
       {/* <div>Hello Orbiqon</div> */}
       <Complete open={complete} setOpen={setComplete} />
