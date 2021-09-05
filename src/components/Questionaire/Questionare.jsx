@@ -3,8 +3,6 @@ import { Container } from 'Layout';
 import { Button } from 'components/Button';
 import { BubbleLoading } from 'components/Loading';
 import { Questions } from 'components/Questions';
-import { useFetch, useLazyFetch } from 'hooks';
-import { getCategoriesService, getQuestionsService } from 'api';
 import { colorLoader } from 'utils';
 import { motion } from 'framer-motion';
 
@@ -21,34 +19,14 @@ function Questionare({
   setResponse,
   response,
   totalQuestions,
-  setTotalQuestions,
   currentCategory,
   setCurrentCategory,
 }) {
-  // const [index, setIndex] = useState(0);
-  // const [totalQuestions, setTotalQuestions] = useState(0);
-  // const [response, setResponse] = useState([{ category_id: '', answers: [] }]);
-  // const { data } = useFetch(getCategoriesService);
-  // const [getQuestions, { data: data1, status }] = useLazyFetch(
-  //   getQuestionsService
-  // );
   const [bubbleValue, setBubbleValue] = useState(20);
   const [animationValue, setAnimationValue] = useState(0);
-  // const [currentCategory, setCurrentCategory] = useState(0);
-
-  const submitResponse = {
-    exam_type_id: 1,
-    data: response,
-  };
-
-  console.log('response', response);
 
   useEffect(() => {
     if (data) {
-      console.log('data12', data);
-      // getQuestions({
-      //   variables: `?category_id=${data.payload[currentCategory].id}&exam_type_id=1`,
-      // });
       let category_id = data.payload[currentCategory].id;
       setResponse((prev) =>
         prev.map((row, index) =>
@@ -63,14 +41,7 @@ function Questionare({
     }
   }, [data, currentCategory]);
 
-  // useEffect(() => {
-  //   if (data1) {
-  //     setTotalQuestions(data1.payload.length);
-  //   }
-  // }, [data1]);
-
   const submit = () => {
-    console.log('abc', submitResponse);
     setCurrentCategory((prev) => prev + 1);
     setIndex(0);
     let copyResponse = [...response];
@@ -95,7 +66,6 @@ function Questionare({
       data: response,
     });
     setBubbleValue((prev) => prev + 20);
-    // setComplete(true);
   };
 
   return (
@@ -128,7 +98,6 @@ function Questionare({
           </div>
         </BubbleLoading>
       </div>
-
       <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
         {
           <>
@@ -208,7 +177,6 @@ function Questionare({
                   ) {
                     onComplete();
                   } else if (index + 1 == data1.payload.length) {
-                    console.log('skhika', response);
                     onComplete(response);
                   } else {
                     submit();

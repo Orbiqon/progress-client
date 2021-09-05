@@ -22,8 +22,6 @@ function HealthQuestionare({ mcqs = true }) {
     data: response,
   };
 
-  console.log('response', response);
-  console.log('fianlresponse', finalResponse);
   useEffect(() => {
     if (data) {
       getQuestions({

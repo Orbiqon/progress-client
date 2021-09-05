@@ -14,7 +14,7 @@ function useFetch(query, params) {
     } else {
       result = await query();
     }
-    // setResult(result);
+
     setLoading(false);
     setData(result.data);
     setError(result.data.error);
@@ -32,7 +32,7 @@ function useFetch(query, params) {
     } else {
       result = await query();
     }
-    // setResult(result);
+
     setLoading(false);
     setFetchMoreResult(result.data);
     setError(result.data.error);

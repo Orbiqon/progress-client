@@ -50,13 +50,7 @@ function LearnMore() {
     imgSlider.style.height = '305px';
     imgSlider.style.borderRadius = '8px';
     containerSlider.style.marginTop = '0px';
-    console.log(
-      sliderRef.current.children[0].children[1].children[0].children[
-        changeEvent
-      ],
-      'abch',
-      sliderRef.current.children[0].children[1].children[0].children.length
-    );
+
     setTotalLength(
       sliderRef.current.children[0].children[1].children[0].children.length
     );
@@ -96,7 +90,6 @@ function LearnMore() {
 
       setChangeEvent((prev) => prev - 1);
     }
-    console.log('shhs');
   };
 
   const nextSlide = () => {
@@ -131,13 +124,6 @@ function LearnMore() {
       prevImgSlider.style.borderRadius = '8px';
       prevContainerSlider.style.marginTop = '26px';
 
-      console.log(
-        sliderRef.current.children[0].children[1].children[0].children[
-          changeEvent
-        ],
-        'length',
-        sliderRef.current.children[0].children[1].children[0].children.length
-      );
       setChangeEvent((prev) => {
         if (prev + 1 < totalLength) {
           return prev + 1;
@@ -147,7 +133,6 @@ function LearnMore() {
       });
     } else {
     }
-    console.log('shhs');
   };
 
   return (

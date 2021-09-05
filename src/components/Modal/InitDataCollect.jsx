@@ -26,7 +26,6 @@ function InitDataCollect({ open, setOpen, ...props }) {
 
   useEffect(() => {
     if (dataAttempt) {
-      console.log('attempts', dataAttempt);
       history.push({
         pathname: HEALTH_SCORE,
         // search: '/score',

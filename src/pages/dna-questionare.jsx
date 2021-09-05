@@ -16,7 +16,6 @@ function DnaQuestionare() {
   const { data, status } = useFetch(getQuestionsService, {
     variables: `?&exam_type_id=2`,
   });
-  console.log(data, 'recent');
 
   const [attempt, { data: dataAttempt, status: statusAttempt }] = usePost(
     attemptService
@@ -24,8 +23,6 @@ function DnaQuestionare() {
 
   useEffect(() => {
     if (dataAttempt && dataAttempt.payload) {
-      console.log('attempts', dataAttempt);
-
       setComplete(true);
     } else if (dataAttempt && dataAttempt.error && dataAttempt.error.detail) {
       alert(dataAttempt.error.detail);
@@ -43,10 +40,9 @@ function DnaQuestionare() {
   const onComplete = (response) => {
     // finalResponse[0].exam_type_id = 1;
     // finalResponse[0].category_id = 0;
-    console.log('finally', response);
+
     attempt({ variables: { exam_type_id: 2, data: response, user_id: 1 } });
   };
-  console.log(finalResponse, 'aqwe');
 
   return (
     <>

@@ -12,15 +12,7 @@ function Questions({
   currentCategory,
   setAnimationValue,
 }) {
-  const {
-    id,
-    answers,
-    category_id,
-    exam_type_id,
-    highest_point,
-    is_published,
-    question_text,
-  } = question;
+  const { id, answers, highest_point, question_text } = question;
 
   const [answer, setAnswer] = useState();
 
@@ -71,7 +63,6 @@ function Questions({
           : row
       )
     );
-    // setFinalResponse();
   };
 
   return (

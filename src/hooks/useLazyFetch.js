@@ -13,7 +13,7 @@ function useLazyFetch(query) {
     } else {
       result = await query();
     }
-    // setResult(result);
+
     setLoading(false);
     setData(result.data);
     setError(result.data.error);
