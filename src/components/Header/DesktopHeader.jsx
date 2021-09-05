@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import { Button } from 'components/Button';
 import { Link } from 'react-router-dom';
-import EntryPoint from 'pages/entry-point';
+import { EntryPoint } from 'components/Modal';
+import { LINKS } from 'utils';
 
 function DesktopHeader({ questionaire }) {
   const [open, setOpen] = useState(false);
+  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ } = LINKS;
 
   return (
     <>
       <div className="max-w-lg m-auto flex justify-between pt-41 px-100">
-        <Link to="/">
+        <Link to={HOME}>
           <img src="images/logo/logo-desktop.svg" className="cursor-pointer" />
         </Link>
 
         {questionaire ? (
-          <Link to="/">
+          <Link to={HOME}>
             <div className="flex cursor-pointer">
               <div className="m-10 uppercase text-xs font-semibold font-display flex items-center text-green">
                 Back
@@ -24,16 +26,16 @@ function DesktopHeader({ questionaire }) {
           </Link>
         ) : (
           <div className="label text-gray-black flex items-center">
-            <Link to="/overview">
+            <Link to={OVERVIEW}>
               <div className="mr-24 cursor-pointer">Programme Overview </div>
             </Link>
-            <Link to="/precautions">
+            <Link to={SUPPORT}>
               <div className="mr-24 cursor-pointer">Your Support Team</div>
             </Link>
-            <Link to="/learn-more">
+            <Link to={LEARN_MORE}>
               <div className="mr-24 cursor-pointer">Learn More</div>
             </Link>
-            <Link to="/information">
+            <Link to={FAQ}>
               <div className="mr-40 cursor-pointer">Testimonials & FAQ</div>
             </Link>
             <div>

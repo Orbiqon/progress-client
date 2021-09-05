@@ -8,7 +8,11 @@ import { genrateSchema } from 'validation';
 import { usePost } from 'hooks';
 import { signInService, attemptService } from 'api';
 import { Link, Router, useHistory } from 'react-router-dom';
+import { LINKS } from 'utils';
+
 function InitDataCollect({ open, setOpen, ...props }) {
+  const { HEALTH_SCORE } = LINKS;
+
   const [initialValues, setInitialValues] = useState({
     email: '',
     phone: '',
@@ -24,7 +28,7 @@ function InitDataCollect({ open, setOpen, ...props }) {
     if (dataAttempt) {
       console.log('attempts', dataAttempt);
       history.push({
-        pathname: '/score',
+        pathname: HEALTH_SCORE,
         // search: '/score',
         state: { data: JSON.stringify(dataAttempt) },
       });
@@ -86,7 +90,6 @@ function InitDataCollect({ open, setOpen, ...props }) {
             error={errors.email}
           />
         </div>
-
         <div className="mb-40">
           <TextField
             border="border"

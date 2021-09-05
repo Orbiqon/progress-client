@@ -4,3 +4,15 @@ export const END_POINTS = {
   SIGN_IN: 'users',
   ATTEMPT: 'attempts',
 };
+
+export const LINKS = {
+  DNA_QUESTIONARE: '/dna-questionare/:id',
+  QUESTIONARE: '/health-questionare',
+  HEALTH_SCORE: '/health-score',
+  BOOKING: '/booking',
+  HOME: '/',
+  OVERVIEW: '/overview',
+  SUPPORT: '/support',
+  LEARN_MORE: '/learn-more',
+  FAQ: '/faq',
+};

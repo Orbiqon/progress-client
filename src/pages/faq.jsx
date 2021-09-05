@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
 
-function Information() {
+function Faq() {
   const settings1 = {
     dots: false,
     infinite: false,
@@ -108,4 +108,4 @@ scelerisque nisl. Sed ac elit "
   );
 }
 
-export default Information;
+export default Faq;

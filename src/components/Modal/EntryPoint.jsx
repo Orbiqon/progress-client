@@ -3,8 +3,11 @@ import { VideoCard } from 'components/VideoCard';
 import { Button } from 'components/Button';
 import { Modal } from 'components/Modal';
 import { Link } from 'react-router-dom';
+import { LINKS } from 'utils';
 
 function EntryPoint({ open, setOpen }) {
+  const { QUESTIONARE } = LINKS;
+
   return (
     <Modal open={open} setOpen={setOpen}>
       <div className="pt-33 pb-270 ">
@@ -18,7 +21,7 @@ function EntryPoint({ open, setOpen }) {
         tempor incididunt ut labore et dolore magna aliqua.
       </div>
       <div className="flex justify-center mb-40">
-        <Link to="/questionare">
+        <Link to={QUESTIONARE}>
           <Button
             value=" Start making progress"
             color="green"

@@ -1,37 +1,8 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import Information from 'pages/information';
-import LearnMore from 'pages/learn-more';
-import Precautions from 'pages/precautions';
-import OverView from 'pages/overview';
-import Home from 'pages/home';
-import Complete from 'pages/complete';
-import DnaQuestionare from 'pages/dna-questionare';
-import InitDataCollect from 'pages/init-data-collect';
-import QuestionareVideo from 'pages/questionare-video';
-import EntryPoint from 'pages/entry-point';
-import HealthScore from 'pages/health-score';
-import IFrame from 'pages/i-frame';
+import { MainRoutes } from 'Routes';
 
 function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/information" component={Information} />
-        <Route exact path="/learn-more" component={LearnMore} />
-        <Route exact path="/precautions" component={Precautions} />
-        <Route exact path="/overview" component={OverView} />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/booking" component={IFrame} />
-        <Route exact path="/complete" component={Complete} />
-        <Route exact path="/questionare" component={DnaQuestionare} />
-        <Route exact path="/init-data" component={InitDataCollect} />
-        <Route exact path="/video" component={QuestionareVideo} />
-        <Route exact path="/entry" component={EntryPoint} />
-        <Route exact path="/score" component={HealthScore} />
-      </Switch>
-    </Router>
-  );
+  return <MainRoutes />;
 }
 
 export default App;

@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
 import { useEffect } from 'react';
 
-function Precautions() {
+function Support() {
   const settings = {
     dots: false,
     infinite: false,
@@ -371,4 +371,4 @@ function Precautions() {
   );
 }
 
-export default Precautions;
+export default Support;

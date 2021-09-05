@@ -5,7 +5,7 @@ import { camelCasetoNormal, colorLoader } from 'utils';
 import { CategoryScore } from 'components/CategoryScore';
 import { useLocation } from 'react-router-dom';
 import BookCallVideo from 'components/BookCallVideo/BookCallVideo';
-import HealthVideo from 'pages/videoplayer';
+import { HealthVideo } from 'components/Modal';
 
 function HealthScore() {
   const [bubbleValue, setBubbleValue] = useState(20);
@@ -21,7 +21,7 @@ function HealthScore() {
       setVideos(data.video);
     }
   }, [location]);
-  console.log(scores, 'khu', videos);
+
   return (
     <Container questionaire={true}>
       {scores && (

@@ -1,0 +1,9 @@
+export { default as Booking } from './booking';
+export { default as HealthQuestionare } from './health-questionare';
+export { default as DnaQuestionare } from './dna-questionare';
+export { default as Faq } from './faq';
+export { default as HealthScore } from './health-score';
+export { default as Home } from './home';
+export { default as LearnMore } from './learn-more';
+export { default as OverView } from './overview';
+export { default as Support } from './support';

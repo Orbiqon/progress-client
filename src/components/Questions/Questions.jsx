@@ -97,8 +97,14 @@ function Questions({
         {`${index + 1}. `}
         {question_text}
       </div>
-      {type === 'mcqs' && answers && (
-        <div className="2xl:mb-40 mx-20 cursor-pointer ">
+      {answers && (
+        <div
+          className={
+            type == 'mcqs'
+              ? '2xl:mb-40 mx-20 cursor-pointer '
+              : 'flex 2xl:mb-40 mx-20 cursor-pointer '
+          }
+        >
           {answers.map((item, i) => (
             <div
               className="flex  mr-40 label text-dark-grey mb-10"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, BackButton } from 'components/Button';
 
-function IFrame({ onClick }) {
+function Booking({ onClick }) {
   return (
     <div>
       <iframe
@@ -30,4 +30,4 @@ function IFrame({ onClick }) {
   );
 }
 
-export default IFrame;
+export default Booking;
