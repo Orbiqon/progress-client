@@ -113,7 +113,7 @@ function Questionare({
           </>
         }
         {data1 && status == 200 && (
-          <div className="flex justify-center overflow-hidden relative h-217">
+          <div className="flex justify-center 2xl:overflow-hidden relative h-217 sm: mb-40">
             <motion.div
               animate={{
                 x: 0,

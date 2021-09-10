@@ -17,20 +17,22 @@ function MobileHeader({ questionaire }) {
         <Link to={HOME}>
           <img src="images/logo/logo.svg" />
         </Link>
-        <div
-          className="flex"
-          onClick={() => {
-            if (questionaire) {
-            } else {
-              setIsOpenMenu(!isOpenMenu);
-            }
-          }}
-        >
-          <div className="m-10 uppercase text-xs font-semibold font-display flex items-center text-green">
-            {questionaire ? 'Back' : ' Menu'}
+        <Link to={HOME}>
+          <div
+            className="flex"
+            onClick={() => {
+              if (questionaire) {
+              } else {
+                setIsOpenMenu(!isOpenMenu);
+              }
+            }}
+          >
+            <div className="m-10 uppercase text-xs font-semibold font-display flex items-center text-green">
+              {questionaire ? 'Back' : ' Menu'}
+            </div>
+            <img src={`images/${icon}`} />
           </div>
-          <img src={`images/${icon}`} />
-        </div>
+        </Link>
       </div>
       <MobileSidebar
         isOpenMenu={isOpenMenu}
