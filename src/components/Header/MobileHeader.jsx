@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { EntryPoint } from 'components/Modal';
 import MobileSidebar from './MobileSidebar';
 import { Link } from 'react-router-dom';
-import { LINKS } from 'utils';
+import { LINKS, ConditionalLink } from 'utils';
 
 function MobileHeader({ questionaire }) {
   const { HOME } = LINKS;
@@ -17,7 +17,7 @@ function MobileHeader({ questionaire }) {
         <Link to={HOME}>
           <img src="images/logo/logo.svg" />
         </Link>
-        <Link to={HOME}>
+        <ConditionalLink to={HOME} condition={questionaire}>
           <div
             className="flex"
             onClick={() => {
@@ -32,7 +32,7 @@ function MobileHeader({ questionaire }) {
             </div>
             <img src={`images/${icon}`} />
           </div>
-        </Link>
+        </ConditionalLink>
       </div>
       <MobileSidebar
         isOpenMenu={isOpenMenu}

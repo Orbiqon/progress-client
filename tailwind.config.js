@@ -448,6 +448,7 @@ module.exports = {
     },
     fontSize: {
       xs: ['8px'],
+      10: ['10px'],
       sm: ['12px', { lineHeight: '180%' }],
       base: ['14px', { lineHeight: '180%' }],
       lg: ['32px'],

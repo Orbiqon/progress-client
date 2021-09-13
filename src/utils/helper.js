@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const bubblesCircle = ({
   parentClass,
   noOfBubbles,
@@ -56,3 +58,6 @@ export const colorLoader = (value) => {
       return 'primary-green';
   }
 };
+
+export const ConditionalLink = ({ children, to, condition }) =>
+  !!condition && to ? <Link to={to}>{children}</Link> : <>{children}</>;

@@ -70,6 +70,7 @@ function Questionare({
 
   return (
     <Container questionaire={true}>
+      {/* {window.innerWidth > 576?} */}
       <div className="sm:hidden 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
         <BubbleLoading
           noOfBubbles="20"
@@ -98,14 +99,42 @@ function Questionare({
           </div>
         </BubbleLoading>
       </div>
-      <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+      <div className="2xl:hidden sm:pt-60 ">
+        <BubbleLoading
+          noOfBubbles="20"
+          parentClass="maindiv"
+          childClass="div2"
+          childHeight="15"
+          value={bubbleValue}
+        >
+          <div id="maindiv">
+            <div className="mr-10 centerText text-center flex flex-col justify-center h-100%">
+              {data &&
+                data.payload.map((item, i) => (
+                  <div
+                    className={
+                      i == currentCategory
+                        ? `text-${colorLoader(
+                            bubbleValue
+                          )} text-10 font-display font-medium`
+                        : 'text-primary-grey font-display text-sm'
+                    }
+                  >
+                    {item.name}
+                  </div>
+                ))}
+            </div>
+          </div>
+        </BubbleLoading>
+      </div>
+      <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100 sm:pt-20">
         {
           <>
-            <div className="mt-40 sub-heading text-blue text-center 2xl:mb-40 sm:pb-20">
+            <div className="2xl:mt-40 sub-heading text-blue text-center 2xl:mb-40 sm:pb-20">
               {(data && data.payload[0].name) || 'Environmental'}
             </div>
             <div className="2xl:flex 2xl:justify-center">
-              <div className="2xl:w-50% content 2xl:text-center mx-30 pb-40">
+              <div className="2xl:w-50% content text-center mx-30 pb-40">
                 {(data && data.payload[0].description) ||
                   'Lorem Ipsum seckt venum istrum'}
               </div>
