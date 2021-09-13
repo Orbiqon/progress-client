@@ -205,7 +205,7 @@ function Questionare({
                     data.payload.length == currentCategory + 1
                   ) {
                     onComplete();
-                  } else if (index + 1 == data1.payload.length) {
+                  } else if (questionType == 'dna') {
                     onComplete(response);
                   } else {
                     submit();
