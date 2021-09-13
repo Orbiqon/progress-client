@@ -41,7 +41,7 @@ function DnaQuestionare() {
     // finalResponse[0].exam_type_id = 1;
     // finalResponse[0].category_id = 0;
 
-    attempt({ variables: { exam_type_id: 2, data: response, user_id: 1 } });
+    attempt({ variables: { exam_type_id: 2, data: response, user_id: id } });
   };
 
   return (
