@@ -131,7 +131,7 @@ function Questionare({
         {
           <>
             <div className="2xl:mt-40 sub-heading text-blue text-center 2xl:mb-40 sm:pb-20">
-              {(data && data.payload[0].name) || 'Environmental'}
+              {(data && data.payload[currentCategory].name) || 'Environmental'}
             </div>
             <div className="2xl:flex 2xl:justify-center">
               <div className="2xl:w-50% content text-center mx-30 pb-40">
