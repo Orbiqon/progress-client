@@ -3,4 +3,5 @@ export {
   getCategoriesService,
   signInService,
   attemptService,
+  staticDataService
 } from './api-services';

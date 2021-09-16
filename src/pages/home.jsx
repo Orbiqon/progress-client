@@ -2,8 +2,31 @@ import React from 'react';
 import { Container } from 'Layout';
 import { MobileForm } from 'components/Form';
 import { Button } from 'components/Button';
+import { staticDataService } from 'api';
+import { useFetch } from 'hooks';
 
 function Home() {
+  const { data, status } = useFetch(staticDataService, {
+    variables: `home`,
+  });
+  const [element]=(data&&data)||[]
+  const {acf}=(element&&element)||{}
+  const {
+    heading,
+    description,
+    section_title_one,
+    section_title_two,
+    section_title_three,
+    section_title_four,
+    section_title_five,
+    section_description_one,
+    section_description_two,
+    section_description_three,
+    section_description_four,
+    section_description_five,
+    bottom_description
+  }=(acf&&acf)||{}
+
   return (
     <Container>
       <>
@@ -15,14 +38,11 @@ function Home() {
             />
           </div>
           <div className="heading 2xl:text-47 pb-20">
-            Lorem ipsum dolor sit amet
+            {heading}
           </div>
           <div className="2xl:flex 2xl:justify-center content text-center sm:mb-40 mx-10">
             <span className="2xl:w-70% 2xl:text-18">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac
-              lacinia ex, vitae scelerisque nisl. Sed ac velit sit amet odio
-              rutrum dignissim sed ac felis. Mauris convallis magna lectus, id
-              blandit metus volutpat non.
+            {description}
             </span>
           </div>
         </div>
@@ -40,10 +60,11 @@ function Home() {
                   </div>
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
-                    <div className="footer-label font-bold">Lorem Ipsum </div>
+                    <div className="footer-label font-bold">
+                    {/* {section_title_one} */}
+                    </div>
                     <div className="label my-10 text-white">
-                      Lorem Ipsum has been the industry’ standard dummy text
-                      ever since the 1500s, when an unk
+                      {/* {section_description_one} */}
                     </div>
                   </div>
                 </div>
@@ -53,10 +74,11 @@ function Home() {
                   </div>
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
-                    <div className="footer-label font-bold">Lorem Ipsum </div>
+                    <div className="footer-label font-bold">
+                    {/* {section_title_two} */}
+                    </div>
                     <div className="label my-10 text-white">
-                      Lorem Ipsum has been the industry’ standard dummy text
-                      ever since the 1500s, when an unk
+                      {/* {section_description_two} */}
                     </div>
                   </div>
                 </div>
@@ -66,10 +88,11 @@ function Home() {
                   </div>
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
-                    <div className="footer-label font-bold">Lorem Ipsum</div>
+                    <div className="footer-label font-bold">
+                    {/* {section_title_three} */}
+                    </div>
                     <div className="label mt-10 text-white sm:pb-20 2xl:pb-80">
-                      Lorem Ipsum has been the industry’ standard dummy text
-                      ever since the 1500s, when an unk
+                      {/* {section_description_three} */}
                     </div>
                   </div>
                 </div>
@@ -81,10 +104,11 @@ function Home() {
                   </div>
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
-                    <div className="footer-label font-bold">Lorem Ipsum </div>
+                    <div className="footer-label font-bold">
+                    {/* {section_title_four} */}
+                    </div>
                     <div className="label my-10 text-white">
-                      Lorem Ipsum has been the industry’ standard dummy text
-                      ever since the 1500s, when an unk
+                    {/* {section_description_four} */}
                     </div>
                   </div>
                 </div>
@@ -94,10 +118,11 @@ function Home() {
                   </div>
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
-                    <div className="footer-label font-bold">Lorem Ipsum</div>
+                    <div className="footer-label font-bold">
+                    {/* {section_title_five} */}
+                    </div>
                     <div className="label mt-10 text-white pb-80">
-                      Lorem Ipsum has been the industry’ standard dummy text
-                      ever since the 1500s, when an unk
+                      {/* {section_description_five} */}
                     </div>
                   </div>
                 </div>
@@ -107,11 +132,7 @@ function Home() {
         </div>
         <div className="2xl:justify-center flex 2xl:mt-87 2xl:mb-62">
           <div className=" 2xl:w-50% flex justify-center content text-center sm:mt-80 sm:mx-22 sm:mb-40">
-            Our unique health questionnaire is designed to give you a view of
-            the state of your health as you are feeling today. Our programme is
-            designed around everything your body needs to help you optimise your
-            health. The results are emailed to you to give you an overview of
-            your key areas to improve
+            {bottom_description}
           </div>
         </div>
         <div className="flex justify-center 2xl:pb-106 sm:pb-80">
@@ -121,5 +142,6 @@ function Home() {
     </Container>
   );
 }
+
 
 export default Home;

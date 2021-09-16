@@ -13,6 +13,7 @@ function DnaQuestionare() {
   const [response, setResponse] = useState([{ category_id: '', answers: [] }]);
   const [complete, setComplete] = useState(false);
   const [currentCategory, setCurrentCategory] = useState(0);
+  
   const { data, status } = useFetch(getQuestionsService, {
     variables: `?&exam_type_id=2`,
   });
@@ -38,8 +39,7 @@ function DnaQuestionare() {
   let { id } = useParams();
 
   const onComplete = (response) => {
-    // finalResponse[0].exam_type_id = 1;
-    // finalResponse[0].category_id = 0;
+
 
     attempt({ variables: { exam_type_id: 2, data: response, user_id: id } });
   };
@@ -52,7 +52,6 @@ function DnaQuestionare() {
         setFinalResponse={setFinalResponse}
         index={index}
         setIndex={setIndex}
-        // data={data && data}
         type="correction"
         data1={data && data}
         currentCategory={currentCategory}
@@ -63,7 +62,6 @@ function DnaQuestionare() {
         setTotalQuestions={setTotalQuestions}
         onComplete={onComplete}
       />
-      {/* <div>Hello Orbiqon</div> */}
       <Complete open={complete} setOpen={setComplete} />
     </>
   );

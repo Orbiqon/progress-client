@@ -2,17 +2,15 @@ import React from 'react';
 import { TextField } from 'components/Form';
 import { Button } from 'components/Button';
 
-function Form() {
+function Form({title,description}) {
   return (
     <div className="">
       <div className="font-display text-blue text-lg text-center sm:text-lg 2xl:text-2xl font-medium pb-20">
-        Contact Us
+        {title}
       </div>
       <div className="mx-20 2xl:mb-40 sm:mb-80 font-display text-center text-dark-grey text-base flex justify-center">
         <span className="2xl:w-50% 2xl:text-16">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et
-          nisl dignissim, elementum nulla tempor, semper dui. Pellentesque
-          habitant morbi tristique senectus.
+          {description}
         </span>
       </div>
       <div className="pt-40 pb-15 flex flex-col items-center bg-grey-white sm:mx-20 rounded-t">

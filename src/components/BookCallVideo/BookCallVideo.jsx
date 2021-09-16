@@ -3,6 +3,8 @@ import { Button, BackButton } from 'components/Button';
 
 function BookCallVideo({
   step = true,
+  text,
+  heading,
   title = 'Book a Free 30 minute call',
   description = true,
   onClick,
@@ -40,7 +42,7 @@ function BookCallVideo({
                 : '2xl:pt-120 2xl:w-50% 2xl:text-2xl sm:text-xl sm:ml-97 sm:mr-76 text-white text-center'
             }
           >
-            Lorem ipsum dolor
+            {heading}
           </div>
         </div>
       </div>
@@ -56,13 +58,7 @@ function BookCallVideo({
       <div className="flex justify-center pt-196">
         {description ? (
           <div class="2xl:text-16 sm:text-base text-white text-center 2xl:w-44% sm:mx-20">
-            If you are interested to learn more you can watch a video explaining
-            the programme and who it is deigned for. At this point you can book
-            a free, no obligation call with one of our team to talk through your
-            unique needs and see whether we can help you make progress with your
-            health. We HATE hard sales pitches so this call will simply be a
-            chance for you to ask more questions and learn how the programme
-            could be tailored to help you.
+            {text}
           </div>
         ) : (
           <div className="flex pb-40">
