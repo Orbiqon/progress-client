@@ -9,24 +9,16 @@ function Home() {
   const { data, status } = useFetch(staticDataService, {
     variables: `home`,
   });
-  const [element]=(data&&data)||[]
-  const {acf}=(element&&element)||{}
+  
+  const [element={}]=data||[]
+  const {acf={}}=element
+  
   const {
     heading,
     description,
-    section_title_one,
-    section_title_two,
-    section_title_three,
-    section_title_four,
-    section_title_five,
-    section_description_one,
-    section_description_two,
-    section_description_three,
-    section_description_four,
-    section_description_five,
+    section = [],
     bottom_description
-  }=(acf&&acf)||{}
-
+  } = acf
   return (
     <Container>
       <>

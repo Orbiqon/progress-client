@@ -18,10 +18,10 @@ function LearnMore() {
 
   const [element={}]=data||[]
   const {acf={}}=element
-  
   const {heading, description, video_section = {}, slider:slider1 = {}, contact = {}} = acf
   const {title : video_section_title, description: video_section_description} = video_section
-  const {title : slider_title, description: slider_description, slider : slider2 = []} = slider1
+  const {title : slider_title, description: slider_description, slider : slider_slider = []} = slider1
+  const {heading : contact_heading, description: contact_description} = contact
 
 
 
@@ -158,18 +158,11 @@ function LearnMore() {
         <div className="2xl:flex w-100% 2xl:justify-between 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="sm:w-100% 2xl:w-50%">
             <div className="2xl:text-3xl 2xl:text-left 2xl: heading pb-20 mx-20">
-              Learn more
+              {heading}
             </div>
             <div className="content 2xl:text-18 sm:text-center sm:mx-20 mb-40">
               <span className="2xl:w-50%">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ac lacinia ex, vitae scelerisque nisl. Sed ac velit sit amet
-                odio rutrum dignissim sed ac felis. Mauris convallis magna
-                lectus, id blandit metus volutpat non. Quisque bibendum libero
-                bibendum, malesuada libero id, tristique nisl. Sed faucibus
-                placerat neque ac ullamcorper. Vestibulum in turpis ante. Fusce
-                mattis arcu sit amet turpis varius, ut congue sem maximus.
-                Aliquam interdum aliquam ipsum, vel rutrum mi.
+                {description}
               </span>
             </div>
           </div>
@@ -186,7 +179,7 @@ function LearnMore() {
           </picture>
         </div>
         <div className="sm:pb-80 2xl:pt-100 sm:pt-40 2xl:pb-120">
-          <BookCallVideo step={false} />
+          <BookCallVideo heading={video_section_title} text={video_section_description} step={false} />
         </div>
         <div className="flex sm:flex-col-reverse ">
           <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 2xl:w-50%">
@@ -219,16 +212,16 @@ function LearnMore() {
             </div>
             <div className="sm:hidden slider4 ">
               <Slider {...settings1}>
-                {[...Array(4)].map(() => (
+                {slider_slider.map((element) => (
                   <div className="rounded-sm  text-base ">
                     <img
-                      src="/images/learn-more/final-report1.jpg"
+                      src={ element.image ? element.image : "/images/learn-more/final-report1.jpg"}
                       className="rounded-sm sm:pl-20"
                     />
 
                     <div className="pl-20 mt-10">
                       <div className="text-base  font-display text-white  font-display pb-10">
-                        Menus / Final report
+                        {element.acf_fc_layout}
                       </div>
                     </div>
                   </div>
@@ -238,22 +231,16 @@ function LearnMore() {
           </div>
           <div className="2xl:ml-100 2xl:w-30% sm:mb-100">
             <div className="sub-heading mx-20 text-blue 2xl:text-2xl sm:text-center pb-20">
-              Lorem ipsum dolor sit amet
+              {slider_title}
             </div>
             <div className="mx-20 content sm:text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac
-              lacinia ex, vitae scelerisque nisl. Sed ac velit sit amet odio
-              rutrum dignissim sed ac felis. Mauris convallis magna lectus, id
-              blandit metus volutpat non. Quisque bibendum libero bibendum,
-              malesuada libero id, tristique nisl. Sed faucibus placerat libero
-              bibendum, malesuada libero id, tristique nisl. Sed faucibus
-              placerat
+              {slider_description}
             </div>
           </div>
         </div>
         <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="mb-_40 mt-80 ">
-            <MobileForm />
+            <MobileForm title={contact_heading} description={contact_description} />
           </div>
         </div>
       </div>
