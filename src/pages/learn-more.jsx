@@ -6,8 +6,25 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
+import { staticDataService } from 'api';
+import { useFetch } from 'hooks';
+
 
 function LearnMore() {
+
+  const { data, status } = useFetch(staticDataService, {
+    variables: `learnmore`,
+  });
+
+  const [element={}]=data||[]
+  const {acf={}}=element
+  
+  const {heading, description, video_section = {}, slider:slider1 = {}, contact = {}} = acf
+  const {title : video_section_title, description: video_section_description} = video_section
+  const {title : slider_title, description: slider_description, slider : slider2 = []} = slider1
+
+
+
   const settings1 = {
     dots: false,
     infinite: false,

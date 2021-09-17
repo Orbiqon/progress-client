@@ -6,8 +6,31 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
 import { useEffect } from 'react';
+import { staticDataService } from 'api';
+import { useFetch } from 'hooks';
 
 function Support() {
+
+  const { data, status } = useFetch(staticDataService, {
+    variables: `support`,
+  });
+
+  const [element={}]=data||[]
+  const {acf={}}=element
+
+  const {
+    heading, 
+    description, 
+    section_1 = {}, 
+    principles = {}, 
+    slider_2 = []
+  } = acf
+
+  const {title : section_1_title, description : section_1_description, slider : slider1 = []} = section_1
+  const {heading : principles_heading, sub_content = []} = principles
+  
+
+
   const settings = {
     dots: false,
     infinite: false,
@@ -162,13 +185,10 @@ function Support() {
           <div className="2xl:flex w-100% 2xl:justify-between 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
             <div className="sm:w-100% 2xl:w-50%">
               <div className="2xl:text-3xl 2xl:text-left 2xl: heading pb-20 sm:mx-20">
-                Your Support Team
+                {heading}
               </div>
               <div className="content 2xl:text-18 sm:text-center mb-30">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ac lacinia ex, vitae scelerisque nisl. Sed ac velit sit amet
-                odio rutrum dignissim sed ac felis. Mauris convallis magna
-                lectus, id blandit metus volutpat non.
+                {description}
               </div>
             </div>
             <picture>
@@ -187,31 +207,24 @@ function Support() {
         <div className="2xl:flex 2xl:flex-row-reverse ">
           <div className="sm:mx-20 sm:mb-113 2xl:w-50% ">
             <div className="sub-heading text-blue sm:text-center pb-20 2xl:ml-173 ">
-              Lorem ipsum dolor sit amet
+              {section_1_title}
             </div>
             <div className="content sm:text-center 2xl:w-50% 2xl:ml-173 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac
-              lacinia ex, vitae scelerisque nisl. Sed ac velit sit amet odio
-              rutrum dignissim sed ac felis. Mauris convallis magna lectus, id
-              blandit metus volutpat non. Quisque bibendum libero bibendum,
-              malesuada libero id, tristique nisl. Sed faucibus placerat libero
-              bibendum, malesuada libero id, tristique nisl. Sed faucibus
-              placerat
+              {section_1_description}
             </div>
             <div className="slider2 sm:hidden">
               <Slider {...settings1} className="2xl:m-100 ">
-                {[...Array(4)].map(() => (
+                {slider1.map((element) => (
                   <div className="rounded-sm h-200 w-270 text-base">
-                    <img src="/images/support/slider-pic.jpeg" />
+                    <img src={element.image.url}/>
 
                     <div className="w-270 mt-20">
                       <div>
                         <div className="text-base  font-display text-black-gray font-bold font-display pb-10">
-                          Mike Vincent
+                          {element.name}
                         </div>
                         <div className="text-sm font-display text-gray-black">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit
+                          {element.description}
                         </div>
                       </div>
                     </div>
@@ -228,9 +241,9 @@ function Support() {
             />
             <div className="2xl:ml-40% 2xl:mr-20%">
               <div className="sub-heading text-white pb-34 pt-315">
-                Our principles
+                {principles_heading}
               </div>
-              <div className="flex">
+              {/* <div className="flex">
                 <div className="w-38%">
                   <img src="images/support/principle1.svg" />
                 </div>
@@ -242,8 +255,8 @@ function Support() {
                     since the 1500s, when an unk
                   </div>
                 </div>
-              </div>
-              <div className="flex">
+              </div> */}
+              {/* <div className="flex">
                 <div className="w-38%">
                   <img src="images/support/principle2.svg" />
                 </div>
@@ -255,20 +268,26 @@ function Support() {
                     since the 1500s, when an unk
                   </div>
                 </div>
-              </div>
-              <div className="flex">
-                <div className="w-38%">
-                  <img src="images/support/principle3.svg" />
-                </div>
+              </div> */}
+             <div className='pb-70'>
+              {
+                sub_content.map((element) => (
+                    <div className="flex">
+                      <div className="w-38%">
+                        <img src={element.logo} />
+                      </div>
 
-                <div className="mx-20 mt-10">
-                  <div className="footer-label font-bold">Principl 3</div>
-                  <div className="label mt-10 text-white pb-80">
-                    Lorem Ipsum has been the industry’ standard dummy text ever
-                    since the 1500s, when an unk
-                  </div>
-                </div>
-              </div>
+                      <div className="mx-20 mt-10">
+                        <div className="footer-label font-bold">{element.title}</div>
+                        <div className="label mt-10 text-white pb-10">
+                          {element.description}
+                        </div>
+                      </div>
+                    </div>
+                  )
+                )
+               }
+             </div>            
             </div>
             <div
               className="slider2 2xl:hidden sm:pb-30 sm:mr-_20"
@@ -313,30 +332,23 @@ function Support() {
         <div>
           <div className="slider1">
             <Slider {...settings} className="2xl:m-100 sm:mt-80">
-              {[...Array(4)].map(() => (
+              {slider_2.map((element) => (
                 <div className="rounded-sm h-200 text-base">
                   <div className="shadow mx-20 mb-38 2xl:text-base sm:text-sm  text-black 2xl:p-35 sm:p-20 relative">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam et nisl dignissim, elementum nulla tempor, semper
-                    dui. Pellentesque habitant morbi tristique senectus. Lorem
-                    ipsum dolor sit amet, consectetur adipiscnisl dignissim,
-                    elementum nulla tempor, semper dui. Pellentesque habitant
-                    morbi tristique senectus. Lorem ipsum dolor sit amet,
-                    consectetur adipiscinga dui. Pellentesque habitant morbi
-                    tristique senectus.
+                    {element.text}
                     <img
                       src="/images/home/vector.svg"
                       className="absolute bottom-_17 left-20"
                     />
                   </div>
                   <div className="flex mx-20">
-                    <img src="/images/home/slider.svg" className="w-50 h-50" />
+                    <img src={element.image ? element.image : "/images/home/slider.svg"} className="w-50 h-50" />
                     <div className="ml-35">
                       <div className="2xl:text-18 sm:text-base font-display text-blue font-display">
-                        Patrick Lindbark
+                       {element.name}
                       </div>
                       <div className="2xl:text-16 sm:text-sm font-display text-light-grey">
-                        Expert
+                        {element.category}
                       </div>
                     </div>
                   </div>

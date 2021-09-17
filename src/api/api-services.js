@@ -21,5 +21,6 @@ export const attemptService = (data) => {
 };
 
 export const staticDataService = (data) => {
+  console.log("staticDataService", data, STATIC_DATA_URL)
   return doGet(`${STATIC_DATA_URL}${data}`);
 };
