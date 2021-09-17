@@ -13,7 +13,7 @@ function DnaQuestionare() {
   const [response, setResponse] = useState([{ category_id: '', answers: [] }]);
   const [complete, setComplete] = useState(false);
   const [currentCategory, setCurrentCategory] = useState(0);
-  
+
   const { data, status } = useFetch(getQuestionsService, {
     variables: `?&exam_type_id=2`,
   });
@@ -39,8 +39,6 @@ function DnaQuestionare() {
   let { id } = useParams();
 
   const onComplete = (response) => {
-
-
     attempt({ variables: { exam_type_id: 2, data: response, user_id: id } });
   };
 

@@ -9,8 +9,9 @@ function Home() {
   const { data, status } = useFetch(staticDataService, {
     variables: `home`,
   });
-  const [element]=(data&&data)||[]
-  const {acf}=(element&&element)||{}
+
+  const [element] = (data && data) || [];
+  const { acf } = (element && element) || {};
   const {
     heading,
     description,
@@ -24,8 +25,8 @@ function Home() {
     section_description_three,
     section_description_four,
     section_description_five,
-    bottom_description
-  }=(acf&&acf)||{}
+    bottom_description,
+  } = (acf && acf) || {};
 
   return (
     <Container>
@@ -37,13 +38,9 @@ function Home() {
               className="2xl:w-500 2xl:h-272"
             />
           </div>
-          <div className="heading 2xl:text-47 pb-20">
-            {heading}
-          </div>
+          <div className="heading 2xl:text-47 pb-20">{heading}</div>
           <div className="2xl:flex 2xl:justify-center content text-center sm:mb-40 mx-10">
-            <span className="2xl:w-70% 2xl:text-18">
-            {description}
-            </span>
+            <span className="2xl:w-70% 2xl:text-18">{description}</span>
           </div>
         </div>
         <div className="2xl:w-100% bg-gradient-green sm:pl-20 sm:mr-20 relative sm:rounded-r-md 2xl:h-819">
@@ -61,7 +58,7 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                    {/* {section_title_one} */}
+                      {/* {section_title_one} */}
                     </div>
                     <div className="label my-10 text-white">
                       {/* {section_description_one} */}
@@ -75,7 +72,7 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                    {/* {section_title_two} */}
+                      {/* {section_title_two} */}
                     </div>
                     <div className="label my-10 text-white">
                       {/* {section_description_two} */}
@@ -89,7 +86,7 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                    {/* {section_title_three} */}
+                      {/* {section_title_three} */}
                     </div>
                     <div className="label mt-10 text-white sm:pb-20 2xl:pb-80">
                       {/* {section_description_three} */}
@@ -105,10 +102,10 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                    {/* {section_title_four} */}
+                      {/* {section_title_four} */}
                     </div>
                     <div className="label my-10 text-white">
-                    {/* {section_description_four} */}
+                      {/* {section_description_four} */}
                     </div>
                   </div>
                 </div>
@@ -119,7 +116,7 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                    {/* {section_title_five} */}
+                      {/* {section_title_five} */}
                     </div>
                     <div className="label mt-10 text-white pb-80">
                       {/* {section_description_five} */}
@@ -142,6 +139,5 @@ function Home() {
     </Container>
   );
 }
-
 
 export default Home;
