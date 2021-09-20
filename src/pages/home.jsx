@@ -9,24 +9,16 @@ function Home() {
   const { data, status } = useFetch(staticDataService, {
     variables: `home`,
   });
-
-  const [element] = (data && data) || [];
-  const { acf } = (element && element) || {};
+  
+  const [element={}]=data||[]
+  const {acf={}}=element
+  
   const {
     heading,
     description,
-    section_title_one,
-    section_title_two,
-    section_title_three,
-    section_title_four,
-    section_title_five,
-    section_description_one,
-    section_description_two,
-    section_description_three,
-    section_description_four,
-    section_description_five,
-    bottom_description,
-  } = (acf && acf) || {};
+    section = [],
+    bottom_description
+  } = acf
 
   return (
     <Container>
@@ -49,19 +41,36 @@ function Home() {
               src="images/home/principle.svg"
               className=" sm:rounded-l-sm absolute sm:top-_70 sm:w-100% sm:right-_20 2xl:top-85 2xl:right-11 2xl:w-67% 2xl:h-637"
             />
-            <div className="  2xl:absolute 2xl:top-_30 sm:w-100% 2xl:w-50%  2xl:flex">
-              <div className="2xl:w-20%">
-                <div className="sm:flex  2xl:w-100% sm:pt-315">
+            <div className="  2xl:absolute 2xl:top-_30 sm:w-100% 2xl:w-70%  2xl:flex">
+              <div className="2xl:w-50% sm:pt-315 sm:pb-15 grid grid-cols-2 sm:block">
+
+                {section.map( element => (
+                  <div className="2xl:w-90% mt-8">
+                    <div className="w-25%">
+                      <img src={ element.logo ? element.logo : "images/home/principle1.svg"} />
+                    </div>
+
+                    <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
+                      <div className="footer-label font-bold">
+                      {element.title}
+                      </div>
+                      <div className="label my-10 text-white">
+                        {element.description}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {/* <div className="sm:flex  2xl:w-100% sm:pt-315">
                   <div className="w-38%">
                     <img src="images/home/principle1.svg" />
                   </div>
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                      {/* {section_title_one} */}
+                    {section_title_one}
                     </div>
                     <div className="label my-10 text-white">
-                      {/* {section_description_one} */}
+                      {section_description_one}
                     </div>
                   </div>
                 </div>
@@ -72,10 +81,10 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                      {/* {section_title_two} */}
+                    {section_title_two}
                     </div>
                     <div className="label my-10 text-white">
-                      {/* {section_description_two} */}
+                      {section_description_two}
                     </div>
                   </div>
                 </div>
@@ -86,26 +95,28 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                      {/* {section_title_three} */}
+                    {section_title_three}
+
                     </div>
                     <div className="label mt-10 text-white sm:pb-20 2xl:pb-80">
-                      {/* {section_description_three} */}
+                      {section_description_three}
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="2xl:ml-100 2xl:w-20%">
-                <div className="sm:flex  2xl:w-100% ">
+                </div> */}
+              </div
+              {/* <div className="2xl:ml-100 2xl:w-20%"> */}
+                {/* <div className="sm:flex  2xl:w-100% ">
                   <div className="w-38%">
                     <img src="images/home/principle2.svg" />
                   </div>
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                      {/* {section_title_four} */}
+                    {section_title_four}
                     </div>
                     <div className="label my-10 text-white">
-                      {/* {section_description_four} */}
+                    {section_description_four}
+
                     </div>
                   </div>
                 </div>
@@ -116,14 +127,15 @@ function Home() {
 
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
-                      {/* {section_title_five} */}
+                    {section_title_five}
+
                     </div>
                     <div className="label mt-10 text-white pb-80">
-                      {/* {section_description_five} */}
+                      {section_description_five}
                     </div>
                   </div>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </div>
           </div>
         </div>
