@@ -42,7 +42,6 @@ function Questionare({
   }, [data, currentCategory]);
 
   const submit = () => {
-    setCurrentCategory((prev) => prev + 1);
     setIndex(0);
     let copyResponse = [...response];
     const indexCheck = copyResponse.findIndex(
@@ -65,6 +64,8 @@ function Questionare({
       exam_type_id: 1,
       data: response,
     });
+
+    setCurrentCategory((prev) => prev + 1);
     setBubbleValue((prev) => prev + 20);
   };
 
@@ -205,6 +206,10 @@ function Questionare({
                     data.payload.length == currentCategory + 1
                   ) {
                     onComplete();
+                    setFinalResponse({
+                      exam_type_id: 1,
+                      data: response,
+                    });
                   } else if (questionType == 'dna') {
                     onComplete(response);
                   } else {

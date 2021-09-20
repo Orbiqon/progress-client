@@ -19,7 +19,7 @@ function Home() {
     section = [],
     bottom_description
   } = acf
-  console.log("Rizwan", section)
+
   return (
     <Container>
       <>
@@ -30,13 +30,9 @@ function Home() {
               className="2xl:w-500 2xl:h-272"
             />
           </div>
-          <div className="heading 2xl:text-47 pb-20">
-            {heading}
-          </div>
+          <div className="heading 2xl:text-47 pb-20">{heading}</div>
           <div className="2xl:flex 2xl:justify-center content text-center sm:mb-40 mx-10">
-            <span className="2xl:w-70% 2xl:text-18">
-            {description}
-            </span>
+            <span className="2xl:w-70% 2xl:text-18">{description}</span>
           </div>
         </div>
         <div className="2xl:w-100% bg-gradient-green sm:pl-20 sm:mr-20 relative sm:rounded-r-md 2xl:h-819">
@@ -100,13 +96,14 @@ function Home() {
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
                     {section_title_three}
+
                     </div>
                     <div className="label mt-10 text-white sm:pb-20 2xl:pb-80">
                       {section_description_three}
                     </div>
                   </div>
                 </div> */}
-              </div>
+              </div
               {/* <div className="2xl:ml-100 2xl:w-20%"> */}
                 {/* <div className="sm:flex  2xl:w-100% ">
                   <div className="w-38%">
@@ -119,6 +116,7 @@ function Home() {
                     </div>
                     <div className="label my-10 text-white">
                     {section_description_four}
+
                     </div>
                   </div>
                 </div>
@@ -130,6 +128,7 @@ function Home() {
                   <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                     <div className="footer-label font-bold">
                     {section_title_five}
+
                     </div>
                     <div className="label mt-10 text-white pb-80">
                       {section_description_five}
@@ -152,6 +151,5 @@ function Home() {
     </Container>
   );
 }
-
 
 export default Home;
