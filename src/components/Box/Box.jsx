@@ -6,6 +6,7 @@ function Box({ heading, detail, onClick }) {
       className={
         detail ? 'rounded-sm shadow-sm p-20 mb-20' : 'rounded-sm p-20 mb-20'
       }
+      onClick={onClick}
     >
       <div className="flex">
         <div className="w-40% mt-2">
@@ -16,7 +17,7 @@ function Box({ heading, detail, onClick }) {
           {detail ? <div className="label">{detail}</div> : null}
         </div>
         <div className="w-20% mt-6 cursor-pointer">
-          <img src={detail ? 'images/up-arrow.svg' : 'images/down-arrow.svg'} onClick={onClick} />
+          <img src={detail ? 'images/up-arrow.svg' : 'images/down-arrow.svg'}  />
         </div>
       </div>
     </div>
