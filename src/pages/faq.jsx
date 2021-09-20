@@ -12,7 +12,7 @@ import { elastic } from 'react-burger-menu';
 
 function Faq() {
 
-  const [select, setSelect] = useState(0)
+  const [select, setSelect] = useState({})
   const { data, status } = useFetch(staticDataService, {
     variables: `faq`,
   });
@@ -38,6 +38,15 @@ function Faq() {
       },
     ],
   };
+
+  const handleSelect = (index) => {
+   if(select == index){
+     setSelect()
+   }else{
+     setSelect(index)
+   }
+
+  }
   return (
     <Container>
       <>
@@ -51,7 +60,7 @@ function Faq() {
             {
               question_answers.map((element,index) => (
                 <div className="2xl:mr-30 " >
-                  <Box onClick={() => setSelect(index)} heading={element.question} detail={select == index && element.answer }/>
+                  <Box onClick={() => handleSelect(index)} heading={element.question} detail={select == index  && element.answer }/>
                 </div>
               ))
             }
