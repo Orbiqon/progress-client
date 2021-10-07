@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container } from 'Layout';
 import { MobileForm } from 'components/Form';
 import { Button } from 'components/Button';
@@ -10,37 +10,43 @@ import Arrow from 'components/Arrow/arrow';
 import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
 
-
 function Overview() {
-
   const { data, status } = useFetch(staticDataService, {
     variables: `overview`,
   });
 
-  
+  const [element = {}] = data || [];
+  const { acf = {} } = element;
 
-  const [element={}]=data||[]
-  const {acf={}}=element
- 
   const {
     heading,
     description,
-    step_1={},
-    step_2={},
-    step_3={},
-    step_4={},
-    step_5={},
-    bottom_section={},
-    slider_2=[],
-    contact={},
-  }=acf
-  const {title : step_1_title, description : step_1_description} = step_1 
-  const {title : step_2_title, description : step_2_description} =step_2 
-  const {title : step_3_title, description: step_3_description} = step_3 
-  const {title : step_4_title, description: step_4_description, sub_description=[]} = step_4
-  const {title : step_5_title, description : step_5_description} = step_5 
-  const {heading : bottom_heading, description : bottom_description} = bottom_section 
-  const {heading : contact_heading, description : contact_description} = contact 
+    step_1 = {},
+    step_2 = {},
+    step_3 = {},
+    step_4 = {},
+    step_5 = {},
+    bottom_section = {},
+    slider_2 = [],
+    contact = {},
+  } = acf;
+  const { title: step_1_title, description: step_1_description } = step_1;
+  const { title: step_2_title, description: step_2_description } = step_2;
+  const { title: step_3_title, description: step_3_description } = step_3;
+  const {
+    title: step_4_title,
+    description: step_4_description,
+    sub_description = [],
+  } = step_4;
+  const { title: step_5_title, description: step_5_description } = step_5;
+  const {
+    heading: bottom_heading,
+    description: bottom_description,
+  } = bottom_section;
+  const {
+    heading: contact_heading,
+    description: contact_description,
+  } = contact;
 
   const settings = {
     dots: false,
@@ -62,7 +68,7 @@ function Overview() {
       },
     ],
   };
-  
+
   const settings1 = {
     dots: false,
     arrows: false,
@@ -72,18 +78,20 @@ function Overview() {
     nextArrow: <Arrow dir="right" />,
     prevArrow: <Arrow dir="left" />,
   };
-  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Container>
-    {console.log("Sub =====> ", step_4_description)}
+      {console.log('Sub =====> ', step_4_description)}
       <>
         <div className="pt-60 sm:mx-20 mb-100 sm:mb-40 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="2xl:flex w-100% 2xl:justify-between">
             <div className="sm:w-100% 2xl:w-40%">
               <div className="heading text-left pb-20">{heading}</div>
-              <div className="content mb-40 2xl:text-18">
-                {description}
-              </div>
+              <div className="content mb-40 2xl:text-18">{description}</div>
               <div className="sm:hidden pb-60">
                 <Button
                   value="Start making progress"
@@ -136,14 +144,12 @@ function Overview() {
               <div className="sub-heading 2xl:text-36 text-blue pb-20">
                 {step_1_title}
               </div>
-              <div className="content 2xl:text-16">
-                {step_1_description}
-              </div>
+              <div className="content 2xl:text-16">{step_1_description}</div>
             </div>
           </div>
         </div>
         <section className="2xl:mt-100 sm:pb-80">
-          <BookCallVideo heading={step_2_title} text={step_2_description}/>
+          <BookCallVideo heading={step_2_title} text={step_2_description} />
         </section>
         <div className="flex sm:flex-col-reverse font-display text-white 2xl:mt-160 mb-120">
           <div className="2xl:mt-168 bg-gradient-blue rounded-r-md sm:pt-270 2xl:pt-515 2xl:w-50% mr-20 relative">
@@ -230,7 +236,7 @@ function Overview() {
               />
             </div>
             <div className="sub-heading 2xl:text-36 text-blue pb-20 2xl:w-50%">
-             {step_5_title}
+              {step_5_title}
             </div>
             <div className="2xl:w-70% content sm:pb-40 2xl:text-16">
               {step_5_description}
@@ -282,7 +288,10 @@ function Overview() {
                   />
                 </div>
                 <div className="flex mx-20">
-                  <img src={item.image ? item.image : "/images/home/slider.svg"} className="w-50 h-50 rounded-full object-cover" />
+                  <img
+                    src={item.image ? item.image : '/images/home/slider.svg'}
+                    className="w-50 h-50 rounded-full object-cover"
+                  />
                   <div className="ml-35">
                     <div className="2xl:text-18 sm:text-base font-display text-blue font-display">
                       {item.name}
@@ -298,7 +307,10 @@ function Overview() {
         </div>
         <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="mb-_40 mt-80 ">
-            <MobileForm  title={contact_heading} description={contact_description}/>
+            <MobileForm
+              title={contact_heading}
+              description={contact_description}
+            />
           </div>
         </div>
       </>

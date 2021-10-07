@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { LINKS } from 'utils';
 
 function EntryPoint({ open, setOpen }) {
-  const { QUESTIONARE } = LINKS;
+  const { QUESTIONARE, BOOKING } = LINKS;
 
   return (
     <Modal open={open} setOpen={setOpen}>
@@ -21,13 +21,16 @@ function EntryPoint({ open, setOpen }) {
         tempor incididunt ut labore et dolore magna aliqua.
       </div>
       <div className="flex justify-center mb-40">
-        <Link to={QUESTIONARE}>
+        <Link to={QUESTIONARE} className="mr-10">
           <Button
-            value=" Start making progress"
+            value="Take Questionaire"
             color="green"
             width="200"
             height="66"
           />
+        </Link>
+        <Link to={BOOKING}>
+          <Button value="Book a Call" color="blue" width="200" height="66" />
         </Link>
       </div>
     </Modal>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'Layout';
 import { Box } from 'components/Box';
 import { MobileForm } from 'components/Form';
@@ -11,16 +11,24 @@ import { useFetch } from 'hooks';
 import { elastic } from 'react-burger-menu';
 
 function Faq() {
-
-  const [select, setSelect] = useState({})
+  const [select, setSelect] = useState({});
   const { data, status } = useFetch(staticDataService, {
     variables: `faq`,
   });
 
-  const [element={}]=data||[]
-  const {acf={}}=element
-  const {heading, description, question_answers = [], slider = [], contact = {}} = acf
-  const {heading : contact_heading, description: contact_description} = contact
+  const [element = {}] = data || [];
+  const { acf = {} } = element;
+  const {
+    heading,
+    description,
+    question_answers = [],
+    slider = [],
+    contact = {},
+  } = acf;
+  const {
+    heading: contact_heading,
+    description: contact_description,
+  } = contact;
 
   const settings1 = {
     dots: false,
@@ -39,6 +47,9 @@ function Faq() {
     ],
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>
@@ -49,14 +60,17 @@ function Faq() {
             {description}
           </div>
           <div className="grid grid-cols-2 sm:block">
-          
-            {
-              question_answers.map((element,index) => (
-                <div className="2xl:mr-30 " >
-                  <Box onClick={() => setSelect((prev)=>prev!=index?index:null)} heading={element.question} detail={select == index  && element.answer }/>
-                </div>
-              ))
-            }
+            {question_answers.map((element, index) => (
+              <div className="2xl:mr-30 ">
+                <Box
+                  onClick={() =>
+                    setSelect((prev) => (prev != index ? index : null))
+                  }
+                  heading={element.question}
+                  detail={select == index && element.answer}
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className="bg-gradient-light-blue 2xl:mt-100 px-20 pt-40 pb-20">
@@ -65,7 +79,11 @@ function Faq() {
               {slider.map((element) => (
                 <div className="rounded-sm  w-370 text-base">
                   <img
-                    src={ element.image ? element.image : "/images/support/slider-pic.jpeg"}
+                    src={
+                      element.image
+                        ? element.image
+                        : '/images/support/slider-pic.jpeg'
+                    }
                     className="w-370"
                   />
 
@@ -85,7 +103,10 @@ function Faq() {
         </div>
         <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="mb-_40 mt-80 ">
-            <MobileForm title={contact_heading} description={contact_description} />
+            <MobileForm
+              title={contact_heading}
+              description={contact_description}
+            />
           </div>
         </div>
       </>

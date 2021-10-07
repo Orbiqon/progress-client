@@ -87,9 +87,7 @@ function Questionare({
                   <div
                     className={
                       i == currentCategory
-                        ? `text-${colorLoader(
-                            bubbleValue
-                          )} text-18 font-display font-medium`
+                        ? `text-black-grey text-18 font-display font-bold`
                         : 'text-primary-grey font-display text-sm'
                     }
                   >
@@ -115,9 +113,7 @@ function Questionare({
                   <div
                     className={
                       i == currentCategory
-                        ? `text-${colorLoader(
-                            bubbleValue
-                          )} text-10 font-display font-medium`
+                        ? `text-black-grey text-10 font-display font-bold bold`
                         : 'text-primary-grey font-display text-sm'
                     }
                   >
@@ -132,7 +128,7 @@ function Questionare({
         {
           <>
             <div className="2xl:mt-40 sub-heading text-blue text-center 2xl:mb-40 sm:pb-20">
-              {(data && data.payload[currentCategory].name) || 'Environmental'}
+              {(data && data.payload[currentCategory].name) || 'DNA'}
             </div>
             <div className="2xl:flex 2xl:justify-center">
               <div className="2xl:w-50% content text-center mx-30 pb-40">
@@ -176,7 +172,7 @@ function Questionare({
             width="70"
             height="32"
             color="blue"
-            value="Back"
+            value={data && data.payload[currentCategory - 1].name}
             onClick={() => {
               setCurrentCategory((prev) => prev - 1);
               setBubbleValue((prev) => prev - 20);
@@ -197,7 +193,7 @@ function Questionare({
                     : index + 1 == data1.payload.length &&
                       data.payload.length == currentCategory + 1
                     ? 'Get My Result'
-                    : 'Next'
+                    : data && data.payload[currentCategory + 1].name
                 }
                 onClick={() => {
                   if (

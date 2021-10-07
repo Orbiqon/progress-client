@@ -9,21 +9,33 @@ import Arrow from 'components/Arrow/arrow';
 import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
 
-
 function LearnMore() {
-
   const { data, status } = useFetch(staticDataService, {
     variables: `learnmore`,
   });
 
-  const [element={}]=data||[]
-  const {acf={}}=element
-  const {heading, description, video_section = {}, slider:slider1 = {}, contact = {}} = acf
-  const {title : video_section_title, description: video_section_description} = video_section
-  const {title : slider_title, description: slider_description, slider : slider_slider = []} = slider1
-  const {heading : contact_heading, description: contact_description} = contact
-
-
+  const [element = {}] = data || [];
+  const { acf = {} } = element;
+  const {
+    heading,
+    description,
+    video_section = {},
+    slider: slider1 = {},
+    contact = {},
+  } = acf;
+  const {
+    title: video_section_title,
+    description: video_section_description,
+  } = video_section;
+  const {
+    title: slider_title,
+    description: slider_description,
+    slider: slider_slider = [],
+  } = slider1;
+  const {
+    heading: contact_heading,
+    description: contact_description,
+  } = contact;
 
   const settings1 = {
     dots: false,
@@ -72,6 +84,10 @@ function LearnMore() {
       sliderRef.current.children[0].children[1].children[0].children.length
     );
   }, [sliderRef]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const prevSlide = () => {
     slider.slickPrev();
@@ -161,9 +177,7 @@ function LearnMore() {
               {heading}
             </div>
             <div className="content 2xl:text-18 sm:text-center sm:mx-20 mb-40">
-              <span className="2xl:w-50%">
-                {description}
-              </span>
+              <span className="2xl:w-50%">{description}</span>
             </div>
           </div>
           <picture>
@@ -179,7 +193,11 @@ function LearnMore() {
           </picture>
         </div>
         <div className="sm:pb-80 2xl:pt-100 sm:pt-40 2xl:pb-120">
-          <BookCallVideo heading={video_section_title} text={video_section_description} step={false} />
+          <BookCallVideo
+            heading={video_section_title}
+            text={video_section_description}
+            step={false}
+          />
         </div>
         <div className="flex sm:flex-col-reverse ">
           <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 2xl:w-50%">
@@ -215,7 +233,11 @@ function LearnMore() {
                 {slider_slider.map((element) => (
                   <div className="rounded-sm  text-base ">
                     <img
-                      src={ element.image ? element.image : "/images/learn-more/final-report1.jpg"}
+                      src={
+                        element.image
+                          ? element.image
+                          : '/images/learn-more/final-report1.jpg'
+                      }
                       className="rounded-sm sm:pl-20"
                     />
 
@@ -240,7 +262,10 @@ function LearnMore() {
         </div>
         <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
           <div className="mb-_40 mt-80 ">
-            <MobileForm title={contact_heading} description={contact_description} />
+            <MobileForm
+              title={contact_heading}
+              description={contact_description}
+            />
           </div>
         </div>
       </div>

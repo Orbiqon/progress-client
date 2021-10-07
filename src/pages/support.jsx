@@ -10,26 +10,27 @@ import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
 
 function Support() {
-
   const { data, status } = useFetch(staticDataService, {
     variables: `support`,
   });
 
-  const [element={}]=data||[]
-  const {acf={}}=element
+  const [element = {}] = data || [];
+  const { acf = {} } = element;
 
   const {
-    heading, 
-    description, 
-    section_1 = {}, 
-    principles = {}, 
-    slider_2 = []
-  } = acf
+    heading,
+    description,
+    section_1 = {},
+    principles = {},
+    slider_2 = [],
+  } = acf;
 
-  const {title : section_1_title, description : section_1_description, slider : slider1 = []} = section_1
-  const {heading : principles_heading, sub_content = []} = principles
-  
-
+  const {
+    title: section_1_title,
+    description: section_1_description,
+    slider: slider1 = [],
+  } = section_1;
+  const { heading: principles_heading, sub_content = [] } = principles;
 
   const settings = {
     dots: false,
@@ -99,6 +100,10 @@ function Support() {
       sliderRef.current.children[0].children[1].children[0].children.length
     );
   }, [sliderRef]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const prevSlide = () => {
     slider.slickPrev();
@@ -216,7 +221,7 @@ function Support() {
               <Slider {...settings1} className="2xl:m-100 ">
                 {slider1.map((element) => (
                   <div className="rounded-sm h-200 w-270 text-base">
-                    <img src={element.image.url}/>
+                    <img src={element.image.url} />
 
                     <div className="w-270 mt-20">
                       <div>
@@ -269,25 +274,24 @@ function Support() {
                   </div>
                 </div>
               </div> */}
-             <div className='pb-70'>
-              {
-                sub_content.map((element) => (
-                    <div className="flex">
-                      <div className="w-38%">
-                        <img src={element.logo} />
-                      </div>
+              <div className="pb-70">
+                {sub_content.map((element) => (
+                  <div className="flex">
+                    <div className="w-38%">
+                      <img src={element.logo} />
+                    </div>
 
-                      <div className="mx-20 mt-10">
-                        <div className="footer-label font-bold">{element.title}</div>
-                        <div className="label mt-10 text-white pb-10">
-                          {element.description}
-                        </div>
+                    <div className="mx-20 mt-10">
+                      <div className="footer-label font-bold">
+                        {element.title}
+                      </div>
+                      <div className="label mt-10 text-white pb-10">
+                        {element.description}
                       </div>
                     </div>
-                  )
-                )
-               }
-             </div>            
+                  </div>
+                ))}
+              </div>
             </div>
             <div
               className="slider2 2xl:hidden sm:pb-30 sm:mr-_20"
@@ -342,10 +346,17 @@ function Support() {
                     />
                   </div>
                   <div className="flex mx-20">
-                    <img src={element.image ? element.image : "/images/home/slider.svg"} className="w-50 h-50" />
+                    <img
+                      src={
+                        element.image
+                          ? element.image
+                          : '/images/home/slider.svg'
+                      }
+                      className="w-50 h-50"
+                    />
                     <div className="ml-35">
                       <div className="2xl:text-18 sm:text-base font-display text-blue font-display">
-                       {element.name}
+                        {element.name}
                       </div>
                       <div className="2xl:text-16 sm:text-sm font-display text-light-grey">
                         {element.category}
