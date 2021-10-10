@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Arrow(props) {
-  const { className, onClick, dir } = props;
+  const { className, onClick, dir, icon = 'Arrowblack' } = props;
   return (
     <div className={className} onClick={onClick}>
-      <img src={`/images/slick/${dir}-arrow.svg`} className="max-w-xl" />
+      <img src={`/images/arrow/${icon}${dir}.svg`} className="max-w-xl" />
     </div>
   );
 }

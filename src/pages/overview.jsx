@@ -279,7 +279,7 @@ function Overview() {
         <div className="slider1">
           <Slider {...settings} className="2xl:m-100 sm:mt-80">
             {slider_2.map((item) => (
-              <div className="rounded-sm h-200 text-base">
+              <div className="rounded-sm h-auto text-base">
                 <div className="shadow mx-20 mb-38 2xl:text-base sm:text-sm  text-black 2xl:p-35 sm:p-20 relative">
                   {item.text}
                   <img
@@ -296,7 +296,7 @@ function Overview() {
                     <div className="2xl:text-18 sm:text-base font-display text-blue font-display">
                       {item.name}
                     </div>
-                    <div className="2xl:text-16 sm:text-sm font-display text-light-grey">
+                    <div className="2xl:text-16 mb-10 sm:text-sm font-display text-light-grey">
                       {item.category}
                     </div>
                   </div>

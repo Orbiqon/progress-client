@@ -182,7 +182,9 @@ function Support() {
     } else {
     }
   };
-
+  {
+    console.log('slid', slider);
+  }
   return (
     <Container>
       <>
@@ -303,7 +305,7 @@ function Support() {
                 {...settings1}
                 className="2xl:m-100 "
               >
-                {[...Array(4)].map(() => (
+                {[...Array(4)].map((item, index) => (
                   <div className="rounded-sm h-200 w-270 text-base mt-18">
                     <img
                       src="/images/support/slider-pic.jpeg"
@@ -326,9 +328,19 @@ function Support() {
               </Slider>
               <div className="flex justify-end mr-40">
                 <div className="mr-10">
-                  <Arrow dir="left" onClick={() => prevSlide()} />
+                  <Arrow
+                    dir="left"
+                    icon="Arrow"
+                    // className={index == 0 ? 'opacity-10' : ''}
+                    onClick={() => prevSlide()}
+                  />
                 </div>
-                <Arrow dir="right" onClick={() => nextSlide()} />
+                <Arrow
+                  dir="right"
+                  icon="Arrow"
+                  // className={index == 3 ? 'opacity-10' : ''}
+                  onClick={() => nextSlide()}
+                />
               </div>
             </div>
           </div>

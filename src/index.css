@@ -98,8 +98,12 @@
   left: 72% !important;
 }
 
+.slick-disabled {
+  opacity: 0.2 !important;
+}
+
 .slider1 .slick-next {
-  right: 18% !important ;
+  right: 23% !important ;
   top: 100% !important;
 }
 

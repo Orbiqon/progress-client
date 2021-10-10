@@ -42,8 +42,8 @@ function LearnMore() {
     infinite: false,
     slidesToShow: 2,
     slidesToScroll: 1,
-    nextArrow: <Arrow dir="right" />,
-    prevArrow: <Arrow dir="left" />,
+    nextArrow: <Arrow dir="right" icon="Arrow" />,
+    prevArrow: <Arrow dir="left" icon="Arrow" />,
 
     // centerPadding: '25%',
   };
