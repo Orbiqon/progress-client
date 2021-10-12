@@ -9,16 +9,11 @@ function Home() {
   const { data, status } = useFetch(staticDataService, {
     variables: `home`,
   });
-  
-  const [element={}]=data||[]
-  const {acf={}}=element
-  
-  const {
-    heading,
-    description,
-    section = [],
-    bottom_description
-  } = acf
+
+  const [element = {}] = data || [];
+  const { acf = {} } = element;
+
+  const { heading, description, section = [], bottom_description } = acf;
 
   return (
     <Container>
@@ -26,8 +21,9 @@ function Home() {
         <div className="2xl:pt-129 sm:pt-86 sm:mx-20 mb-113 2xl:max-w-lg 2xl:m-auto 2xl:px-100 2xl:mb-206">
           <div className="flex justify-center pb-56">
             <img
-              src="images/logo/logo-verticle.svg"
+              src="images/logo/progress.gif"
               className="2xl:w-500 2xl:h-272"
+              loop="1"
             />
           </div>
           <div className="heading 2xl:text-47 pb-20">{heading}</div>
@@ -43,16 +39,21 @@ function Home() {
             />
             <div className="  2xl:absolute 2xl:top-_30 sm:w-100% 2xl:w-70%  2xl:flex">
               <div className="2xl:w-50% sm:pt-315 sm:pb-15 grid grid-cols-2 sm:block">
-
-                {section.map( element => (
+                {section.map((element) => (
                   <div className="2xl:w-90% mt-8">
                     <div className="w-25%">
-                      <img src={ element.logo ? element.logo : "images/home/principle1.svg"} />
+                      <img
+                        src={
+                          element.logo
+                            ? element.logo
+                            : 'images/home/principle1.svg'
+                        }
+                      />
                     </div>
 
                     <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
                       <div className="footer-label font-bold">
-                      {element.title}
+                        {element.title}
                       </div>
                       <div className="label my-10 text-white">
                         {element.description}

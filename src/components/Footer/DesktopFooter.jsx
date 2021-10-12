@@ -11,7 +11,7 @@ function DesktopFooter() {
         <div className="flex justify-between">
           <div>
             <Link to={HOME}>
-              <img src="images/logo/logo-desktop.svg" />
+              <img src="images/logo/logo-footer.svg" />
             </Link>
             <div className="flex mt-20">
               <div className="label text-white pr-30">
