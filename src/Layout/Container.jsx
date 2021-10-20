@@ -9,7 +9,7 @@ function Container({ children, questionaire = false }) {
 
   return (
     <>
-      {window.innerWidth > 1024 ? (
+      {window.innerWidth > 959 ? (
         <div className="sm:hidden ">
           <DesktopHeader questionaire={questionaire} />
           <div className="">{children}</div>

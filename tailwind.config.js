@@ -77,7 +77,7 @@ module.exports = {
       md: [{ min: '641px', max: '768px' }],
       lg: [{ min: '769px', max: '1024px' }],
       xl: [{ min: '1025px', max: '1280px' }],
-      '2xl': '1440px',
+      '2xl': [{ min: '960px' }],
     },
     colors: {
       transparent: 'transparent',
