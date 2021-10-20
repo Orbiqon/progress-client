@@ -18,29 +18,29 @@ function Home() {
   return (
     <Container>
       <>
-        <div className="2xl:pt-129 sm:pt-86 sm:mx-20 mb-113 2xl:max-w-lg 2xl:m-auto 2xl:px-100 2xl:mb-206">
+        <div className="pt-129 sm:pt-86 sm:mx-20 mb-113 max-w-lg m-auto px-100 lg:px-50 mb-206">
           <div className="flex justify-center pb-56">
             <img
               src="images/logo/progress.gif"
-              className="2xl:w-500 2xl:h-272"
+              className="w-500 h-272"
               loop="1"
             />
           </div>
-          <div className="heading 2xl:text-47 pb-20">{heading}</div>
-          <div className="2xl:flex 2xl:justify-center content text-center sm:mb-40 mx-10">
-            <span className="2xl:w-70% 2xl:text-18">{description}</span>
+          <div className="heading text-47 pb-20">{heading}</div>
+          <div className="flex justify-center content text-center sm:mb-40 mx-10">
+            <span className="w-70% text-18">{description}</span>
           </div>
         </div>
-        <div className="2xl:w-100% bg-gradient-green sm:pl-20 sm:mr-20 relative sm:rounded-r-md 2xl:h-819">
-          <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+        <div className="w-100% bg-gradient-green sm:pl-20 sm:mr-20 relative sm:rounded-r-md h-819">
+          <div className="max-w-lg m-auto px-100">
             <img
               src="images/home/principle.svg"
-              className=" sm:rounded-l-sm absolute sm:top-_70 sm:w-100% sm:right-_20 2xl:top-85 2xl:right-11 2xl:w-67% 2xl:h-637"
+              className=" sm:rounded-l-sm absolute sm:top-_70 lg:w-auto lg:right-0 md:w-50% sm:w-100% sm:right-_20 top-85 right-11 w-67% h-637"
             />
-            <div className="  2xl:absolute 2xl:top-_30 sm:w-100% 2xl:w-70%  2xl:flex">
-              <div className="2xl:w-50% sm:pt-315 sm:pb-15 grid grid-cols-2 sm:block">
+            <div className="  absolute top-_30 sm:w-100% w-70%  flex">
+              <div className="w-50% sm:pt-315 sm:pb-15 grid grid-cols-2 sm:block">
                 {section.map((element) => (
-                  <div className="2xl:w-90% mt-8">
+                  <div className="w-90% mt-8">
                     <div className="w-25%">
                       <img
                         src={
@@ -51,7 +51,7 @@ function Home() {
                       />
                     </div>
 
-                    <div className="sm:mx-20 sm:mt-10 2xl:mt-36">
+                    <div className="sm:mx-20 sm:mt-10 mt-36">
                       <div className="footer-label font-bold">
                         {element.title}
                       </div>
@@ -65,12 +65,12 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="2xl:justify-center flex 2xl:mt-87 2xl:mb-62">
-          <div className=" 2xl:w-50% flex justify-center content text-center sm:mt-80 sm:mx-22 sm:mb-40">
+        <div className="justify-center flex mt-87 mb-62">
+          <div className=" w-50% flex justify-center content text-center sm:mt-80 sm:mx-22 sm:mb-40">
             {bottom_description}
           </div>
         </div>
-        <div className="flex justify-center 2xl:pb-106 sm:pb-80">
+        <div className="flex justify-center pb-106 sm:pb-80">
           <Button value="Lorem ipsum" color="green" width="200" height="66" />
         </div>
       </>

@@ -87,11 +87,11 @@ function Overview() {
     <Container>
       {console.log('Sub =====> ', step_4_description)}
       <>
-        <div className="pt-60 sm:mx-20 mb-100 sm:mb-40 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
-          <div className="2xl:flex w-100% 2xl:justify-between">
-            <div className="sm:w-100% 2xl:w-40%">
+        <div className="pt-60 sm:mx-20 mb-100 sm:mb-40 max-w-lg m-auto px-100">
+          <div className="flex w-100% justify-between">
+            <div className="sm:w-100% w-40%">
               <div className="heading text-left pb-20">{heading}</div>
-              <div className="content mb-40 2xl:text-18">{description}</div>
+              <div className="content mb-40 text-18">{description}</div>
               <div className="sm:hidden pb-60">
                 <Button
                   value="Start making progress"
@@ -102,7 +102,7 @@ function Overview() {
                   DeHeight="66"
                 />
               </div>
-              <div className="sm:hidden 2xl:ml-10">
+              <div className="sm:hidden ml-10">
                 <img src="/images/scroll-down.svg" />
               </div>
             </div>
@@ -118,7 +118,7 @@ function Overview() {
               <img className="m-auto" src="images/overview/card-header.svg" />
             </picture>
           </div>
-          <div className="2xl:flex w-100% sm:flex sm:flex-col-reverse 2xl:mt-120">
+          <div className="flex w-100% sm:flex sm:flex-col-reverse mt-120">
             <picture>
               <source
                 media="(min-width:651px)"
@@ -130,7 +130,7 @@ function Overview() {
               />
               <img className="m-auto" src="images/overview/question.svg" />
             </picture>
-            <div className="2xl:pl-100 sm:w-100% 2xl:w-50% sm:pt-20 2xl:mt-80">
+            <div className="pl-100 sm:w-100% w-50% sm:pt-20 mt-80">
               <div className="pb-10">
                 <Button
                   value="step 1"
@@ -141,18 +141,18 @@ function Overview() {
                   DeHeight="46"
                 />
               </div>
-              <div className="sub-heading 2xl:text-36 text-blue pb-20">
+              <div className="sub-heading text-36 text-blue pb-20">
                 {step_1_title}
               </div>
-              <div className="content 2xl:text-16">{step_1_description}</div>
+              <div className="content text-16">{step_1_description}</div>
             </div>
           </div>
         </div>
-        <section className="2xl:mt-100 sm:pb-80">
+        <section className="mt-100 sm:pb-80">
           <BookCallVideo heading={step_2_title} text={step_2_description} />
         </section>
-        <div className="flex sm:flex-col-reverse font-display text-white 2xl:mt-160 mb-120">
-          <div className="2xl:mt-168 bg-gradient-blue rounded-r-md sm:pt-270 2xl:pt-515 2xl:w-50% mr-20 relative">
+        <div className="flex sm:flex-col-reverse font-display text-white mt-160 mb-120">
+          <div className="mt-168 bg-gradient-blue rounded-r-md sm:pt-270 pt-515 w-50% mr-20 relative">
             <div className="slider5 absolute w-80% right-0 top-_78 ">
               <Slider {...settings1}>
                 <img src="/images/overview/slider/pic1.jpg" className="w--80" />
@@ -171,11 +171,11 @@ function Overview() {
               />
               <img
                 src="/images/overview/step3.svg"
-                className="absolute 2xl:right-_518 sm:right-_20 sm:bottom-_158"
+                className="absolute right-_518 sm:right-_20 sm:bottom-_158"
               />
             </picture>
 
-            <div className="2xl:max-w-md 2xl:m-auto sm:mx-20">
+            <div className="max-w-md m-auto sm:mx-20">
               <div className="pt-60">
                 <Button
                   value="step 4"
@@ -186,17 +186,17 @@ function Overview() {
                   DeHeight="46"
                 />
               </div>
-              <div className="2xl:text-36 sm:text-xl font-display font-medium sm:mb-20 sm:mt-10 2xl:my-20">
+              <div className="text-36 sm:text-xl font-display font-medium sm:mb-20 sm:mt-10 my-20">
                 {step_4_title}
               </div>
-              <div className="2xl:text-16 font-display sm:text-base  2xl:mb-60 ">
+              <div className="text-16 font-display sm:text-base  mb-60 ">
                 {step_4_description}
               </div>
-              <div className="2xl:mb-160 sm:mt-40 sm:pb-398">
+              <div className="mb-160 sm:mt-40 sm:pb-398">
                 {sub_description.map((item) => (
                   <div className="flex ">
                     <img src={item.logo} className="self-start" />
-                    <div className="2xl:text-base sm:text-sm sm:ml-20 2xl:ml-30 mb-30 2xl:w-370">
+                    <div className="text-base sm:text-sm sm:ml-20 ml-30 mb-30 w-370">
                       {item.description}
                     </div>
                   </div>
@@ -204,7 +204,7 @@ function Overview() {
               </div>
             </div>
           </div>
-          <div className="2xl:mx-70 2xl:w-40% sm:mx-20">
+          <div className="mx-70 w-40% sm:mx-20">
             <div className="pb-10">
               <Button
                 value="step 3"
@@ -215,16 +215,14 @@ function Overview() {
                 DeHeight="46"
               />
             </div>
-            <div className="sub-heading 2xl:text-36 text-blue pb-20 w-253">
+            <div className="sub-heading text-36 text-blue pb-20 w-253">
               {step_3_title}
             </div>
-            <div className="content 2xl:text-16 2xl:w-370">
-              {step_3_description}
-            </div>
+            <div className="content text-16 w-370">{step_3_description}</div>
           </div>
         </div>
-        <div className="mx-20 sm:pt-60 2xl:flex 2xl:flex-row-reverse 2xl:max-w-lg 2xl:m-auto 2xl:px-10">
-          <div className="2xl:pl-100 2xl:w-50% ">
+        <div className="mx-20 sm:pt-60 flex flex-row-reverse max-w-lg m-auto px-10">
+          <div className="pl-100 w-50% ">
             <div className="pb-10 ">
               <Button
                 value="step 5"
@@ -235,10 +233,10 @@ function Overview() {
                 DeHeight="46"
               />
             </div>
-            <div className="sub-heading 2xl:text-36 text-blue pb-20 2xl:w-50%">
+            <div className="sub-heading text-36 text-blue pb-20 w-50%">
               {step_5_title}
             </div>
-            <div className="2xl:w-70% content sm:pb-40 2xl:text-16">
+            <div className="w-70% content sm:pb-40 text-16">
               {step_5_description}
             </div>
           </div>
@@ -254,13 +252,13 @@ function Overview() {
             <img className="m-auto" src="images/overview/weight.svg" />
           </picture>
         </div>
-        <div className="bg-gradient-green 2xl:flex 2xl:justify-between 2xl:mt-129 mt-28 sm:pt-80 2xl:py-60 mb-100">
-          <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100 2xl:flex 2xl:justify-between">
-            <div className="2xl:w-70%">
-              <div className="sub-heading 2xl:text-36 text-white sm:text-center sm:mx-40 mb-20">
+        <div className="bg-gradient-green flex justify-between mt-129 mt-28 sm:pt-80 py-60 mb-100">
+          <div className="max-w-lg m-auto px-100 flex justify-between">
+            <div className="w-70%">
+              <div className="sub-heading text-36 text-white sm:text-center sm:mx-40 mb-20">
                 {bottom_heading}
               </div>
-              <div className="footer-label 2xl:text-16 sm:text-center sm:mx-20 ">
+              <div className="footer-label text-16 sm:text-center sm:mx-20 ">
                 {bottom_description}
               </div>
             </div>
@@ -277,10 +275,10 @@ function Overview() {
           </div>
         </div>
         <div className="slider1">
-          <Slider {...settings} className="2xl:m-100 sm:mt-80">
+          <Slider {...settings} className="m-100 sm:mt-80">
             {slider_2.map((item) => (
               <div className="rounded-sm h-auto text-base">
-                <div className="shadow mx-20 mb-38 2xl:text-base sm:text-sm  text-black 2xl:p-35 sm:p-20 relative">
+                <div className="shadow mx-20 mb-38 text-base sm:text-sm  text-black p-35 sm:p-20 relative">
                   {item.text}
                   <img
                     src="/images/home/vector.svg"
@@ -293,10 +291,10 @@ function Overview() {
                     className="w-50 h-50 rounded-full object-cover"
                   />
                   <div className="ml-35">
-                    <div className="2xl:text-18 sm:text-base font-display text-blue font-display">
+                    <div className="text-18 sm:text-base font-display text-blue font-display">
                       {item.name}
                     </div>
-                    <div className="2xl:text-16 mb-10 sm:text-sm font-display text-light-grey">
+                    <div className="text-16 mb-10 sm:text-sm font-display text-light-grey">
                       {item.category}
                     </div>
                   </div>
@@ -305,7 +303,7 @@ function Overview() {
             ))}{' '}
           </Slider>
         </div>
-        <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+        <div className="max-w-lg m-auto px-100">
           <div className="mb-_40 mt-80 ">
             <MobileForm
               title={contact_heading}

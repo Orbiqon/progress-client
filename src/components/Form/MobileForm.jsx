@@ -2,16 +2,14 @@ import React from 'react';
 import { TextField } from 'components/Form';
 import { Button } from 'components/Button';
 
-function Form({title,description}) {
+function Form({ title, description }) {
   return (
     <div className="">
-      <div className="font-display text-blue text-lg text-center sm:text-lg 2xl:text-2xl font-medium pb-20">
+      <div className="font-display text-blue text-lg text-center sm:text-lg text-2xl font-medium pb-20">
         {title}
       </div>
-      <div className="mx-20 2xl:mb-40 sm:mb-80 font-display text-center text-dark-grey text-base flex justify-center">
-        <span className="2xl:w-50% 2xl:text-16">
-          {description}
-        </span>
+      <div className="mx-20 mb-40 sm:mb-80 font-display text-center text-dark-grey text-base flex justify-center">
+        <span className="w-50% text-16">{description}</span>
       </div>
       <div className="pt-40 pb-15 flex flex-col items-center bg-grey-white sm:mx-20 rounded-t">
         <img src="images/facebook/fb-logo.svg" />
@@ -22,8 +20,8 @@ function Form({title,description}) {
       </div>
 
       <div className="relative  bg-gradient-green sm:mx-20 rounded-b-md">
-        <div className="2xl:w-100% 2xl:flex 2xl:justify-between">
-          <div className="2xl:w-100%">
+        <div className="w-100% flex justify-between">
+          <div className="w-100%">
             <div className="pt-40 pb-20">
               <TextField
                 placeholder="Name"
@@ -52,7 +50,7 @@ function Form({title,description}) {
               />
             </div>
           </div>
-          <div className="2xl:pt-40 2xl:w-100% sm:pb-20">
+          <div className="pt-40 w-100% sm:pb-20">
             <TextField
               placeholder="Message"
               pb="115"

@@ -7,7 +7,7 @@ function Booking({ onClick }) {
       <iframe
         src="https://secure.gethealthie.com/appointments/embed_appt?dietitian_id=678293&appt_type_ids=[131371,131372,134619]"
         // style="width:100%; height: 100%; min-height:600px; border:0px"
-        className="w-100% h-100% 2xl:max-w-lg 2xl:m-auto 2xl:px-10"
+        className="w-100% h-100% max-w-lg m-auto px-10"
         style={{ minHeight: '629px' }}
       ></iframe>
       <div className="flex pb-20 justify-center mt-20">

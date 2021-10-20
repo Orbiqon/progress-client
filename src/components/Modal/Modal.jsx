@@ -15,7 +15,7 @@ function Modal({ children, open, setOpen }) {
       styles={bg}
       showCloseIcon={false}
       classNames={{
-        modal: 'sm:w-100% sm:h-100% 2xl:w-40%  modal',
+        modal: 'sm:w-100% sm:h-100% w-40%  modal',
       }}
       center
     >

@@ -50,7 +50,7 @@ function HealthScore() {
               Your health score
             </div>
             <div className="flex justify-center">
-              <div className="sm:w-90% 2xl:w-30% font-display text-base text-dark-grey  text-center">
+              <div className="sm:w-90% w-30% font-display text-base text-dark-grey  text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus ultricies sem orci, ac pellentesque nunc viverra sed.
                 Curabitur luctus ligula quam, ut accumsan lectus efficitur eu.
@@ -58,7 +58,7 @@ function HealthScore() {
               </div>
             </div>
           </div>
-          <div className="2xl:flex 2xl:justify-center 2xl:flex-wrap 2xl:pb-168  2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+          <div className="flex justify-center flex-wrap pb-168  max-w-lg m-auto px-100">
             {scores.categories.map((item, index) => (
               <div className="grid-item" key={index}>
                 <CategoryScore

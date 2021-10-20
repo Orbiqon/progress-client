@@ -72,7 +72,7 @@ function Questionare({
   return (
     <Container questionaire={true}>
       {/* {window.innerWidth > 576?} */}
-      <div className="sm:hidden 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+      <div className="sm:hidden max-w-lg m-auto px-100">
         <BubbleLoading
           noOfBubbles="20"
           parentClass="parentdiv"
@@ -98,7 +98,7 @@ function Questionare({
           </div>
         </BubbleLoading>
       </div>
-      <div className="2xl:hidden sm:pt-60 ">
+      <div className="hidden sm:pt-60 ">
         <BubbleLoading
           noOfBubbles="20"
           parentClass="maindiv"
@@ -124,14 +124,14 @@ function Questionare({
           </div>
         </BubbleLoading>
       </div>
-      <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100 sm:pt-20">
+      <div className="max-w-lg m-auto px-100 sm:pt-20">
         {
           <>
-            <div className="2xl:mt-40 sub-heading text-blue text-center 2xl:mb-40 sm:pb-20">
+            <div className="mt-40 sub-heading text-blue text-center mb-40 sm:pb-20">
               {(data && data.payload[currentCategory].name) || 'DNA'}
             </div>
-            <div className="2xl:flex 2xl:justify-center">
-              <div className="2xl:w-50% content text-center mx-30 pb-40">
+            <div className="flex justify-center">
+              <div className="w-50% content text-center mx-30 pb-40">
                 {(data && data.payload[0].description) ||
                   'Lorem Ipsum seckt venum istrum'}
               </div>
@@ -139,7 +139,7 @@ function Questionare({
           </>
         }
         {data1 && status == 200 && (
-          <div className="flex justify-center 2xl:overflow-hidden relative h-217 sm: mb-40">
+          <div className="flex justify-center overflow-hidden relative h-217 sm: mb-40">
             <motion.div
               animate={{
                 x: 0,

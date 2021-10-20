@@ -12,7 +12,7 @@ function Button({
   return (
     <button
       onClick={onClick}
-      className={`bg-gradient-${color} cursor-pointer uppercase text-sm font-display text-white font-bold rounded-sm sm:w-${width} sm:h-${height} 2xl:w-${DeWidth} 2xl:h-${DeHeight}`}
+      className={`bg-gradient-${color} cursor-pointer uppercase text-sm font-display text-white font-bold rounded-sm sm:w-${width} sm:h-${height} w-${DeWidth} h-${DeHeight}`}
     >
       {value}
     </button>

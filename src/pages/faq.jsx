@@ -54,14 +54,14 @@ function Faq() {
   return (
     <Container>
       <>
-        <div className="2xl:pt-80 sm:pt-60 2xl:max-w-lg 2xl:m-auto 2xl:px-100 sm:mx-38">
+        <div className="pt-80 sm:pt-60 max-w-lg m-auto px-100 sm:mx-38">
           <div className="heading pb-13">{heading}</div>
-          <div className="content 2xl:text-18 text-center sm:mb-40 2xl:mb-60">
+          <div className="content text-18 text-center sm:mb-40 mb-60">
             {description}
           </div>
           <div className="grid grid-cols-2 sm:block">
             {question_answers.map((element, index) => (
-              <div className="2xl:mr-30 ">
+              <div className="mr-30 ">
                 <Box
                   onClick={() =>
                     setSelect((prev) => (prev != index ? index : null))
@@ -73,8 +73,8 @@ function Faq() {
             ))}
           </div>
         </div>
-        <div className="bg-gradient-light-blue 2xl:mt-100 px-20 pt-40 pb-20">
-          <div className="slider3 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+        <div className="bg-gradient-light-blue mt-100 px-20 pt-40 pb-20">
+          <div className="slider3 max-w-lg m-auto px-100">
             <Slider {...settings1} className="mb-100">
               {slider.map((element) => (
                 <div className="rounded-sm  w-370 text-base">
@@ -87,7 +87,7 @@ function Faq() {
                     className="w-370"
                   />
 
-                  <div className="sm:98% 2xl:w-270 rounded-lg py-20  relative">
+                  <div className="sm:98% w-270 rounded-lg py-20  relative">
                     <div className="bg-white p-20 rounded-lg">
                       {element.comment}
                     </div>
@@ -101,7 +101,7 @@ function Faq() {
             </Slider>
           </div>
         </div>
-        <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+        <div className="max-w-lg m-auto px-100">
           <div className="mb-_40 mt-80 ">
             <MobileForm
               title={contact_heading}

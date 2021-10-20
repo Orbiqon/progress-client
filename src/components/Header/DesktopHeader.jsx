@@ -10,7 +10,7 @@ function DesktopHeader({ questionaire }) {
 
   return (
     <>
-      <div className="max-w-lg m-auto flex justify-between pt-41 px-100">
+      <div className="max-w-lg m-auto flex justify-between pt-41 px-100 ">
         <Link to={HOME}>
           <img src="images/logo/logo-desktop.svg" className="cursor-pointer" />
         </Link>

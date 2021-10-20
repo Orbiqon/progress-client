@@ -19,9 +19,9 @@ function TextField({
   error,
 }) {
   return (
-    <div className={`relative sm:mx-15 2xl:ml-${ml} 2xl:mr-${mr}`}>
+    <div className={`relative sm:mx-15 ml-${ml} mr-${mr}`}>
       <input
-        className={` w-100% rounded-sm box-${border} bg-white outline-none ${border} ${border}-solid ${border}-border h-${height} 2xl:pb-${dpb} pb-${pb} pt-${pt} -indent-${indent} placeholder-dark-grey`}
+        className={` w-100% rounded-sm box-${border} bg-white outline-none ${border} ${border}-solid ${border}-border h-${height} pb-${dpb} pb-${pb} pt-${pt} -indent-${indent} placeholder-dark-grey`}
         name={name}
         placeholder={placeholder}
         type={type}

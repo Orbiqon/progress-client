@@ -73,11 +73,11 @@ module.exports = {
       },
     },
     screens: {
-      sm: [{ min: '0px', max: '640px' }],
+      sm: [{ min: '0px', max: '768px' }],
       md: [{ min: '641px', max: '768px' }],
       lg: [{ min: '769px', max: '1024px' }],
       xl: [{ min: '1025px', max: '1280px' }],
-      '2xl': [{ min: '960px' }],
+      '2xl': [{ min: '1025px' }],
     },
     colors: {
       transparent: 'transparent',

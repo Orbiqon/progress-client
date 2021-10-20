@@ -188,13 +188,13 @@ function Support() {
   return (
     <Container>
       <>
-        <div className="pt-60 mx-20 2xl:mb-272 sm:mb-100">
-          <div className="2xl:flex w-100% 2xl:justify-between 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
-            <div className="sm:w-100% 2xl:w-50%">
-              <div className="2xl:text-3xl 2xl:text-left 2xl: heading pb-20 sm:mx-20">
+        <div className="pt-60 mx-20 mb-272 sm:mb-100">
+          <div className="flex w-100% justify-between max-w-lg m-auto px-100">
+            <div className="sm:w-100% w-50%">
+              <div className="text-3xl text-left  heading pb-20 sm:mx-20">
                 {heading}
               </div>
-              <div className="content 2xl:text-18 sm:text-center mb-30">
+              <div className="content text-18 sm:text-center mb-30">
                 {description}
               </div>
             </div>
@@ -211,16 +211,16 @@ function Support() {
             </picture>
           </div>
         </div>
-        <div className="2xl:flex 2xl:flex-row-reverse ">
-          <div className="sm:mx-20 sm:mb-113 2xl:w-50% ">
-            <div className="sub-heading text-blue sm:text-center pb-20 2xl:ml-173 ">
+        <div className="flex flex-row-reverse ">
+          <div className="sm:mx-20 sm:mb-113 w-50% ">
+            <div className="sub-heading text-blue sm:text-center pb-20 ml-173 ">
               {section_1_title}
             </div>
-            <div className="content sm:text-center 2xl:w-50% 2xl:ml-173 ">
+            <div className="content sm:text-center w-50% ml-173 ">
               {section_1_description}
             </div>
             <div className="slider2 sm:hidden">
-              <Slider {...settings1} className="2xl:m-100 ">
+              <Slider {...settings1} className="m-100 ">
                 {slider1.map((element) => (
                   <div className="rounded-sm h-200 w-270 text-base">
                     <img src={element.image.url} />
@@ -241,12 +241,12 @@ function Support() {
             </div>
           </div>
 
-          <div className="bg-gradient-blue pl-20 mr-20 relative rounded-r-md 2xl:w-52% ">
+          <div className="bg-gradient-blue pl-20 mr-20 relative rounded-r-md w-52% ">
             <img
               src="images/support/principle.svg"
-              className="2xl:h-580 h-305 rounded-l-sm absolute 2xl:right-_13% 2xl:top-_237 sm:top-_70 sm:right-_20"
+              className="h-580 h-305 rounded-l-sm absolute right-_13% top-_237 sm:top-_70 sm:right-_20"
             />
-            <div className="2xl:ml-40% 2xl:mr-20%">
+            <div className="ml-40% mr-20%">
               <div className="sub-heading text-white pb-34 pt-315">
                 {principles_heading}
               </div>
@@ -296,14 +296,14 @@ function Support() {
               </div>
             </div>
             <div
-              className="slider2 2xl:hidden sm:pb-30 sm:mr-_20"
+              className="slider2 hidden sm:pb-30 sm:mr-_20"
               id="mbl-slider"
               ref={sliderRef}
             >
               <Slider
                 ref={(c) => setSlider(c)}
                 {...settings1}
-                className="2xl:m-100 "
+                className="m-100 "
               >
                 {[...Array(4)].map((item, index) => (
                   <div className="rounded-sm h-200 w-270 text-base mt-18">
@@ -347,10 +347,10 @@ function Support() {
         </div>
         <div>
           <div className="slider1">
-            <Slider {...settings} className="2xl:m-100 sm:mt-80">
+            <Slider {...settings} className="m-100 sm:mt-80">
               {slider_2.map((element) => (
                 <div className="rounded-sm h-200 text-base">
-                  <div className="shadow mx-20 mb-38 2xl:text-base sm:text-sm  text-black 2xl:p-35 sm:p-20 relative">
+                  <div className="shadow mx-20 mb-38 text-base sm:text-sm  text-black p-35 sm:p-20 relative">
                     {element.text}
                     <img
                       src="/images/home/vector.svg"
@@ -367,10 +367,10 @@ function Support() {
                       className="w-50 h-50"
                     />
                     <div className="ml-35">
-                      <div className="2xl:text-18 sm:text-base font-display text-blue font-display">
+                      <div className="text-18 sm:text-base font-display text-blue font-display">
                         {element.name}
                       </div>
-                      <div className="2xl:text-16 sm:text-sm font-display text-light-grey">
+                      <div className="text-16 sm:text-sm font-display text-light-grey">
                         {element.category}
                       </div>
                     </div>
@@ -380,7 +380,7 @@ function Support() {
             </Slider>
           </div>
         </div>
-        <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+        <div className="max-w-lg m-auto px-100">
           <div className="mb-_40 mt-80">
             <MobileForm />
           </div>

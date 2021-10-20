@@ -171,13 +171,13 @@ function LearnMore() {
   return (
     <Container>
       <div className="pt-60 ">
-        <div className="2xl:flex w-100% 2xl:justify-between 2xl:max-w-lg 2xl:m-auto 2xl:px-100">
-          <div className="sm:w-100% 2xl:w-50%">
-            <div className="2xl:text-3xl 2xl:text-left 2xl: heading pb-20 mx-20">
+        <div className="flex w-100% justify-between max-w-lg m-auto px-100">
+          <div className="sm:w-100% w-50%">
+            <div className="text-3xl text-left  heading pb-20 mx-20">
               {heading}
             </div>
-            <div className="content 2xl:text-18 sm:text-center sm:mx-20 mb-40">
-              <span className="2xl:w-50%">{description}</span>
+            <div className="content text-18 sm:text-center sm:mx-20 mb-40">
+              <span className="w-50%">{description}</span>
             </div>
           </div>
           <picture>
@@ -192,7 +192,7 @@ function LearnMore() {
             <img className="m-auto" src="images/learn-more/card-header.svg" />
           </picture>
         </div>
-        <div className="sm:pb-80 2xl:pt-100 sm:pt-40 2xl:pb-120">
+        <div className="sm:pb-80 pt-100 sm:pt-40 pb-120">
           <BookCallVideo
             heading={video_section_title}
             text={video_section_description}
@@ -200,11 +200,8 @@ function LearnMore() {
           />
         </div>
         <div className="flex sm:flex-col-reverse ">
-          <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 2xl:w-50%">
-            <div
-              className="2xl:hidden slider4 sm:ml-20 sm:mr-_20"
-              ref={sliderRef}
-            >
+          <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 w-50%">
+            <div className="hidden slider4 sm:ml-20 sm:mr-_20" ref={sliderRef}>
               <Slider {...settings} ref={(c) => setSlider(c)}>
                 {[...Array(4)].map(() => (
                   <div className="rounded-sm  text-base sm:pl-20 mt-26">
@@ -251,8 +248,8 @@ function LearnMore() {
               </Slider>
             </div>
           </div>
-          <div className="2xl:ml-100 2xl:w-30% sm:mb-100">
-            <div className="sub-heading mx-20 text-blue 2xl:text-2xl sm:text-center pb-20">
+          <div className="ml-100 w-30% sm:mb-100">
+            <div className="sub-heading mx-20 text-blue text-2xl sm:text-center pb-20">
               {slider_title}
             </div>
             <div className="mx-20 content sm:text-center">
@@ -260,7 +257,7 @@ function LearnMore() {
             </div>
           </div>
         </div>
-        <div className="2xl:max-w-lg 2xl:m-auto 2xl:px-100">
+        <div className="max-w-lg m-auto px-100">
           <div className="mb-_40 mt-80 ">
             <MobileForm
               title={contact_heading}

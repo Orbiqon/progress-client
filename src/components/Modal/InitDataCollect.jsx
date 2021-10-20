@@ -67,11 +67,11 @@ function InitDataCollect({ open, setOpen, ...props }) {
   });
   return (
     <Modal open={open} setOpen={setOpen}>
-      <div className="pt-60 2xl:px-47">
-        <div className="modal-heading 2xl:mx-20 mb-20 sm:mx-40">
+      <div className="pt-60 px-47">
+        <div className="modal-heading mx-20 mb-20 sm:mx-40">
           Lorem ipsum derset dolor sit amet
         </div>
-        <div className="content text-center 2xl:mx-20 mb-30 sm:ml-46 sm:mr-43">
+        <div className="content text-center mx-20 mb-30 sm:ml-46 sm:mr-43">
           Lorem ipsum dolor sit amet, consecteturlorem ipsumipiscing elit
         </div>
         <div className="mb-20">
@@ -104,7 +104,7 @@ function InitDataCollect({ open, setOpen, ...props }) {
             error={errors.phone}
           />
         </div>
-        <div className="flex justify-center 2xl:pb-80">
+        <div className="flex justify-center pb-80">
           <Button
             value="confirm"
             color="green"
