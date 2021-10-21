@@ -4,7 +4,7 @@ import { Button } from 'components/Button';
 import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
 
-function Home() {
+function Home({ history }) {
   const { data, status } = useFetch(staticDataService, {
     variables: `home`,
   });
@@ -70,7 +70,13 @@ function Home() {
           </div>
         </div>
         <div className="flex justify-center pb-106 sm:pb-80">
-          <Button value="Lorem ipsum" color="green" width="200" height="66" />
+          <Button
+            value="Start Making Progress"
+            color="green"
+            width="200"
+            height="66"
+            onClick={() => history.push('/health-questionare')}
+          />
         </div>
       </>
     </Container>
