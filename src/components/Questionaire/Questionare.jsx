@@ -66,7 +66,6 @@ function Questionare({
     });
 
     setCurrentCategory((prev) => prev + 1);
-    setBubbleValue((prev) => prev + 20);
   };
 
   return (
@@ -155,6 +154,7 @@ function Questionare({
                 finalResponse={
                   response[currentCategory] && response[currentCategory].answers
                 }
+                bubbleValue={setBubbleValue}
                 setAnimationValue={setAnimationValue}
                 currentCategory={currentCategory}
                 setFinalResponse={setResponse}
@@ -175,7 +175,6 @@ function Questionare({
             value={data && data.payload[currentCategory - 1].name}
             onClick={() => {
               setCurrentCategory((prev) => prev - 1);
-              setBubbleValue((prev) => prev - 20);
             }}
           />
         )}

@@ -104,6 +104,7 @@ function Overview() {
                     height={66}
                     DeWidth="200"
                     DeHeight="66"
+                    onClick={() => setOpen(true)}
                   />
                 </div>
                 <div className="sm:hidden ml-10">
@@ -283,6 +284,7 @@ function Overview() {
                   height="66"
                   DeWidth="200"
                   DeHeight="66"
+                  onClick={() => setOpen(true)}
                 />
               </div>
             </div>

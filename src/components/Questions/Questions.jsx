@@ -8,6 +8,7 @@ function Questions({
   setIndex,
   totalQuestionLength,
   finalResponse,
+  bubbleValue,
   setFinalResponse,
   currentCategory,
   setAnimationValue,
@@ -53,6 +54,7 @@ function Questions({
     if (indexCheck !== -1) {
       copyResponse[indexCheck] = selectedAnswer;
     } else {
+      bubbleValue((prev) => prev + 1);
       copyResponse.push(selectedAnswer);
     }
 
