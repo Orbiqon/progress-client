@@ -22,7 +22,7 @@ function Questionare({
   currentCategory,
   setCurrentCategory,
 }) {
-  const [bubbleValue, setBubbleValue] = useState(20);
+  const [bubbleValue, setBubbleValue] = useState(0);
   const [animationValue, setAnimationValue] = useState(0);
 
   useEffect(() => {

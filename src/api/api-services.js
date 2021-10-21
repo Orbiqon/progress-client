@@ -1,5 +1,5 @@
 import { doGet, doPost } from './httpRequests';
-import { BASE_URL,STATIC_DATA_URL } from 'configure';
+import { BASE_URL, STATIC_DATA_URL } from 'configure';
 import { END_POINTS } from 'utils';
 
 const { GET_QUESTIONS, GET_CATEGORIES, SIGN_IN, ATTEMPT } = END_POINTS;
@@ -21,6 +21,6 @@ export const attemptService = (data) => {
 };
 
 export const staticDataService = (data) => {
-  console.log("staticDataService", data, STATIC_DATA_URL)
+  console.log('staticDataService', data, STATIC_DATA_URL);
   return doGet(`${STATIC_DATA_URL}${data}`);
 };

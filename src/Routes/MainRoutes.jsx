@@ -11,6 +11,8 @@ import {
   LearnMore,
   OverView,
   Support,
+  Private,
+  Terms,
 } from 'pages';
 
 function MainRoutes() {
@@ -21,6 +23,8 @@ function MainRoutes() {
     SUPPORT,
     FAQ,
     HOME,
+    PRIVATE,
+    TERMS,
     HEALTH_SCORE,
     QUESTIONARE,
     DNA_QUESTIONARE,
@@ -35,6 +39,8 @@ function MainRoutes() {
         <Route exact path={SUPPORT} component={Support} />
         <Route exact path={OVERVIEW} component={OverView} />
         <Route exact path={HOME} component={Home} />
+        <Route exact path={PRIVATE} component={Private} />
+        <Route exact path={TERMS} component={Terms} />
         <Route exact path={BOOKING} component={Booking} />
         <Route exact path={QUESTIONARE} component={HealthQuestionare} />
         <Route exact path={HEALTH_SCORE} component={HealthScore} />

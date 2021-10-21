@@ -10,7 +10,7 @@ function BubbleLoading({
   value,
 }) {
   useEffect(() => {
-    if (value) {
+    if (value || value == 0) {
       bubblesCircle({
         noOfBubbles,
         childClass,

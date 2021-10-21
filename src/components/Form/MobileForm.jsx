@@ -20,7 +20,7 @@ function Form({ title, description }) {
       </div>
 
       <div className="relative  bg-gradient-green sm:mx-20 rounded-b-md">
-        <div className="w-100% flex flex-col justify-between">
+        <div className="w-100% flex sm:flex-col justify-between">
           <div className="w-100%">
             <div className="pt-40 pb-20">
               <TextField

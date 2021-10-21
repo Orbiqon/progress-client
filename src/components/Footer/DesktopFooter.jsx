@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { LINKS } from 'utils';
 
 function DesktopFooter() {
-  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ } = LINKS;
+  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ, PRIVATE, TERMS } = LINKS;
 
   return (
     <div className="bg-gradient-light-blue pt-80 pb-40">
@@ -42,8 +42,12 @@ function DesktopFooter() {
         </div>
         <div className="flex flex-col items-center">
           <div className="flex label text-white underline pb-10 pt-17">
-            <div className="pr-24 cursor-pointer">Terms And Conditions</div>
-            <div className="cursor-pointer">Privacy Policy</div>
+            <Link to={TERMS} className="pr-24 cursor-pointer">
+              Terms And Conditions
+            </Link>
+            <Link to={PRIVATE} className="cursor-pointer">
+              Privacy Policy
+            </Link>
           </div>
           <div className="label text-white">
             Copyright ©Progress Lorem ipsum dolor sit amet

@@ -1,4 +1,6 @@
 export { default as Booking } from './booking';
+export { default as Private } from './private';
+export { default as Terms } from './terms';
 export { default as HealthQuestionare } from './health-questionare';
 export { default as DnaQuestionare } from './dna-questionare';
 export { default as Faq } from './faq';

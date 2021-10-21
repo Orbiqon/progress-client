@@ -171,9 +171,9 @@ function LearnMore() {
   return (
     <Container>
       <div className="pt-60 ">
-        <div className="flex w-100% justify-between max-w-lg m-auto px-100">
+        <div className="flex sm:flex-col w-100% justify-between max-w-lg m-auto sm:px-0 px-100">
           <div className="sm:w-100% w-50%">
-            <div className="text-3xl text-left  heading pb-20 mx-20">
+            <div className="text-3xl text-left sm:text-center heading pb-20 mx-20">
               {heading}
             </div>
             <div className="content text-18 sm:text-center sm:mx-20 mb-40">
@@ -200,8 +200,11 @@ function LearnMore() {
           />
         </div>
         <div className="flex sm:flex-col-reverse ">
-          <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 w-50%">
-            <div className="hidden slider4 sm:ml-20 sm:mr-_20" ref={sliderRef}>
+          <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 w-50% sm:w-90%">
+            <div
+              className="hidden sm:block slider4 sm:ml-20 sm:mr-_20"
+              ref={sliderRef}
+            >
               <Slider {...settings} ref={(c) => setSlider(c)}>
                 {[...Array(4)].map(() => (
                   <div className="rounded-sm  text-base sm:pl-20 mt-26">
@@ -248,7 +251,7 @@ function LearnMore() {
               </Slider>
             </div>
           </div>
-          <div className="ml-100 w-30% sm:mb-100">
+          <div className="ml-100 w-30% sm:w-100% sm:ml-0 sm:mb-100">
             <div className="sub-heading mx-20 text-blue text-2xl sm:text-center pb-20">
               {slider_title}
             </div>
@@ -257,7 +260,7 @@ function LearnMore() {
             </div>
           </div>
         </div>
-        <div className="max-w-lg m-auto px-100">
+        <div className="max-w-lg m-auto px-100 sm:px-0">
           <div className="mb-_40 mt-80 ">
             <MobileForm
               title={contact_heading}

@@ -11,10 +11,10 @@ export const LINKS = {
   HEALTH_SCORE: '/health-score',
   BOOKING: '/booking',
   HOME: '/',
+  PRIVATE: '/private',
+  TERMS: '/terms',
   OVERVIEW: '/overview',
   SUPPORT: '/support',
   LEARN_MORE: '/learn-more',
   FAQ: '/faq',
 };
-
-
