@@ -13,10 +13,12 @@ export const bubblesCircle = ({
   parentdiv.style.height = childHeight * (noOfBubbles / 2 + 1) + 'px';
   parentdiv.style.width = childHeight * (noOfBubbles / 2 + 1) + 'px';
 
+  var currentValue = value % 10;
+  var parts = Math.floor(value / 10);
+  var circleToBeFilled = parts * 4 + partCount(currentValue);
   if (parentdiv) {
     for (var i = 1; i <= noOfBubbles; ++i) {
       var childdiv = document.createElement('div');
-      var circleToBeFilled = Math.ceil(value / 5);
       var positionToBe = i - 11;
       if (i <= circleToBeFilled) {
         childdiv.className = `bg-${colorLoader(i * 5)} ${childClass}`;
@@ -56,6 +58,19 @@ export const colorLoader = (value) => {
       return 'primary-green-light';
     case value > 80 && value <= 100:
       return 'primary-green';
+  }
+};
+
+export const partCount = (value) => {
+  switch (true) {
+    case value >= 7:
+      return 3;
+    case value >= 5:
+      return 2;
+    case value >= 2:
+      return 1;
+    default:
+      return 0;
   }
 };
 

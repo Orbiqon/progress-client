@@ -1,9 +1,10 @@
+import { Private } from 'pages';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LINKS } from 'utils';
 
 function MobileFooter() {
-  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ } = LINKS;
+  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ, PRIVATE, TERMS } = LINKS;
 
   return (
     <>
@@ -36,8 +37,10 @@ function MobileFooter() {
       </div>
       <div className="label text-white text-center bg-gradient-light-blue pt-20 pb-30">
         <div className=" flex justify-center underline pb-10">
-          <div className="mr-16">Terms And Conditions </div>
-          <div>Privacy Policy</div>
+          <Link to={TERMS} className="mr-16">
+            Terms And Conditions{' '}
+          </Link>
+          <Link to={PRIVATE}>Privacy Policy</Link>
         </div>
         <div>Copyright ©Progress Lorem ipsum dolor sit amet</div>
       </div>

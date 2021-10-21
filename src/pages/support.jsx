@@ -191,7 +191,7 @@ function Support() {
         <div className="pt-60 mx-20 mb-272 sm:mb-100">
           <div className="flex sm:flex-col w-100% justify-between max-w-lg m-auto px-100 sm:px-0">
             <div className="sm:w-100% w-50%">
-              <div className="text-3xl text-left  heading pb-20 sm:mx-20 sm:w-100% sm:text-center">
+              <div className="text-3xl text-left  heading pb-20 sm:pb-0 sm:w-100% sm:text-center">
                 {heading}
               </div>
               <div className="content text-18 sm:text-center mb-30">
@@ -212,7 +212,7 @@ function Support() {
           </div>
         </div>
         <div className="flex flex-row-reverse sm:flex-col">
-          <div className="sm:mx-20 sm:mb-113 w-50% sm:w-100%">
+          <div className=" sm:mb-113 w-50% sm:w-100%">
             <div className="sub-heading text-blue sm:text-center pb-20 ml-173 sm:mx-20">
               {section_1_title}
             </div>
@@ -241,12 +241,12 @@ function Support() {
             </div>
           </div>
 
-          <div className="bg-gradient-blue pl-20 mr-20 relative rounded-r-md sm:w-100% w-52%  ">
+          <div className="bg-gradient-blue pl-20 mr-20 relative rounded-r-md sm:w-95% w-52%  ">
             <img
               src="images/support/principle.svg"
               className="h-580 h-305 rounded-l-sm absolute right-_13% top-_237 sm:top-_190 sm:right-_20"
             />
-            <div className="ml-40% sm:ml-10% mr-20%">
+            <div className="ml-40% sm:ml-0 sm:mr-0 mr-20%">
               <div className="sub-heading text-white pb-34 pt-315">
                 {principles_heading}
               </div>
@@ -322,7 +322,7 @@ function Support() {
         </div>
         <div>
           <div className="slider1">
-            <Slider {...settings} className="m-100 sm:mt-80">
+            <Slider {...settings} className="m-100 sm:m-0 sm:mt-80">
               {slider_2.map((element) => (
                 <div className="rounded-sm h-200 text-base">
                   <div className="shadow mx-20 mb-38 text-base sm:text-sm  text-black p-35 sm:p-20 relative">
