@@ -189,9 +189,9 @@ function Support() {
     <Container>
       <>
         <div className="pt-60 mx-20 mb-272 sm:mb-100">
-          <div className="flex w-100% justify-between max-w-lg m-auto px-100">
+          <div className="flex sm:flex-col w-100% justify-between max-w-lg m-auto px-100 sm:px-0">
             <div className="sm:w-100% w-50%">
-              <div className="text-3xl text-left  heading pb-20 sm:mx-20">
+              <div className="text-3xl text-left  heading pb-20 sm:mx-20 sm:w-100% sm:text-center">
                 {heading}
               </div>
               <div className="content text-18 sm:text-center mb-30">
@@ -211,12 +211,12 @@ function Support() {
             </picture>
           </div>
         </div>
-        <div className="flex flex-row-reverse ">
-          <div className="sm:mx-20 sm:mb-113 w-50% ">
-            <div className="sub-heading text-blue sm:text-center pb-20 ml-173 ">
+        <div className="flex flex-row-reverse sm:flex-col">
+          <div className="sm:mx-20 sm:mb-113 w-50% sm:w-100%">
+            <div className="sub-heading text-blue sm:text-center pb-20 ml-173 sm:mx-20">
               {section_1_title}
             </div>
-            <div className="content sm:text-center w-50% ml-173 ">
+            <div className="content sm:text-center w-50% sm:w-100% ml-173 sm:mx-20 sm:ml-0">
               {section_1_description}
             </div>
             <div className="slider2 sm:hidden">
@@ -241,41 +241,16 @@ function Support() {
             </div>
           </div>
 
-          <div className="bg-gradient-blue pl-20 mr-20 relative rounded-r-md w-52% ">
+          <div className="bg-gradient-blue pl-20 mr-20 relative rounded-r-md sm:w-100% w-52%  ">
             <img
               src="images/support/principle.svg"
-              className="h-580 h-305 rounded-l-sm absolute right-_13% top-_237 sm:top-_70 sm:right-_20"
+              className="h-580 h-305 rounded-l-sm absolute right-_13% top-_237 sm:top-_190 sm:right-_20"
             />
-            <div className="ml-40% mr-20%">
+            <div className="ml-40% sm:ml-10% mr-20%">
               <div className="sub-heading text-white pb-34 pt-315">
                 {principles_heading}
               </div>
-              {/* <div className="flex">
-                <div className="w-38%">
-                  <img src="images/support/principle1.svg" />
-                </div>
 
-                <div className="mx-20 mt-10">
-                  <div className="footer-label font-bold">Principl 1</div>
-                  <div className="label my-10 text-white">
-                    Lorem Ipsum has been the industry’ standard dummy text ever
-                    since the 1500s, when an unk
-                  </div>
-                </div>
-              </div> */}
-              {/* <div className="flex">
-                <div className="w-38%">
-                  <img src="images/support/principle2.svg" />
-                </div>
-
-                <div className="mx-20 mt-10">
-                  <div className="footer-label font-bold">Principl 2</div>
-                  <div className="label my-10 text-white">
-                    Lorem Ipsum has been the industry’ standard dummy text ever
-                    since the 1500s, when an unk
-                  </div>
-                </div>
-              </div> */}
               <div className="pb-70">
                 {sub_content.map((element) => (
                   <div className="flex">
@@ -380,7 +355,7 @@ function Support() {
             </Slider>
           </div>
         </div>
-        <div className="max-w-lg m-auto px-100">
+        <div className="max-w-lg m-auto px-100 sm:px-0">
           <div className="mb-_40 mt-80">
             <MobileForm />
           </div>

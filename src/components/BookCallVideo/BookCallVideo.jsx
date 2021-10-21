@@ -38,8 +38,8 @@ function BookCallVideo({
           <div
             className={
               step
-                ? 'text-2xl w-50%  sm:text-xl sm:ml-97 sm:mr-76 text-white text-center'
-                : 'pt-120 w-50% text-2xl sm:text-xl sm:ml-97 sm:mr-76 text-white text-center'
+                ? 'text-2xl w-50% sm:w-100%  sm:text-xl sm:ml-97 sm:mr-76 text-white text-center'
+                : 'pt-120 w-50% sm:w-100% text-2xl sm:text-xl sm:ml-97 sm:mr-76 text-white text-center'
             }
           >
             {heading}
@@ -57,7 +57,7 @@ function BookCallVideo({
       </div>
       <div className="flex justify-center pt-196">
         {description ? (
-          <div class="text-16 sm:text-base text-white text-center w-44% sm:mx-20">
+          <div class="text-16 sm:text-base text-white text-center w-44% sm:w-100% sm:mx-20">
             {text}
           </div>
         ) : (

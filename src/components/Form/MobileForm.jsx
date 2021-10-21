@@ -9,7 +9,7 @@ function Form({ title, description }) {
         {title}
       </div>
       <div className="mx-20 mb-40 sm:mb-80 font-display text-center text-dark-grey text-base flex justify-center">
-        <span className="w-50% text-16">{description}</span>
+        <span className="w-50% sm:w-100% text-16">{description}</span>
       </div>
       <div className="pt-40 pb-15 flex flex-col items-center bg-grey-white sm:mx-20 rounded-t">
         <img src="images/facebook/fb-logo.svg" />
@@ -20,7 +20,7 @@ function Form({ title, description }) {
       </div>
 
       <div className="relative  bg-gradient-green sm:mx-20 rounded-b-md">
-        <div className="w-100% flex justify-between">
+        <div className="w-100% flex flex-col justify-between">
           <div className="w-100%">
             <div className="pt-40 pb-20">
               <TextField

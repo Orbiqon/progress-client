@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'Layout';
-import { MobileForm } from 'components/Form';
 import { Button } from 'components/Button';
 import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
