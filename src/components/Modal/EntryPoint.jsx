@@ -9,31 +9,40 @@ function EntryPoint({ open, setOpen }) {
   const { QUESTIONARE, BOOKING } = LINKS;
 
   return (
-    <Modal open={open} setOpen={setOpen}>
-      <div className="pt-33 pb-270 ">
-        <VideoCard />
-      </div>
-      <div className=" mx-40 sub-heading text-center text-blue">
-        Lorem ipsum derset dolor sit amet
-      </div>
-      <div className="content text-center mx-20 mt-20 mb-40">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </div>
-      <div className="flex justify-center mb-40">
-        <Link to={QUESTIONARE} className="mr-10">
-          <Button
-            value="Take Questionaire"
-            color="green"
-            width="200"
-            height="66"
-          />
-        </Link>
-        <Link to={BOOKING}>
-          <Button value="Book a Call" color="blue" width="200" height="66" />
-        </Link>
-      </div>
-    </Modal>
+    <>
+      <Modal open={open} setOpen={setOpen}>
+        <div className="pb-1">
+          <div className="pt-33 pb-270 ">
+            <VideoCard />
+          </div>
+          <div className=" mx-40 sub-heading text-center text-blue">
+            Lorem ipsum derset dolor sit amet
+          </div>
+          <div className="content text-center mx-20 mt-20 mb-40">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div className="flex justify-center mb-40">
+            <Link to={QUESTIONARE} className="mr-10">
+              <Button
+                value="Take Questionaire"
+                color="green"
+                width="200"
+                height="66"
+              />
+            </Link>
+            <Link to={BOOKING}>
+              <Button
+                value="Book a Call"
+                color="blue"
+                width="200"
+                height="66"
+              />
+            </Link>
+          </div>
+        </div>
+      </Modal>
+    </>
   );
 }
 

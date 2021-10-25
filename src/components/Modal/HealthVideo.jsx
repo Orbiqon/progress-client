@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function HealthVideo({ open, setOpen, onClick }) {
   return (
     <Modal open={open} setOpen={setOpen}>
-      <div className="sm:max-w-sm sm:m-auto sm:mt-100 sm:w-100% bg-dull-black">
+      <div className="sm:max-w-sm sm:m-auto sm:mt-100 sm:w-100% bg-backBlack">
         <video
           id="my-video"
           class="video-js"
@@ -17,7 +17,7 @@ function HealthVideo({ open, setOpen, onClick }) {
           height="100%"
           poster="MY_VIDEO_POSTER.jpg"
           data-setup="{}"
-          src={'https://youtu.be/zSguDQRjZv0'}
+          src={'https://www.w3schools.com/html/mov_bbb.mp4'}
         ></video>
         <div className="flex pb-20 justify-center mt-20">
           <div className="flex items-center mr-20">

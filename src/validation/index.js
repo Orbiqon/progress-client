@@ -34,6 +34,10 @@ export const genrateSchema = (param) => {
           'Password is not match to confirm Password'
         )
         .required();
+    else if (label.indexOf('checkBox') >= 0)
+      schema[label] = Yup.boolean().required(
+        `${camelCasetoNormal(label)} is required`
+      );
     else
       schema[label] = Yup.string().required(
         `${camelCasetoNormal(label)} is required`

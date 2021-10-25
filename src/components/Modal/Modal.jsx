@@ -7,6 +7,8 @@ function Modal({ children, open, setOpen }) {
     overlay: {
       background: 'transparent',
     },
+
+    background: 'transparent',
   };
   return (
     <ModalReact
@@ -15,11 +17,11 @@ function Modal({ children, open, setOpen }) {
       styles={bg}
       showCloseIcon={false}
       classNames={{
-        modal: 'sm:w-100% sm:h-100% w-40%  modal',
+        modal: 'sm:w-100% sm:h-100% w-40%  modal ',
       }}
       center
     >
-      {children}
+      <div className="bg-white ">{children}</div>
     </ModalReact>
   );
 }

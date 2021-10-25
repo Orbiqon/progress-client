@@ -11,12 +11,14 @@ import { Link, Router, useHistory } from 'react-router-dom';
 import { LINKS } from 'utils';
 
 function InitDataCollect({ open, setOpen, ...props }) {
-  const { HEALTH_SCORE } = LINKS;
+  const { HEALTH_SCORE, TERMS, PRIVATE } = LINKS;
 
   const [initialValues, setInitialValues] = useState({
     email: '',
     phone: '',
   });
+
+  const [checkBox, setCheckBox] = useState(false);
   const [signIn, { data, status }] = usePost(signInService);
   const [attempt, { data: dataAttempt, status: statusAttempt }] = usePost(
     attemptService
@@ -65,6 +67,7 @@ function InitDataCollect({ open, setOpen, ...props }) {
 
     validationSchema: genrateSchema(initialValues),
   });
+  console.log(errors, 'aqws');
   return (
     <Modal open={open} setOpen={setOpen}>
       <div className="pt-60 px-47">
@@ -104,6 +107,30 @@ function InitDataCollect({ open, setOpen, ...props }) {
             error={errors.phone}
           />
         </div>
+        <div className="mb-20">
+          <input
+            id="1"
+            type="checkbox"
+            name="checkBox"
+            onChange={() => setCheckBox((prev) => !prev)}
+            checked={checkBox}
+          />
+          <label className="pl-20" for="1">
+            I agree with the{' '}
+            <Link to={TERMS} target="_blank" className="underline">
+              terms and condition
+            </Link>{' '}
+            and{' '}
+            <Link to={PRIVATE} target="_blank" className="underline">
+              {' '}
+              privacy policy
+            </Link>
+          </label>
+          {!checkBox ? (
+            <div className=" ml-10 text-sm text-red">CheckBox is required</div>
+          ) : null}{' '}
+        </div>
+
         <div className="flex justify-center pb-80">
           <Button
             value="confirm"

@@ -241,6 +241,15 @@
 .modal {
   @apply sm:absolute sm:p-0 sm:m-0 sm:top-62 sm:left-0 sm:h-100% sm:z-0 overflow-hidden !important;
 }
+
+.react-responsive-modal-root {
+  background: rgb(0, 0, 0, 0.9);
+}
+
+.react-responsive-modal-modal {
+  background-color: transparent !important;
+}
+
 @media screen and (max-width: 557px) {
   .react-responsive-modal-root {
     overflow: auto !important;

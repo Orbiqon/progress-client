@@ -24,7 +24,7 @@ function Booking({ onClick, history }) {
             height={32}
             DeWidth="120"
             DeHeight="66"
-            onClick={onClick}
+            onClick={() => history.push('/learn-more')}
           />
           {/* </Link> */}
         </div>

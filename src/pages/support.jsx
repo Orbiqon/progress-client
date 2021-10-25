@@ -56,14 +56,36 @@ function Support() {
   const settings1 = {
     dots: false,
     infinite: false,
-    draggable: false,
-    swipeToSlide: false,
-    touchMove: false,
+    draggable: true,
+    swipeToSlide: true,
+    touchMove: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrow: false,
     // nextArrow: <Arrow dir="right" />,
     // prevArrow: <Arrow dir="left" />,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+    ],
+    // centerPadding: '25%',
+  };
+
+  const settings2 = {
+    dots: false,
+    infinite: false,
+    draggable: true,
+    swipeToSlide: true,
+    touchMove: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrow: true,
+    nextArrow: <Arrow dir="right" />,
+    prevArrow: <Arrow dir="left" />,
     responsive: [
       {
         breakpoint: 576,
@@ -220,7 +242,7 @@ function Support() {
               {section_1_description}
             </div>
             <div className="slider2 sm:hidden">
-              <Slider {...settings1} className="m-100 ">
+              <Slider {...settings2} className="m-100 ">
                 {slider1.map((element) => (
                   <div className="rounded-sm h-200 w-270 text-base">
                     <img src={element.image.url} />
