@@ -20,6 +20,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-slick": "^0.26.1",
+    "recaptcha-v3": "^1.10.0",
     "slick-carousel": "^1.8.1",
     "standard": "^16.0.3",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
