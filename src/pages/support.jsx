@@ -43,11 +43,12 @@ function Support() {
     centerPadding: '25%',
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 490,
         settings: {
           slidesToShow: 1.15,
-          centerMode: false,
-          centerPadding: '100%',
+          centerMode: true,
+          centerPadding: '0%',
+          transformEnabled: true,
         },
       },
     ],

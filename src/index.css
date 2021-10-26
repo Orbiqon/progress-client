@@ -250,6 +250,15 @@
   background-color: transparent !important;
 }
 
+.slick-slider.use-transform .slick-track,
+.slick-slider.use-transform .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
 @media screen and (max-width: 557px) {
   .react-responsive-modal-root {
     overflow: auto !important;
