@@ -70,7 +70,6 @@ function Questionare({
 
   return (
     <Container questionaire={true}>
-      {/* {window.innerWidth > 576?} */}
       <div className="sm:hidden tab:block max-w-lg m-auto px-100">
         <BubbleLoading
           noOfBubbles="20"

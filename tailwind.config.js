@@ -14,12 +14,14 @@ module.exports = {
       }),
       spacing: {
         17: '17px',
+        '11%': '11%',
         _17: '-17px',
         _78: '-78px',
         _190: '-190px',
         _158: '-158px',
         260: '260px',
         '95%': '95%',
+        '74%': '74%',
         '90%': '90%',
         _518: '-518px',
         38: '38px',
@@ -712,6 +714,8 @@ module.exports = {
       none: 'none',
       0: '0rem',
       xs: '20rem',
+      370: '370px',
+      270: '270px',
       sm: '500px',
       md: '400px',
       700: '700px',
@@ -736,6 +740,7 @@ module.exports = {
     },
     minWidth: {
       0: '0px',
+
       full: '100%',
       min: 'min-content',
       max: 'max-content',

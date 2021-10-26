@@ -2,10 +2,14 @@ import { doGet, doPost } from './httpRequests';
 import { BASE_URL, STATIC_DATA_URL } from 'configure';
 import { END_POINTS } from 'utils';
 
-const { GET_QUESTIONS, GET_CATEGORIES, SIGN_IN, ATTEMPT } = END_POINTS;
+const { GET_QUESTIONS, GET_CATEGORIES, SIGN_IN, ATTEMPT, REQUEST } = END_POINTS;
 
 export const getCategoriesService = () => {
   return doGet(`${BASE_URL}${GET_CATEGORIES}`);
+};
+
+export const contactFormService = (data) => {
+  return doPost(`${BASE_URL}${REQUEST}`, data);
 };
 
 export const getQuestionsService = (data) => {

@@ -3,5 +3,6 @@ export {
   getCategoriesService,
   signInService,
   attemptService,
-  staticDataService
+  contactFormService,
+  staticDataService,
 } from './api-services';

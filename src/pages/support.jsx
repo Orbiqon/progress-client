@@ -277,7 +277,7 @@ function Support() {
               <div className="pb-70">
                 {sub_content.map((element) => (
                   <div className="flex">
-                    <div className="w-38%">
+                    <div className="w-38% md:w-11%">
                       <img src={element.logo} />
                     </div>
 
@@ -294,15 +294,11 @@ function Support() {
               </div>
             </div>
             <div
-              className="slider2 hidden sm:pb-30 sm:mr-_20"
+              className="slider2 hidden sm:block sm:pb-30 sm:mr-_20"
               id="mbl-slider"
               ref={sliderRef}
             >
-              <Slider
-                ref={(c) => setSlider(c)}
-                {...settings1}
-                className="m-100 "
-              >
+              <Slider ref={(c) => setSlider(c)} {...settings1} className="">
                 {[...Array(4)].map((item, index) => (
                   <div className="rounded-sm h-200 w-270 text-base mt-18">
                     <img

@@ -3,6 +3,7 @@ export const END_POINTS = {
   GET_QUESTIONS: 'questions',
   SIGN_IN: 'users',
   ATTEMPT: 'attempts',
+  REQUEST: 'requests',
 };
 
 export const LINKS = {

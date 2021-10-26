@@ -76,17 +76,17 @@ function Faq() {
           <div className="slider3 max-w-lg m-auto px-100 sm:px-0">
             <Slider {...settings1} className="mb-100">
               {slider.map((element) => (
-                <div className="rounded-sm  w-370 text-base">
+                <div className="rounded-sm max-w-370 w-100% text-base pr-20">
                   <img
                     src={
                       element.image
                         ? element.image
                         : '/images/support/slider-pic.jpeg'
                     }
-                    className="w-370"
+                    className=" w-370"
                   />
 
-                  <div className="sm:98% w-270 rounded-lg py-20  relative">
+                  <div className="sm:98% w-270 rounded-lg py-20 max-w-270 w-100% relative">
                     <div className="bg-white p-20 rounded-lg">
                       {element.comment}
                     </div>

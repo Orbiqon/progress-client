@@ -11,7 +11,7 @@ function MobileFooter() {
       <div className="flex items-center flex-col bg-gradient-light-blue pt-80">
         <div className="">
           <Link to={HOME}>
-            <img src="images/logo/logo.svg" className="h-66" />
+            <img src="images/logo/logo-footer.svg" className="h-66" />
           </Link>
         </div>
         <div className="flex jusitfy-center mt-20">

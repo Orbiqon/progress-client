@@ -89,7 +89,6 @@ function Overview() {
   return (
     <>
       <Container>
-        {console.log('Sub =====> ', step_4_description)}
         <>
           <div className="pt-60 sm:mx-20 mb-100 sm:mb-40 max-w-lg m-auto px-100 sm:px-0">
             <div className="flex w-100% justify-between sm:flex-col">
@@ -157,7 +156,7 @@ function Overview() {
             <BookCallVideo heading={step_2_title} text={step_2_description} />
           </section>
           <div className="flex sm:flex-col-reverse font-display text-white sm:mt-0 mt-160 mb-120">
-            <div className="mt-168 bg-gradient-blue rounded-r-md sm:pt-140 pt-515 w-50% sm:w-90% mr-20 relative">
+            <div className="mt-168 bg-gradient-blue rounded-r-md sm:pt-140 pt-305 w-50% sm:w-90% mr-20 relative">
               <div className="slider5 absolute w-80% sm:w-100% right-0 top-_78 ">
                 <Slider {...settings1}>
                   <img
@@ -175,22 +174,22 @@ function Overview() {
                 </Slider>
               </div>
               <picture>
-                <source
+                {/* <source
                   media="(min-width:651px)"
                   srcset="/images/overview/step3.svg"
-                />
+                /> */}
                 <source
-                  media="(max-width:650px)"
+                  media="(max-width:768px)"
                   srcset="/images/overview/step3-mbl.svg"
                 />
                 <img
                   src="/images/overview/step3.svg"
-                  className="absolute right-_518 sm:right-_20 sm:bottom-_158"
+                  className="absolute right-_518 lg:left-370 md:left-335 sm:right-_20 sm:bottom-_158  sm:left-auto"
                 />
               </picture>
 
               <div className="max-w-md m-auto sm:mx-20">
-                <div className="pt-60 sm:pt-0">
+                <div className="pt-60 md:pt-60 sm:pt-0">
                   <Button
                     value="step 4"
                     color="green"
@@ -218,7 +217,7 @@ function Overview() {
                 </div>
               </div>
             </div>
-            <div className="mx-70 w-40% sm:mx-20">
+            <div className="mx-70 w-40% lg:mx-10 lg:w-20% sm:mx-20">
               <div className="pb-10">
                 <Button
                   value="step 3"
@@ -247,7 +246,7 @@ function Overview() {
                   DeHeight="46"
                 />
               </div>
-              <div className="sub-heading text-36 text-blue pb-20 w-50% sm:w-100%">
+              <div className="sub-heading text-36 text-blue pb-20 lg:w-70% w-50% sm:w-100%">
                 {step_5_title}
               </div>
               <div className="w-70% sm:w-100% content sm:pb-40 text-16">

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField } from 'components/Form';
 import { Button } from 'components/Button';
 import { load } from 'recaptcha-v3';
+import { usePost } from 'hooks';
+import { contactFormService } from 'api/api-services';
+import { useFormik } from 'formik';
+import { genrateSchema } from 'validation';
 
 load('6LczEPUcAAAAABl38N3maKpsl0g2Ts9I1DUSQC_A').then((recaptcha) => {
   recaptcha.execute('<action>').then((token) => {
@@ -10,6 +14,54 @@ load('6LczEPUcAAAAABl38N3maKpsl0g2Ts9I1DUSQC_A').then((recaptcha) => {
 });
 
 function Form({ title, description }) {
+  const [post, { data: dataPost, status: statusPost }] = usePost(
+    contactFormService
+  );
+
+  const [actions, setActions] = useState();
+  const [dataSubmit, setDataSubmit] = useState();
+
+  const [initialValues, setInitialValues] = useState({
+    email: '',
+    phone: '',
+    message: '',
+    name: '',
+  });
+
+  useEffect(() => {
+    if (dataPost) {
+      actions.resetForm();
+      setDataSubmit(dataPost);
+      setTimeout(() => setDataSubmit(), 30000);
+    }
+  }, [dataPost]);
+
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleReset,
+    handleSubmit,
+  } = useFormik({
+    initialValues,
+    onSubmit: (values, actions) => {
+      let { email, phone, message, name } = values;
+      post({
+        variables: {
+          email,
+          phone,
+          message,
+          name,
+        },
+      });
+      setActions(actions);
+    },
+
+    validationSchema: genrateSchema(initialValues),
+  });
+
   return (
     <div className="">
       <div className="font-display text-blue text-lg text-center sm:text-lg text-2xl font-medium pb-20">
@@ -31,29 +83,47 @@ function Form({ title, description }) {
           <div className="w-100%">
             <div className="pt-40 pb-20">
               <TextField
-                placeholder="Name"
                 icon="name"
                 height="59"
                 indent="59"
                 ml="70"
+                name="name"
+                placeholder="Name"
+                type="text"
+                onChange={handleChange}
+                handleBlur={handleBlur}
+                value={values.name}
+                error={errors.name}
               />
             </div>
             <div className="pb-20">
               <TextField
-                placeholder="Email"
                 icon="email"
                 height="59"
                 indent="59"
                 ml="70"
+                name="email"
+                placeholder="Email"
+                type="text"
+                onChange={handleChange}
+                handleBlur={handleBlur}
+                value={values.email}
+                error={errors.email}
               />
             </div>
             <div className="pb-20">
               <TextField
-                placeholder="Phone"
                 icon="phone"
                 height="59"
                 indent="59"
                 ml="70"
+                name="phone"
+                placeholder="Phone"
+                type="text"
+                onChange={handleChange}
+                handleBlur={handleBlur}
+                value={values.phone}
+                error={errors.phone}
               />
             </div>
           </div>
@@ -66,10 +136,19 @@ function Form({ title, description }) {
               indent="20"
               ml="30"
               mr="70"
+              name="message"
+              placeholder="Message"
+              type="text"
+              onChange={handleChange}
+              handleBlur={handleBlur}
+              value={values.message}
+              error={errors.message}
             />
           </div>
         </div>
-        <div className="flex justify-center pb-40">
+
+        <div className="flex flex-col items-center justify-center pb-40">
+          <div className=" text-white pb-20">{dataSubmit && dataSubmit}</div>
           <Button
             width="200"
             height="66"
@@ -77,6 +156,7 @@ function Form({ title, description }) {
             DeHeight="66"
             color="blue"
             value="Send request"
+            onClick={handleSubmit}
           />
         </div>
       </div>

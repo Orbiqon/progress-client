@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Complete } from 'components/Modal';
-import { useFetch } from 'hooks';
+import { useFetch, usePost } from 'hooks';
 import { Questionare } from 'components/Questionaire';
 import { getQuestionsService, attemptService } from 'api';
-import { usePost } from 'hooks';
 import { useParams } from 'react-router-dom';
 
 function DnaQuestionare() {

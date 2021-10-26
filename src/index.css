@@ -95,7 +95,7 @@
 
 .slider1 .slick-prev {
   top: 100% !important;
-  left: 72% !important;
+  left: 70% !important;
 }
 
 .slick-disabled {
@@ -105,6 +105,15 @@
 .slider1 .slick-next {
   right: 23% !important ;
   top: 100% !important;
+}
+
+@media screen and (max-width: 1226px) {
+  .slider1 .slick-prev {
+    left: 68% !important;
+  }
+  .slider1 .slick-next {
+    right: 21% !important ;
+  }
 }
 
 @media screen and (max-width: 557px) {

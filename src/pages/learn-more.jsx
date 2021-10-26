@@ -223,9 +223,9 @@ function LearnMore() {
               </Slider>
               <div className="flex justify-end mr-40">
                 <div className="mr-10">
-                  <Arrow dir="left" onClick={() => prevSlide()} />
+                  <Arrow dir="left" icon="Arrow" onClick={() => prevSlide()} />
                 </div>
-                <Arrow dir="right" onClick={() => nextSlide()} />
+                <Arrow dir="right" icon="Arrow" onClick={() => nextSlide()} />
               </div>
             </div>
             <div className="sm:hidden slider4 ">

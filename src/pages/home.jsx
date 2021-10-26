@@ -35,17 +35,17 @@ function Home() {
               </span>
             </div>
           </div>
-          <div className="w-100% bg-gradient-green sm:pl-20 sm:mr-0 relative sm:rounded-r-md h-819 sm:h-1550 sm:w-95%">
+          <div className="w-74% bg-gradient-green rounded-r-md sm:pl-20 sm:mr-0 relative sm:rounded-r-md h-auto pb-20 sm:h-auto sm:w-95%">
             <div className="max-w-lg m-auto px-100 sm:px-0">
               <img
                 src="images/home/principle.png"
-                className=" sm:rounded-l-sm absolute sm:top-_70 lg:w-auto lg:right-0 md:w-50% sm:w-95% sm:right-_20 top-85 right-11 w-50% "
+                className="rounded sm:rounded-l-sm absolute sm:top-_70 lg:w-auto lg:right-_190 md:w-50% sm:w-95% sm:right-_20 top-85 right-_190 w-50% "
               />
-              <div className="  absolute top-_30 sm:w-100% w-70%  flex">
-                <div className="w-50% sm:pt-315 sm:pb-15 grid grid-cols-2 sm:block">
+              <div className=" max-w-lg m-auto px-100 sm:px-0 sm:w-100% w-100% pt-80 flex">
+                <div className="w-70% sm:w-100% lg:w-100% sm:pt-173 sm:pb-15 grid grid-cols-2 sm:block">
                   {section.map((element) => (
-                    <div className="w-90% mt-8">
-                      <div className="w-25%">
+                    <div className="w-90% sm:w-100% mt-8 sm:flex">
+                      <div className="w-25% sm:w-auto">
                         <img
                           src={
                             element.logo
@@ -55,7 +55,7 @@ function Home() {
                         />
                       </div>
 
-                      <div className="sm:mx-20 sm:mt-10 mt-36">
+                      <div className="sm:mx-20 sm:mt-10 mt-36 sm:w-50%">
                         <div className="footer-label font-bold">
                           {element.title}
                         </div>
