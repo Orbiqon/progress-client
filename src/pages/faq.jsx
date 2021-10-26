@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
 import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
-import { elastic } from 'react-burger-menu';
 
 function Faq() {
   const [select, setSelect] = useState({});

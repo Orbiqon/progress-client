@@ -3,6 +3,7 @@ import { Container } from 'Layout';
 import { Button } from 'components/Button';
 import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
+import { EntryPoint } from 'components/Modal';
 
 function Home() {
   const { data, status } = useFetch(staticDataService, {
@@ -12,7 +13,7 @@ function Home() {
   const { acf = {} } = element;
 
   const { heading, description, section = [], bottom_description } = acf;
-
+  const [open, setOpen] = useState(false);
   return (
     <>
       <Container>
@@ -74,10 +75,17 @@ function Home() {
             </div>
           </div>
           <div className="flex justify-center pb-106 sm:pb-80">
-            <Button value="Lorem ipsum" color="green" width="200" height="66" />
+            <Button
+              value="Start Making Progress"
+              color="green"
+              width="200"
+              height="66"
+              onClick={() => setOpen(true)}
+            />
           </div>
         </>
       </Container>
+      <EntryPoint open={open} setOpen={setOpen} />
     </>
   );
 }
