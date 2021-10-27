@@ -22,21 +22,23 @@ function EntryPoint({ open, setOpen }) {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <div className="flex justify-center mb-40">
+          <div className="flex justify-center mb-40 px-20">
             <Link to={QUESTIONARE} className="mr-10">
               <Button
                 value="Take Questionaire"
                 color="green"
-                width="200"
+                width="173"
                 height="66"
+                DeWidth="200"
               />
             </Link>
             <Link to={BOOKING}>
               <Button
                 value="Book a Call"
                 color="blue"
-                width="200"
+                width="173"
                 height="66"
+                DeWidth="200"
               />
             </Link>
           </div>

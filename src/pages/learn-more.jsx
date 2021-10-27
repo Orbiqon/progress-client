@@ -228,10 +228,10 @@ function LearnMore() {
                 <Arrow dir="right" icon="Arrow" onClick={() => nextSlide()} />
               </div>
             </div>
-            <div className="sm:hidden slider4 ">
+            <div className="sm:hidden slider4 lg:ml-20">
               <Slider {...settings1}>
                 {slider_slider.map((element) => (
-                  <div className="rounded-sm  text-base ">
+                  <div className="rounded-sm text-base ">
                     <img
                       src={
                         element.image

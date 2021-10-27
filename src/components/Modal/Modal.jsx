@@ -17,11 +17,11 @@ function Modal({ children, open, setOpen }) {
       styles={bg}
       showCloseIcon={false}
       classNames={{
-        modal: 'sm:w-100% sm:h-100% w-40%  modal ',
+        modal: 'sm:w-100% sm:h-100% w-40% lg:w-50%  modal',
       }}
       center
     >
-      <div className="bg-white ">{children}</div>
+      <div className="bg-white w-fit sm:h-100vh">{children}</div>
     </ModalReact>
   );
 }

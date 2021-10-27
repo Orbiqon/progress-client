@@ -239,16 +239,16 @@ function Support() {
             <div className="sub-heading text-blue sm:text-center pb-20 ml-173 sm:mx-20">
               {section_1_title}
             </div>
-            <div className="content sm:text-center w-50% sm:w-100% ml-173 sm:mx-20 sm:ml-0">
+            <div className="content sm:text-center w-50% sm:w-100% ml-173 sm:mx-20 md:pb-80 sm:ml-0">
               {section_1_description}
             </div>
             <div className="slider2 sm:hidden">
               <Slider {...settings2} className="m-100 ">
                 {slider1.map((element) => (
-                  <div className="rounded-sm h-200 w-270 text-base">
+                  <div className="rounded-sm h-200 w-100% max-w-270 pr-20 text-base">
                     <img src={element.image.url} />
 
-                    <div className="w-270 mt-20">
+                    <div className="w-100% max-w-270 mr-20 mt-20">
                       <div>
                         <div className="text-base  font-display text-black-gray font-bold font-display pb-10">
                           {element.name}
@@ -269,7 +269,7 @@ function Support() {
               src="images/support/principle.svg"
               className="h-580 h-305 rounded-l-sm absolute right-_13% top-_237 sm:top-_190 sm:right-_20"
             />
-            <div className="ml-40% sm:ml-0 sm:mr-0 mr-20%">
+            <div className="ml-40% ml-16% sm:ml-0 sm:mr-0 mr-20%">
               <div className="sub-heading text-white pb-34 pt-315">
                 {principles_heading}
               </div>
@@ -277,7 +277,7 @@ function Support() {
               <div className="pb-70">
                 {sub_content.map((element) => (
                   <div className="flex">
-                    <div className="w-38% md:w-11%">
+                    <div className="w-38% lg:w-100% md:w-11%">
                       <img src={element.logo} />
                     </div>
 

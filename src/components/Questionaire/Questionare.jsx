@@ -70,7 +70,7 @@ function Questionare({
 
   return (
     <Container questionaire={true}>
-      <div className="sm:hidden tab:block max-w-lg m-auto px-100">
+      <div className="sm:hidden tab:block max-w-lg m-auto px-100 lg:pt-60">
         <BubbleLoading
           noOfBubbles="20"
           parentClass="parentdiv"
@@ -122,10 +122,10 @@ function Questionare({
           </div>
         </BubbleLoading>
       </div>
-      <div className="max-w-lg m-auto px-100 sm:pt-20">
+      <div className="max-w-lg m-auto px-100 sm:px-20 sm:pt-20">
         {
           <>
-            <div className="mt-40 sub-heading text-blue text-center mb-40 sm:pb-20">
+            <div className="mt-40 sub-heading text-blue text-center mb-40 sm:mt-20 sm:mb-0 sm:pb-20">
               {(data && data.payload[currentCategory].name) || 'DNA'}
             </div>
             <div className="flex justify-center">
@@ -168,7 +168,7 @@ function Questionare({
       <div className="mt-16  mb-53 flex flex-row justify-center items-center">
         {currentCategory > 0 && (
           <Button
-            width="70"
+            width="129"
             height="32"
             color="blue"
             value={data && data.payload[currentCategory - 1].name}
@@ -182,7 +182,7 @@ function Questionare({
           response[currentCategory].answers.length == totalQuestions && (
             <div className="pl-60">
               <Button
-                width="70"
+                width="129"
                 height="32"
                 color="blue"
                 value={

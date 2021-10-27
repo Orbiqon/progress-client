@@ -13,7 +13,7 @@ function MobileHeader({ questionaire }) {
 
   return (
     <>
-      <div className="flex justify-between px-20 py-11 h-border-bottom sticky top-0 z-3 bg-white">
+      <div className="flex justify-between px-20 py-11 h-border-bottom sticky top-0 z-10000 bg-white">
         <Link to={HOME}>
           <img src="images/logo/logo.svg" />
         </Link>

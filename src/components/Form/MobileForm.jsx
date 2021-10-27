@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { TextField } from 'components/Form';
 import { Button } from 'components/Button';
-import { load } from 'recaptcha-v3';
+// import { load } from 'recaptcha-v3';
 import { usePost } from 'hooks';
 import { contactFormService } from 'api/api-services';
 import { useFormik } from 'formik';
 import { genrateSchema } from 'validation';
 
-load('6LczEPUcAAAAABl38N3maKpsl0g2Ts9I1DUSQC_A').then((recaptcha) => {
-  recaptcha.execute('<action>').then((token) => {
-    console.log(token); // Will print the token
-  });
-});
+// load('6LczEPUcAAAAABl38N3maKpsl0g2Ts9I1DUSQC_A').then((recaptcha) => {
+//   recaptcha.execute('<action>').then((token) => {
+//     console.log(token); // Will print the token
+//   });
+// });
 
 function Form({ title, description }) {
   const [post, { data: dataPost, status: statusPost }] = usePost(
