@@ -14,7 +14,6 @@ module.exports = {
       }),
       spacing: {
         17: '17px',
-        fit: 'fit-content',
         '100vh': '100vh',
         '11%': '11%',
         '16%': '16%',

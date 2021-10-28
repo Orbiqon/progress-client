@@ -98,6 +98,10 @@
   left: 70% !important;
 }
 
+.w-fit {
+  width: fit-content;
+}
+
 .slick-disabled {
   opacity: 0.2 !important;
 }
