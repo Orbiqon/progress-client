@@ -26,7 +26,7 @@ function CategoryScore({ title, score, description, parentClass, childClass }) {
         {title}
       </div>
       <div className="flex justify-center">
-        <div className="w-80% font-display text-base text-dark-grey  text-center">
+        <div className="w-80% font-display text-base text-dark-grey ">
           {description}
         </div>
       </div>

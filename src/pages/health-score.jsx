@@ -51,10 +51,7 @@ function HealthScore() {
             </div>
             <div className="flex justify-center">
               <div className="sm:w-90% w-30% font-display text-base text-dark-grey  text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus ultricies sem orci, ac pellentesque nunc viverra sed.
-                Curabitur luctus ligula quam, ut accumsan lectus efficitur eu.
-                Cras ut odio a neque imperdiet scelerisque
+                {scores.health.description}
               </div>
             </div>
           </div>
