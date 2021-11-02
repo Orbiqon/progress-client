@@ -4,10 +4,10 @@ import { VideoCard } from 'components/VideoCard';
 import { Button, BackButton } from 'components/Button';
 import { Link } from 'react-router-dom';
 
-function HealthVideo({ open, setOpen, onClick }) {
+function HealthVideo({ open, setOpen, onClick,display='hidden' }) {
   return (
     <Modal open={open} setOpen={setOpen}>
-      <div className="sm:max-w-sm sm:m-auto sm:mt-100 sm:w-100% bg-backBlack">
+      <div className="sm:max-w-sm w-693 sm:m-auto sm:mt-100 sm:w-100% bg-backBlack">
         <video
           id="my-video"
           class="video-js"
@@ -19,7 +19,7 @@ function HealthVideo({ open, setOpen, onClick }) {
           data-setup="{}"
           src={'https://www.w3schools.com/html/mov_bbb.mp4'}
         ></video>
-        <div className="flex pb-20 justify-center mt-20">
+        <div className={`pb-20 justify-center mt-20 ${display}`}>
           <div className="flex items-center mr-20">
             <BackButton value="Back" />
           </div>
