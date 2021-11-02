@@ -6,6 +6,7 @@ import { usePost } from 'hooks';
 import { contactFormService } from 'api/api-services';
 import { useFormik } from 'formik';
 import { genrateSchema } from 'validation';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 // load('6LczEPUcAAAAABl38N3maKpsl0g2Ts9I1DUSQC_A').then((recaptcha) => {
 //   recaptcha.execute('<action>').then((token) => {
@@ -150,6 +151,7 @@ function Form({ title, description }) {
 
         <div className="flex flex-col items-center justify-center pb-40">
           <div className=" text-white pb-20">{dataSubmit && dataSubmit}</div>
+          <ReCAPTCHA sitekey="6LfbEg0dAAAAAAOew7rr_KeodWHzY_bN3usYkzKS" />,
           <Button
             width="200"
             height="66"
