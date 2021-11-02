@@ -139,6 +139,7 @@ function Form({ title, description }) {
               name="message"
               placeholder="Message"
               type="text"
+              element="textarea"
               onChange={handleChange}
               handleBlur={handleBlur}
               value={values.message}

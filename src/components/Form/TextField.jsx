@@ -3,6 +3,7 @@ import React from 'react';
 function TextField({
   icon,
   height,
+  element="text",
   indent,
   pb,
   pt,
@@ -20,15 +21,29 @@ function TextField({
 }) {
   return (
     <div className={`relative sm:mx-15 ml-${ml} mr-${mr}`}>
-      <input
-        className={` w-100% rounded-sm box-${border} bg-white outline-none ${border} ${border}-solid ${border}-border h-${height} pb-${dpb} pb-${pb} pt-${pt} -indent-${indent} placeholder-dark-grey`}
-        name={name}
-        placeholder={placeholder}
-        type={type}
-        onChange={onChange}
-        handleBlur={handleBlur}
-        value={value}
-      />
+      {element == 'text' ? (
+        <input
+          className={` w-100% rounded-sm box-${border} bg-white outline-none ${border} ${border}-solid ${border}-border h-${height} pb-${dpb} pb-${pb} pt-${pt} -indent-${indent} placeholder-dark-grey`}
+          name={name}
+          placeholder={placeholder}
+          type={type}
+          onChange={onChange}
+          handleBlur={handleBlur}
+          value={value}
+        />
+      ) : (
+        <textarea
+          className={` w-100% rounded-sm box-${border} px-30 bg-white outline-none ${border} ${border}-solid ${border}-border h-${height} pb-${dpb} pb-${pb} pt-${pt}  placeholder-dark-grey`}
+          name={name}
+          placeholder={placeholder}
+          type={type}
+          onChange={onChange}
+          handleBlur={handleBlur}
+          value={value}
+        >
+          {value}
+        </textarea>
+      )}
       {icon && (
         <img
           className="absolute left-20 top-18"
