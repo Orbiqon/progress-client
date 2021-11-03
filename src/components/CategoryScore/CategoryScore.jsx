@@ -26,9 +26,12 @@ function CategoryScore({ title, score, description, parentClass, childClass }) {
         {title}
       </div>
       <div className="flex justify-center">
-        <div className="w-80% font-display text-base text-dark-grey ">
-          {description}
-        </div>
+        {description &&
+          description.map((item) => (
+            <div className="w-80% font-display text-base text-dark-grey ">
+              <b> &#8226;</b> {item}
+            </div>
+          ))}
       </div>
     </div>
   );

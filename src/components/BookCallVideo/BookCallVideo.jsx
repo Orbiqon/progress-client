@@ -73,7 +73,11 @@ function BookCallVideo({
           )}
         </div>
       </div>
-      <HealthVideo open={open} setOpen={setOpen} />
+      <HealthVideo
+        open={open}
+        setOpen={setOpen}
+        display={description ? 'hidden' : 'flex'}
+      />
     </>
   );
 }
