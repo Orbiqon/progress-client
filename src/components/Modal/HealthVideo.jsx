@@ -4,17 +4,17 @@ import { VideoCard } from 'components/VideoCard';
 import { Button, BackButton } from 'components/Button';
 import { Link } from 'react-router-dom';
 
-function HealthVideo({ open, setOpen, onClick,display='hidden' }) {
+function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
   return (
-    <Modal open={open} setOpen={setOpen}>
-      <div className="sm:max-w-sm w-693 sm:m-auto sm:mt-100 sm:w-100% bg-backBlack">
+    <Modal open={open} setOpen={setOpen} height="auto" display="contents">
+      <div className="sm:max-w-sm w-100% sm:m-auto sm:mt-100 sm:w-100% bg-backBlack">
         <video
           id="my-video"
           class="video-js"
           controls
           preload="auto"
-          width="100%"
-          height="100%"
+          width="700"
+          height="500"
           poster="MY_VIDEO_POSTER.jpg"
           data-setup="{}"
           src={'https://www.w3schools.com/html/mov_bbb.mp4'}

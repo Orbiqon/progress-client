@@ -13,11 +13,10 @@ function Questions({
   currentCategory,
   setAnimationValue,
 }) {
-  const { id, answers, highest_point, question_text,result_text } = question;
+  const { id, answers, highest_point, question_text, result_text } = question;
 
   const [answer, setAnswer] = useState();
 
-  
   useEffect(() => {
     const questionCheck = finalResponse.findIndex((x) => x.question_id == id);
 
@@ -50,7 +49,7 @@ function Questions({
       question_id: id,
       points: point,
       total_points: highest_point,
-      result_text:point==0||point==1?result_text:null
+      result_text: point == 0 || point == 1 ? result_text : null,
     };
 
     if (indexCheck !== -1) {

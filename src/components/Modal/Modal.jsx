@@ -2,7 +2,13 @@ import React from 'react';
 import 'react-responsive-modal/styles.css';
 import { Modal as ModalReact } from 'react-responsive-modal';
 
-function Modal({ children, open, setOpen }) {
+function Modal({
+  children,
+  open,
+  setOpen,
+  height = '100vh',
+  display = 'block',
+}) {
   const bg = {
     overlay: {
       background: 'transparent',
@@ -21,7 +27,9 @@ function Modal({ children, open, setOpen }) {
       }}
       center
     >
-      <div className="bg-white w-fit sm:h-100vh">{children}</div>
+      <div className={`bg-white w-fit  ${display} sm:h-${height}`}>
+        {children}
+      </div>
     </ModalReact>
   );
 }

@@ -68,7 +68,6 @@ function Questionare({
     setCurrentCategory((prev) => prev + 1);
   };
 
-
   return (
     <Container questionaire={true}>
       <div className="sm:hidden tab:block max-w-lg m-auto px-100 lg:pt-60">
@@ -138,7 +137,7 @@ function Questionare({
           </>
         }
         {data1 && status == 200 && (
-          <div className="flex justify-center overflow-hidden relative h-217 sm: mb-40">
+          <div className="flex justify-center overflow-hidden relative h-100% sm: mb-40">
             <motion.div
               animate={{
                 x: 0,
