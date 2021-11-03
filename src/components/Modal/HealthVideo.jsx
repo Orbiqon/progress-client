@@ -6,11 +6,22 @@ import { Link } from 'react-router-dom';
 
 function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
   return (
-    <Modal open={open} setOpen={setOpen} height="auto" display="contents">
-      <div className="sm:max-w-sm w-100% sm:m-auto sm:mt-100 sm:w-100% bg-backBlack">
+    <Modal
+      open={open}
+      setOpen={setOpen}
+      height="auto"
+      display="contents"
+      width="50%"
+      content="content"
+    >
+      <div
+        className="sm:max-w-sm w-100% sm:m-auto sm:mt-100 sm:w-100% bg-backBlack"
+        onClick={() => setOpen(false)}
+      >
         <video
           id="my-video"
           class="video-js"
+          onClick={() => setOpen(false)}
           controls
           preload="auto"
           width="700"

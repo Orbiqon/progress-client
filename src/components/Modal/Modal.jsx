@@ -6,8 +6,10 @@ function Modal({
   children,
   open,
   setOpen,
+  width = '100%',
   height = '100vh',
   display = 'block',
+  content = 'block',
 }) {
   const bg = {
     overlay: {
@@ -15,6 +17,7 @@ function Modal({
     },
 
     background: 'transparent',
+    display: `display`,
   };
   return (
     <ModalReact
@@ -22,12 +25,16 @@ function Modal({
       onClose={() => setOpen(false)}
       styles={bg}
       showCloseIcon={false}
+      shouldCloseOnOverlayClick={true}
       classNames={{
-        modal: 'sm:w-100% sm:h-100% w-40% lg:w-50%  modal',
+        modal: `sm:w-${width} sm:h-100% w-40% lg:w-50%  modal ${content}`,
       }}
       center
     >
-      <div className={`bg-white w-fit  ${display} sm:h-${height}`}>
+      <div
+        className={`bg-white w-fit  ${display} sm:h-${height}`}
+        onClick={() => setOpen(false)}
+      >
         {children}
       </div>
     </ModalReact>

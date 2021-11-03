@@ -255,6 +255,10 @@
   @apply sm:absolute sm:p-0 sm:m-0 sm:top-62 sm:left-0 sm:h-100% sm:z-0 overflow-hidden !important;
 }
 
+.content {
+  display: contents !important;
+}
+
 .react-responsive-modal-root {
   background: rgb(0, 0, 0, 0.9);
 }
