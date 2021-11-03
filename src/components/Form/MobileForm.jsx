@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TextField } from 'components/Form';
 import { Button } from 'components/Button';
-// import { load } from 'recaptcha-v3';
 import { usePost } from 'hooks';
 import { contactFormService } from 'api/api-services';
 import { useFormik } from 'formik';
@@ -18,7 +17,7 @@ function Form({ title, description }) {
   const [post, { data: dataPost, status: statusPost }] = usePost(
     contactFormService
   );
-
+  const [disable, setDisable] = useState(true);
   const [actions, setActions] = useState();
   const [dataSubmit, setDataSubmit] = useState();
 
@@ -36,6 +35,10 @@ function Form({ title, description }) {
       setTimeout(() => setDataSubmit(), 30000);
     }
   }, [dataPost]);
+
+  function onChange(value) {
+    setDisable(false);
+  }
 
   const {
     values,
@@ -151,7 +154,11 @@ function Form({ title, description }) {
 
         <div className="flex flex-col items-center justify-center pb-40">
           <div className=" text-white pb-20">{dataSubmit && dataSubmit}</div>
-          <ReCAPTCHA sitekey="6LfbEg0dAAAAAAOew7rr_KeodWHzY_bN3usYkzKS" />,
+          <ReCAPTCHA
+            sitekey="6LfbEg0dAAAAAAOew7rr_KeodWHzY_bN3usYkzKS"
+            onChange={onChange}
+          />
+          ,
           <Button
             width="200"
             height="66"
@@ -160,6 +167,7 @@ function Form({ title, description }) {
             color="blue"
             value="Send request"
             onClick={handleSubmit}
+            disabled={disable}
           />
         </div>
       </div>

@@ -1,3 +1,4 @@
 {
-    "thunder-client.showActivityFromCollection": true
+    "thunder-client.showActivityFromCollection": true,
+    "editor.formatOnSave": true
 }
