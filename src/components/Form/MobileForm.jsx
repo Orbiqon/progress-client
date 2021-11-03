@@ -158,7 +158,6 @@ function Form({ title, description }) {
             sitekey="6LfbEg0dAAAAAAOew7rr_KeodWHzY_bN3usYkzKS"
             onChange={onChange}
           />
-          ,
           <Button
             width="200"
             height="66"
