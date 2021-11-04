@@ -31,10 +31,7 @@ function Modal({
       }}
       center
     >
-      <div
-        className={`bg-white w-fit  ${display} sm:h-${height}`}
-        onClick={() => setOpen(false)}
-      >
+      <div className={`bg-white w-fit  ${display} sm:h-${height}`}>
         {children}
       </div>
     </ModalReact>
