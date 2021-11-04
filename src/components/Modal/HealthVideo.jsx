@@ -12,7 +12,7 @@ function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
       height="auto"
       display="contents"
       width="50%"
-      content="content"
+      content="conten"
     >
       <div
         className="sm:max-w-sm w-100% sm:m-auto sm:mt-100 sm:w-100% bg-backBlack"
