@@ -15,7 +15,7 @@ function VideoCard() {
           play
         </div>
       </div>
-      <HealthVideo open={videoOpen} setOpen={setVideoOpen} />
+      {/* <HealthVideo open={videoOpen} setOpen={setVideoOpen} /> */}
     </>
   );
 }

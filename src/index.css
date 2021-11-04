@@ -255,8 +255,10 @@
   @apply sm:absolute sm:p-0 sm:m-0 sm:top-62 sm:left-0 sm:h-100% sm:z-0 overflow-hidden !important;
 }
 
-.conten {
-  display: contents !important;
+@media screen and (max-width: 700px) {
+  .conten {
+    display: contents !important;
+  }
 }
 
 .react-responsive-modal-root {
