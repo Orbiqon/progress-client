@@ -66,6 +66,10 @@ function Form({ title, description }) {
     validationSchema: genrateSchema(initialValues),
   });
 
+  const fbClick = () => {
+    window.FB.CustomerChat.showDialog();
+  };
+
   return (
     <div className="">
       <div className="font-display text-blue text-lg text-center sm:text-lg text-2xl font-medium pb-20">
@@ -74,7 +78,10 @@ function Form({ title, description }) {
       <div className="mx-20 mb-40 sm:mb-80 font-display text-center text-dark-grey text-base flex justify-center">
         <span className="w-50% sm:w-100% text-16">{description}</span>
       </div>
-      <div className="pt-40 pb-15 flex flex-col items-center bg-grey-white sm:mx-20 rounded-t">
+      <div
+        onClick={() => fbClick()}
+        className="pt-40 pb-15 flex flex-col items-center bg-grey-white sm:mx-20 rounded-t"
+      >
         <img src="images/facebook/fb-logo.svg" />
         <div className=" font-display text-sm text-blue">Facebook chat</div>
       </div>
