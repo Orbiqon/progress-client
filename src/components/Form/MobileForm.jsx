@@ -80,7 +80,7 @@ function Form({ title, description }) {
       </div>
       <div
         onClick={() => fbClick()}
-        className="pt-40 pb-15 flex flex-col items-center bg-grey-white sm:mx-20 rounded-t"
+        className="cursor-pointer pt-40 pb-15 flex flex-col items-center bg-grey-white sm:mx-20 rounded-t"
       >
         <img src="images/facebook/fb-logo.svg" />
         <div className=" font-display text-sm text-blue">Facebook chat</div>
