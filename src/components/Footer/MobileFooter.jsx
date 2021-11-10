@@ -4,7 +4,17 @@ import { Link } from 'react-router-dom';
 import { LINKS } from 'utils';
 
 function MobileFooter() {
-  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ, PRIVATE, TERMS } = LINKS;
+  const {
+    HOME,
+    OVERVIEW,
+    SUPPORT,
+    LEARN_MORE,
+    FAQ,
+    PRIVATE,
+    TERMS,
+    INSTA,
+    FACEBOOK,
+  } = LINKS;
 
   return (
     <>
@@ -15,11 +25,13 @@ function MobileFooter() {
           </Link>
         </div>
         <div className="flex jusitfy-center mt-20">
-          <div className="label text-white mr-30 ">
-            Lorem ipsum dolor sit amet
-          </div>
-          <img src="images/facebook/fb-icon.svg" className="mr-10" />
-          <img src="images/instagram.svg" />
+          <div className="label text-white mr-30 ">Follow us:</div>
+          <a href={FACEBOOK} target="_blank">
+            <img src="images/facebook/fb-icon.svg" className="mr-10" />
+          </a>
+          <a href={INSTA} target="_blank">
+            <img src="images/instagram.svg" />
+          </a>
         </div>
         <div></div>
         <Link to={OVERVIEW} className="footer-label text-center pb-7 pt-40">

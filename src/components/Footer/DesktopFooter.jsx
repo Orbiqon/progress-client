@@ -12,6 +12,7 @@ function DesktopFooter() {
     PRIVATE,
     TERMS,
     INSTA,
+    FACEBOOK,
   } = LINKS;
 
   return (
@@ -27,9 +28,13 @@ function DesktopFooter() {
               <a href={INSTA} target="_blank">
                 <img src="images/instagram.svg" className="cursor-pointer" />
               </a>
-              <div className="ml-10 cursor-pointer">
+              <a
+                href={FACEBOOK}
+                target="_blank"
+                className="ml-10 cursor-pointer"
+              >
                 <img src="images/facebook/fb-icon.svg" />
-              </div>
+              </a>
             </div>
           </div>
           <div className=" mt-14 flex footer-label">
