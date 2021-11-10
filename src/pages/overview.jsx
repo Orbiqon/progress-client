@@ -10,6 +10,7 @@ import Arrow from 'components/Arrow/arrow';
 import { staticDataService } from 'api';
 import { EntryPoint } from 'components/Modal';
 import { useFetch } from 'hooks';
+import { BottomSlider } from 'components/Slider';
 
 function Overview() {
   const [open, setOpen] = useState(false);
@@ -290,35 +291,7 @@ function Overview() {
               </div>
             </div>
           </div>
-          <div className="slider1">
-            <Slider {...settings} className="m-100 sm:m-0 sm:mt-80">
-              {slider_2.map((item) => (
-                <div className="rounded-sm h-auto text-base">
-                  <div className="shadow mx-20 mb-38 text-base sm:text-sm  text-black p-35 sm:p-20 relative">
-                    {item.text}
-                    <img
-                      src="/images/home/vector.svg"
-                      className="absolute bottom-_17 left-20"
-                    />
-                  </div>
-                  <div className="flex mx-20">
-                    <img
-                      src={item.image ? item.image : '/images/home/slider.svg'}
-                      className="w-50 h-50 rounded-full object-cover"
-                    />
-                    <div className="ml-35">
-                      <div className="text-18 sm:text-base font-display text-blue font-display">
-                        {item.name}
-                      </div>
-                      <div className="text-16 mb-10 sm:text-sm font-display text-light-grey">
-                        {item.category}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}{' '}
-            </Slider>
-          </div>
+          <BottomSlider content={slider_2} />
           <div className="max-w-lg m-auto px-100 sm:px-0">
             <div className="mb-_40 mt-80 ">
               <MobileForm
