@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 import { LINKS } from 'utils';
 
 function DesktopFooter() {
-  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ, PRIVATE, TERMS } = LINKS;
+  const {
+    HOME,
+    OVERVIEW,
+    SUPPORT,
+    LEARN_MORE,
+    FAQ,
+    PRIVATE,
+    TERMS,
+    INSTA,
+  } = LINKS;
 
   return (
     <div className="bg-gradient-light-blue pt-80 pb-40">
@@ -14,12 +23,10 @@ function DesktopFooter() {
               <img src="images/logo/logo-footer.svg" />
             </Link>
             <div className="flex mt-20">
-              <div className="label text-white pr-30">
-                Lorem ipsum dolor sit amet
-              </div>
-              <div>
+              <div className="label text-white pr-30">Follow us:</div>
+              <a href={INSTA} target="_blank">
                 <img src="images/instagram.svg" className="cursor-pointer" />
-              </div>
+              </a>
               <div className="ml-10 cursor-pointer">
                 <img src="images/facebook/fb-icon.svg" />
               </div>
