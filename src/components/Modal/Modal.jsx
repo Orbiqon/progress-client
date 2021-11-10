@@ -27,7 +27,7 @@ function Modal({
       showCloseIcon={false}
       // shouldCloseOnOverlayClick={true}
       classNames={{
-        modal: `sm:w-${width} sm:h-100% w-40% lg:w-50%  modal ${content}`,
+        modal: `sm:w-${width} sm:h-100% w-40% lg:w-50%   modal ${content}`,
       }}
       center
     >

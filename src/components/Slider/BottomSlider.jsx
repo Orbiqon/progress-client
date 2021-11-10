@@ -32,7 +32,7 @@ function BottomSlider({ content = [] }) {
       <Slider {...settings} className="m-100 sm:m-0 sm:mt-80">
         {content.map((element) => (
           <div className="rounded-sm h-200 text-base">
-            <div className="shadow mx-20 mb-38 text-base sm:text-sm  text-black p-35 sm:p-20 relative">
+            <div className="shadow h-239 mx-20 mb-38 text-base sm:text-sm  text-black p-35 sm:p-20 relative">
               {element.text}
               <img
                 src="/images/home/vector.svg"
