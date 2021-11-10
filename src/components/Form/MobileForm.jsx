@@ -76,7 +76,7 @@ function Form({ title, description }) {
         {title}
       </div>
       <div className="mx-20 mb-40 sm:mb-80 font-display text-center text-dark-grey text-base flex justify-center">
-        <span className="w-50% sm:w-100% text-16">{description}</span>
+        <span className="w-50% sm:w-100% text-16 lg:w-90%">{description}</span>
       </div>
       <div
         onClick={() => fbClick()}
@@ -138,7 +138,7 @@ function Form({ title, description }) {
               />
             </div>
           </div>
-          <div className="pt-40 w-100% sm:pb-20">
+          <div className="pt-40 sm:pt-0 w-100% sm:pb-20">
             <TextField
               placeholder="Message"
               pb="115"
@@ -165,16 +165,18 @@ function Form({ title, description }) {
             sitekey="6LfbEg0dAAAAAAOew7rr_KeodWHzY_bN3usYkzKS"
             onChange={onChange}
           />
-          <Button
-            width="200"
-            height="66"
-            DeWidth="200"
-            DeHeight="66"
-            color="blue"
-            value="Send request"
-            onClick={handleSubmit}
-            disabled={disable}
-          />
+          <div className="pt-20">
+            <Button
+              width="200"
+              height="66"
+              DeWidth="200"
+              DeHeight="66"
+              color="blue"
+              value="Send request"
+              onClick={handleSubmit}
+              disabled={disable}
+            />
+          </div>
         </div>
       </div>
     </div>

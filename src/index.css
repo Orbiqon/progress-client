@@ -1,5 +1,5 @@
 .heading {
-  @apply text-blue font-display font-medium sm:text-heading 2xl:text-3xl text-center;
+  @apply text-blue font-display font-medium sm:text-heading lg:text-heading  2xl:text-3xl text-center;
 }
 
 .modal-heading {
@@ -45,6 +45,11 @@
   background-color: white;
   /* border-radius: 80px; */
   margin: 46px;
+}
+
+.react-responsive-modal-container {
+  height: 100vh !important;
+  margin: auto !important;
 }
 
 #react-burger-menu-btn {

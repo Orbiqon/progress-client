@@ -92,7 +92,7 @@ function Overview() {
         <>
           <div className="pt-60 sm:mx-20 mb-100 sm:mb-40 max-w-lg m-auto px-100 sm:px-0">
             <div className="flex w-100% justify-between sm:flex-col">
-              <div className="sm:w-100% w-40%">
+              <div className="sm:w-100% w-40% lg:w-60% mr-100">
                 <div className="heading text-left pb-20">{heading}</div>
                 <div className="content mb-40 text-18">{description}</div>
                 <div className="sm:hidden pb-60">
@@ -217,8 +217,8 @@ function Overview() {
                 </div>
               </div>
             </div>
-            <div className="mx-70 w-40% lg:mx-10 lg:w-20% sm:mx-20">
-              <div className="pb-10">
+            <div className="mx-70 w-40% lg:mx-10 lg:w-20% sm:w-100% sm:mx-0">
+              <div className="pb-10 sm:px-20 ">
                 <Button
                   value="step 3"
                   color="green"
@@ -228,14 +228,16 @@ function Overview() {
                   DeHeight="46"
                 />
               </div>
-              <div className="sub-heading text-36 text-blue pb-20 w-253">
+              <div className="sub-heading text-36 text-blue pb-20 w-253  sm:px-20 ">
                 {step_3_title}
               </div>
-              <div className="content text-16 w-370">{step_3_description}</div>
+              <div className="content text-16 w-370 sm:w-100% sm:pr-20 sm:px-20 ">
+                {step_3_description}
+              </div>
             </div>
           </div>
-          <div className="mx-20 sm:pt-60 flex flex-row-reverse sm:flex-col max-w-lg m-auto px-10">
-            <div className="pl-100 w-50% sm:w-100% sm:pl-0">
+          <div className="mx-20 sm:pt-60 flex flex-row-reverse sm:flex-col max-w-lg m-auto">
+            <div className="pl-100 w-50% lg:w-60% sm:w-100% sm:pl-0">
               <div className="pb-10 ">
                 <Button
                   value="step 5"

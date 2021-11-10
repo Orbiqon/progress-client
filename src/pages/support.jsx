@@ -8,6 +8,7 @@ import Arrow from 'components/Arrow/arrow';
 import { useEffect } from 'react';
 import { staticDataService } from 'api';
 import { useFetch } from 'hooks';
+import { BottomSlider } from 'components/Slider';
 
 function Support() {
   const { data, status } = useFetch(staticDataService, {
@@ -31,28 +32,6 @@ function Support() {
     slider: slider1 = [],
   } = section_1;
   const { heading: principles_heading, sub_content = [] } = principles;
-
-  const settings = {
-    dots: false,
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <Arrow dir="right" />,
-    prevArrow: <Arrow dir="left" />,
-    centerMode: true,
-    centerPadding: '25%',
-    responsive: [
-      {
-        breakpoint: 490,
-        settings: {
-          slidesToShow: 1.15,
-          centerMode: true,
-          centerPadding: '0%',
-          transformEnabled: true,
-        },
-      },
-    ],
-  };
 
   const settings1 = {
     dots: false,
@@ -213,8 +192,8 @@ function Support() {
       <>
         <div className="pt-60 mx-20 mb-272 sm:mb-100">
           <div className="flex sm:flex-col w-100% justify-between max-w-lg m-auto px-100 sm:px-0">
-            <div className="sm:w-100% w-50%">
-              <div className="text-3xl text-left  heading pb-20 sm:pb-0 sm:w-100% sm:text-center">
+            <div className="sm:w-100% w-40% lg:w-60% mr-100">
+              <div className="text-left  heading pb-20 sm:pb-0 sm:w-100% sm:text-center">
                 {heading}
               </div>
               <div className="content text-18 sm:text-center mb-30">
@@ -236,7 +215,7 @@ function Support() {
         </div>
         <div className="flex flex-row-reverse sm:flex-col">
           <div className=" sm:mb-113 w-50% sm:w-100%">
-            <div className="sub-heading text-blue sm:text-center pb-20 ml-173 sm:mx-20">
+            <div className="sub-heading text-blue sm:text-center pb-20 ml-173 sm:mx-20 w-50% sm:w-100%">
               {section_1_title}
             </div>
             <div className="content sm:text-center w-50% sm:w-100% ml-173 sm:mx-20 md:pb-80 sm:ml-0">
@@ -277,10 +256,10 @@ function Support() {
               <div className="pb-70">
                 {sub_content.map((element) => (
                   <div className="flex">
-                    <div className="w-38% lg:w-100% md:w-11%">
-                      <img src={element.logo} />
-                    </div>
-
+                    <img
+                      src={element.logo}
+                      className="w-70 h-70 lg:w-100% md:w-11%"
+                    />
                     <div className="mx-20 mt-10">
                       <div className="footer-label font-bold">
                         {element.title}
@@ -340,39 +319,7 @@ function Support() {
           </div>
         </div>
         <div>
-          <div className="slider1">
-            <Slider {...settings} className="m-100 sm:m-0 sm:mt-80">
-              {slider_2.map((element) => (
-                <div className="rounded-sm h-200 text-base">
-                  <div className="shadow mx-20 mb-38 text-base sm:text-sm  text-black p-35 sm:p-20 relative">
-                    {element.text}
-                    <img
-                      src="/images/home/vector.svg"
-                      className="absolute bottom-_17 left-20"
-                    />
-                  </div>
-                  <div className="flex mx-20">
-                    <img
-                      src={
-                        element.image
-                          ? element.image
-                          : '/images/home/slider.svg'
-                      }
-                      className="w-50 h-50"
-                    />
-                    <div className="ml-35">
-                      <div className="text-18 sm:text-base font-display text-blue font-display">
-                        {element.name}
-                      </div>
-                      <div className="text-16 sm:text-sm font-display text-light-grey">
-                        {element.category}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
+          <BottomSlider content={slider_2} />
         </div>
         <div className="max-w-lg m-auto px-100 sm:px-0">
           <div className="mb-_40 mt-80">
