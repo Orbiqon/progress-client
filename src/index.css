@@ -49,6 +49,9 @@
 
 .react-responsive-modal-container {
   height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #react-burger-menu-btn {
