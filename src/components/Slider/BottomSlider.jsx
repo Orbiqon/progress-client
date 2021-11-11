@@ -42,7 +42,7 @@ function BottomSlider({ content = [] }) {
             <div className="flex mx-20">
               <img
                 src={element.image ? element.image : '/images/home/slider.svg'}
-                className="w-50 h-50"
+                className="w-50 h-100"
               />
               <div className="ml-35">
                 <div className="text-18 sm:text-base font-display text-blue font-display">
