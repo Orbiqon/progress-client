@@ -16,11 +16,11 @@ function EntryPoint({ open, setOpen }) {
             <VideoCard />
           </div>
           <div className=" mx-40 sub-heading text-center text-blue">
-            Lorem ipsum derset dolor sit amet
+            The world's most advanced health programme
           </div>
           <div className="content text-center mx-20 mt-20 mb-40">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Take our free health questionnaire to see where the programme could
+            help you the most
           </div>
           <div className="flex justify-center mb-40 px-20">
             <Link to={QUESTIONARE} className="mr-10">

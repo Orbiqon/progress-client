@@ -7,12 +7,6 @@ import { useFormik } from 'formik';
 import { genrateSchema } from 'validation';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-// load('6LczEPUcAAAAABl38N3maKpsl0g2Ts9I1DUSQC_A').then((recaptcha) => {
-//   recaptcha.execute('<action>').then((token) => {
-//     console.log(token); // Will print the token
-//   });
-// });
-
 function Form({ title, description }) {
   const [post, { data: dataPost, status: statusPost }] = usePost(
     contactFormService

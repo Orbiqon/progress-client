@@ -36,10 +36,10 @@ function Home() {
             </div>
           </div>
           <div className="w-74% bg-gradient-green rounded-r-md sm:pl-20 sm:mr-0 relative sm:rounded-r-md h-auto pb-20 sm:h-auto sm:w-95%">
-            <div className="max-w-lg m-auto px-100 sm:px-0">
+            <div className="max-w-lg m-auto px-100 lg:px-0 sm:px-0">
               <img
-                src="images/home/principle.png"
-                className="rounded sm:rounded-l-sm absolute sm:top-_70 lg:w-auto lg:right-_190 md:w-50% sm:w-95% sm:right-_20 top-85 right-_190 w-50% "
+                src="images/PROGRESS/homepage1.jpg"
+                className="max-w-484 rounded sm:rounded-l-sm absolute sm:top-_70 lg:right-_190 lg:w-50% md:w-50% md:h-36% sm:w-58% sm:right-_20 top-85 right-_190 w-50% "
               />
               <div className=" max-w-lg m-auto px-100 sm:px-0 sm:w-100% w-100% pt-80 flex">
                 <div className="w-70% sm:w-100% lg:w-100% sm:pt-173 sm:pb-15 grid grid-cols-2 sm:block">
@@ -55,7 +55,7 @@ function Home() {
                         />
                       </div>
 
-                      <div className="sm:mx-20 sm:mt-10 mt-36 sm:w-50%">
+                      <div className="sm:mx-20 sm:mt-10 mt-36 lg:max-w-187 sm:w-50%">
                         <div className="footer-label font-bold">
                           {element.title}
                         </div>
