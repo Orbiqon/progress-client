@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 import { HealthVideo } from 'components/Modal';
 
 function VideoCard() {
@@ -7,20 +8,29 @@ function VideoCard() {
     <>
       <div className="relative">
         {videoOpen ? (
-          <div className="absolute left-50% w-87% transform-x">
-            <video
+          <div className="absolute left-50% w-87%  pb-20 transform-x">
+            <ReactPlayer
+              url="https://youtu.be/5QsSPNPU0O4"
+              style={{ borderRadius: '10px', margin: 'auto' }}
+              controls
+              width="80%"
+              height="250px"
+            />
+
+            {/* <video
               id="my-video"
-              class="video-js"
-              style={{ borderRadius: '10px' }}
+              className="video-js"
+              style={{ borderRadius: '10px', margin: 'auto' }}
               // onClick={() => setOpen(false)}
               controls
               preload="auto"
               width="500"
               height="220"
               poster="MY_VIDEO_POSTER.jpg"
-              data-setup="{}"
-              src={'https://www.w3schools.com/html/mov_bbb.mp4'}
-            ></video>
+              // data-setup="{}"
+              data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'
+              // src={'https://www.w3schools.com/html/mov_bbb.mp4'}
+            ></video> */}
           </div>
         ) : (
           <>

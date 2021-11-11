@@ -173,7 +173,7 @@ function LearnMore() {
       <div className="pt-60 ">
         <div className="flex sm:flex-col w-100% justify-between max-w-lg m-auto sm:px-0 px-100">
           <div className="sm:w-100% w-50%">
-            <div className="text-3xl text-left sm:text-center heading pb-20 mx-20">
+            <div className="text-3xl text-left sm:text-center heading pb-20  sm:mx-20">
               {heading}
             </div>
             <div className="content text-18 sm:text-center sm:mx-20 mb-40">

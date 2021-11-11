@@ -3,6 +3,7 @@ import { Modal } from 'components/Modal';
 import { VideoCard } from 'components/VideoCard';
 import { Button, BackButton } from 'components/Button';
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 
 function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
   return (
@@ -18,7 +19,14 @@ function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
         className="sm:max-w-sm w-100% sm:m-auto sm:mt-100 sm:w-100% bg-backBlack"
         onClick={() => setOpen(false)}
       >
-        <video
+        <ReactPlayer
+          url="https://youtu.be/5QsSPNPU0O4"
+          style={{ borderRadius: '10px', margin: 'auto' }}
+          controls
+          width="700px"
+          height="500px"
+        />
+        {/* <video
           id="my-video"
           class="video-js"
           onClick={() => setOpen(false)}
@@ -29,7 +37,7 @@ function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
           poster="MY_VIDEO_POSTER.jpg"
           data-setup="{}"
           src={'https://www.w3schools.com/html/mov_bbb.mp4'}
-        ></video>
+        ></video> */}
         <div className={`pb-20 justify-center mt-20 ${display}`}>
           <div className="flex items-center mr-20">
             <BackButton value="Back" />

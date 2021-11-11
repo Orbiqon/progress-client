@@ -257,7 +257,7 @@ function Support() {
                 {sub_content.map((element) => (
                   <div className="flex">
                     <img
-                      src={element.logo}
+                      src="./images/home/principle1.svg"
                       className="w-70 h-70 lg:w-100% md:w-11%"
                     />
                     <div className="mx-20 mt-10">

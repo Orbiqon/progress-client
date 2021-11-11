@@ -209,7 +209,10 @@ function Overview() {
                 <div className="mb-160 sm:mt-40 sm:pb-398">
                   {sub_description.map((item) => (
                     <div className="flex ">
-                      <img src={item.logo} className="self-start" />
+                      <img
+                        src="./images/home/principle1.svg"
+                        className="self-start"
+                      />
                       <div className="text-base sm:text-sm sm:ml-20 ml-30 mb-30 w-370">
                         {item.description}
                       </div>
