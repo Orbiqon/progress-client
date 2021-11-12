@@ -72,10 +72,10 @@ function InitDataCollect({ open, setOpen, ...props }) {
     <Modal open={open} setOpen={setOpen}>
       <div className="pt-60 px-47">
         <div className="modal-heading mx-20 mb-20 sm:mx-40">
-          Lorem ipsum derset dolor sit amet
+          Enter your details to see your result
         </div>
         <div className="content text-center mx-20 mb-30 sm:ml-46 sm:mr-43">
-          Lorem ipsum dolor sit amet, consecteturlorem ipsumipiscing elit
+          Click the box if you are happy for us to email you
         </div>
         <div className="mb-20">
           <TextField
