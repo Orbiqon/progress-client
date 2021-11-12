@@ -218,7 +218,7 @@ function Support() {
                 </picture>
 
                 <img
-                  className="absolute left:45% sm:left-53% lg:bottom-80 md:bottom-70 sm:bottom-90 sm:w-80% lg:rounded rounded-md transform-x bottom-120 h-100% w-60%"
+                  className="absolute left-45% sm:left-53% lg:bottom-80 md:bottom-70 sm:bottom-90 sm:w-80% lg:rounded rounded-md transform-x bottom-120 h-100% w-60%"
                   src="images/PROGRESS/Support.jpg"
                 />
                 {/* <picture>
