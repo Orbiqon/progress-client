@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
 import { staticDataService } from 'api';
+import ReactPlayer from 'react-player';
 import { useFetch } from 'hooks';
 
 function Faq() {
@@ -14,7 +15,7 @@ function Faq() {
   const { data, status } = useFetch(staticDataService, {
     variables: `faq`,
   });
-
+  console.log('aas', data);
   const [element = {}] = data || [];
   const { acf = {} } = element;
   const {
@@ -75,28 +76,36 @@ function Faq() {
         <div className="bg-gradient-light-blue mt-100 px-20 pt-40 pb-20">
           <div className="slider3 max-w-lg m-auto px-100 sm:px-0">
             <Slider {...settings1} className="mb-100">
-              {slider.map((element) => (
-                <div className="rounded-sm max-w-370 w-100% text-base pr-20">
-                  <img
-                    src={
-                      element.image
-                        ? element.image
-                        : '/images/support/slider-pic.jpeg'
-                    }
-                    className=" w-370"
-                  />
-
-                  <div className="sm:98% w-270 rounded-lg py-20 max-w-270 w-100% relative">
-                    <div className="bg-white p-20 rounded-lg">
-                      {element.comment}
-                    </div>
-                    <img
-                      src="/images/home/vector.svg"
-                      className="absolute bottom-3 left-20"
+              {slider &&
+                slider.map((element) => (
+                  <div className="rounded-sm max-w-370 w-100% text-base pr-20">
+                    {/* <img
+                      src={
+                        element.image
+                          ? element.image
+                          : '/images/support/slider-pic.jpeg'
+                      }
+                      className=" w-370"
+                    /> */}
+                    <ReactPlayer
+                      url={element.link}
+                      style={{ borderRadius: '10px', margin: 'auto' }}
+                      controls
+                      width="100%"
+                      height="250px"
                     />
+
+                    <div className="sm:98% w-270 rounded-lg py-20 max-w-270 w-100% relative">
+                      <div className="bg-white p-20 rounded-lg">
+                        {element.comment}
+                      </div>
+                      <img
+                        src="/images/home/vector.svg"
+                        className="absolute bottom-3 left-20"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </Slider>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
-import { HealthVideo } from 'components/Modal';
 
 function VideoCard() {
   const [videoOpen, setVideoOpen] = useState(false);
@@ -52,7 +51,6 @@ function VideoCard() {
           </>
         )}
       </div>
-      {/* <HealthVideo open={videoOpen} setOpen={setVideoOpen} /> */}
     </>
   );
 }
