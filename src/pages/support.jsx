@@ -200,17 +200,57 @@ function Support() {
                 {description}
               </div>
             </div>
-            <picture>
-              <source
-                media="(min-width:651px)"
-                srcset="images/support/card-header.svg"
-              />
-              <source
-                media="(max-width:650px)"
-                srcset="images/support/card-header-mbl.svg"
-              />
-              <img className="m-auto" src="images/support/card-header.svg" />
-            </picture>
+            <div className="w-50% sm:w-100% mx-auto mt-120">
+              <div className="relative mx-auto ml-_20">
+                <picture>
+                  <source
+                    media="(min-width:651px)"
+                    srcset="images/support/container.svg"
+                  />
+                  <source
+                    media="(max-width:650px)"
+                    srcset="images/support/mbl-container.svg"
+                  />
+                  <img
+                    className="h-100% w-100% relative "
+                    src="images/support/container.svg"
+                  />
+                </picture>
+
+                <img
+                  className="absolute left:45% sm:left-53% lg:bottom-80 md:bottom-70 sm:bottom-90 sm:w-80% lg:rounded rounded-md transform-x bottom-120 h-100% w-60%"
+                  src="images/PROGRESS/Support.jpg"
+                />
+                {/* <picture>
+                <source
+                  media="(min-width:651px)"
+                  srcset="images/support/container.svg"
+                />
+                <source
+                  media="(max-width:650px)"
+                  srcset="images/support/card-header-mbl.svg"
+                />
+                <img
+                  className="m-auto absolute"
+                  src="images/support/card-header.svg"
+                />
+              </picture>
+              <picture>
+                <source
+                  media="(min-width:651px)"
+                  srcset="images/support/main.png"
+                />
+                <source
+                  media="(max-width:650px)"
+                  srcset="images/support/card-header-mbl.svg"
+                />
+                <img
+                  className="m-auto absolute"
+                  src="images/support/main.png"
+                />
+              </picture> */}
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex flex-row-reverse sm:flex-col">
