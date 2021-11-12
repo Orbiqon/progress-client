@@ -124,7 +124,7 @@ function Overview() {
                     />
                   </picture>
                   <img
-                    className="absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-60%"
+                    className="object-cover absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-60%"
                     src="images/PROGRESS/overview1.jpg"
                   />
                 </div>
@@ -142,7 +142,25 @@ function Overview() {
               </picture> */}
             </div>
             <div className="flex w-100% sm:flex sm:flex-col-reverse mt-120 sm:mt-0">
-              <picture>
+              <div className="w-50% md:w-50% sm:w-100% mx-auto mt-120">
+                <div className="relative mx-auto ml-_20">
+                  <picture>
+                    <source
+                      media="(max-width:650px)"
+                      srcset="images/overview/mbl-container2.svg"
+                    />
+                    <img
+                      className="h-100% w-100% relative "
+                      src="images/overview/container2.svg"
+                    />
+                  </picture>
+                  <img
+                    className="object-cover bg-white absolute left-50% sm:left-50% md:left-50% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-70%"
+                    src="images/PROGRESS/programmeOverview.PNG"
+                  />
+                </div>
+              </div>
+              {/* <picture>
                 <source
                   media="(min-width:651px)"
                   srcset="images/overview/question.svg"
@@ -152,7 +170,7 @@ function Overview() {
                   srcset="images/overview/question-mbl.svg"
                 />
                 <img className="m-auto" src="images/overview/question.svg" />
-              </picture>
+              </picture> */}
               <div className="pl-100 sm:pl-0 sm:w-100% w-50% sm:pt-20 mt-80 sm:mt-20">
                 <div className="pb-10">
                   <Button
@@ -179,16 +197,16 @@ function Overview() {
               <div className="slider5 absolute w-80% sm:w-100% right-0 top-_78 ">
                 <Slider {...settings1}>
                   <img
-                    src="/images/overview/slider/pic1.jpg"
-                    className="w--80"
+                    src="/images/PROGRESS/programmeOverview3.jpg"
+                    className="w--80 h-200"
                   />
                   <img
-                    src="/images/overview/slider/pic1.jpg"
-                    className="w--80"
+                    src="/images/PROGRESS/programmeOverview3.jpg"
+                    className="w--80 h-200"
                   />
                   <img
-                    src="/images/overview/slider/pic1.jpg"
-                    className="w--80"
+                    src="/images/PROGRESS/programmeOverview3.jpg"
+                    className="w--80 h-200"
                   />
                 </Slider>
               </div>

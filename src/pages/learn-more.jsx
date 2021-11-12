@@ -65,25 +65,25 @@ function LearnMore() {
   const [totalLength, setTotalLength] = useState(0);
   const sliderRef = useRef();
 
-  useEffect(() => {
-    let imgSlider =
-      sliderRef.current.children[0].children[1].children[0].children[
-        changeEvent
-      ].children[0].children[0].children[0];
+  // useEffect(() => {
+  //   let imgSlider =
+  //     sliderRef.current.children[0].children[1].children[0].children[
+  //       changeEvent
+  //     ].children[0].children[0].children[0];
 
-    let containerSlider =
-      sliderRef.current.children[0].children[1].children[0].children[
-        changeEvent
-      ].children[0].children[0];
+  //   let containerSlider =
+  //     sliderRef.current.children[0].children[1].children[0].children[
+  //       changeEvent
+  //     ].children[0].children[0];
 
-    imgSlider.style.height = '305px';
-    imgSlider.style.borderRadius = '8px';
-    containerSlider.style.marginTop = '0px';
+  //   imgSlider.style.height = '305px';
+  //   imgSlider.style.borderRadius = '8px';
+  //   containerSlider.style.marginTop = '0px';
 
-    setTotalLength(
-      sliderRef.current.children[0].children[1].children[0].children.length
-    );
-  }, [sliderRef]);
+  //   setTotalLength(
+  //     sliderRef.current.children[0].children[1].children[0].children.length
+  //   );
+  // }, [sliderRef]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -200,8 +200,15 @@ function LearnMore() {
           />
         </div>
         <div className="flex sm:flex-col-reverse ">
-          <div className="bg-gradient-blue rounded-r-md py-40 sm:mr-20 w-50% sm:w-90%">
-            <div
+          <div className="bg-gradient-blue  relative rounded-r-md py-40 sm:mr-20 w-50% sm:w-90%">
+            <div>
+              <img
+                src="/images/PROGRESS/learn.PNG"
+                className="w-80% float-right mr-30"
+                alt=""
+              />
+            </div>
+            {/* <div
               className="hidden sm:block slider4 sm:ml-20 sm:mr-_20"
               ref={sliderRef}
             >
@@ -249,7 +256,7 @@ function LearnMore() {
                   </div>
                 ))}
               </Slider>
-            </div>
+            </div> */}
           </div>
           <div className="ml-100 w-30% sm:w-100% sm:ml-0 sm:mb-100">
             <div className="sub-heading mx-20 text-blue text-2xl sm:text-center pb-20">
