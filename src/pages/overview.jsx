@@ -111,7 +111,25 @@ function Overview() {
                   <img src="/images/scroll-down.svg" />
                 </div>
               </div>
-              <picture>
+              <div className="w-50% md:w-50% sm:w-100% mx-auto mt-120">
+                <div className="relative mx-auto mr-_20">
+                  <picture>
+                    <source
+                      media="(max-width:650px)"
+                      srcset="images/overview/mbl-container.svg"
+                    />
+                    <img
+                      className="h-100% w-100% relative "
+                      src="images/overview/container.svg"
+                    />
+                  </picture>
+                  <img
+                    className="absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-60%"
+                    src="images/PROGRESS/overview1.jpg"
+                  />
+                </div>
+              </div>
+              {/* <picture>
                 <source
                   media="(min-width:651px)"
                   srcset="images/overview/card-header.svg"
@@ -121,7 +139,7 @@ function Overview() {
                   srcset="images/overview/card-header-mbl.svg"
                 />
                 <img className="m-auto" src="images/overview/card-header.svg" />
-              </picture>
+              </picture> */}
             </div>
             <div className="flex w-100% sm:flex sm:flex-col-reverse mt-120 sm:mt-0">
               <picture>
