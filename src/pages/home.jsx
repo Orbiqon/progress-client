@@ -21,7 +21,7 @@ function Home() {
           <div className="pt-129 sm:pt-86 sm:mx-20 mb-113 max-w-lg m-auto px-100 sm:px-0 lg:px-50 mb-206">
             <div className="flex justify-center pb-56">
               <img
-                src="images/logo/progress.gif"
+                src="images/logo/logo_animation1.gif"
                 className="w-500 h-272 sm:object-contain"
                 loop="1"
               />

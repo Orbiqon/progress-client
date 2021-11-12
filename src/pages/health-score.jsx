@@ -32,7 +32,7 @@ function HealthScore() {
               parentClass="maindiv"
               childClass="div2"
               childHeight="22"
-              value={Math.round(scores.health.health_score)}
+              value={Math.round(scores.health.health_score / 2)}
             >
               <div id="maindiv" className="m-auto relative">
                 <div className="centerText text-center flex flex-col justify-center h-100%">

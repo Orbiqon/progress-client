@@ -10,7 +10,7 @@ function CategoryScore({ title, score, description, parentClass, childClass }) {
         parentClass={parentClass}
         childClass={childClass}
         childHeight="10"
-        value={score}
+        value={score / 2}
       >
         <div id={parentClass} className="m-auto relative">
           <div
@@ -25,7 +25,7 @@ function CategoryScore({ title, score, description, parentClass, childClass }) {
       <div className="font-display text-18 font-medium text-blue text-center">
         {title}
       </div>
-      <div className="flex justify-center">
+      <div className="flex flex-col justify-center items-center">
         {description &&
           description.map((item) => (
             <div className="w-80% font-display text-base text-dark-grey ">

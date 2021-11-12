@@ -58,6 +58,10 @@
   display: none;
 }
 
+#react-burger-menu-btn .bm-burger-bars {
+  height: 0px;
+}
+
 .child_div {
   position: absolute;
   background-color: #d9d9d9;
