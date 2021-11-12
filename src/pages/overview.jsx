@@ -298,13 +298,16 @@ function Overview() {
             <picture>
               <source
                 media="(min-width:651px)"
-                srcset="images/overview/weight.svg"
+                srcset="images/PROGRESS/programmeOverview5.jpg"
               />
               <source
                 media="(max-width:650px)"
-                srcset="images/overview/weight-mbl.svg"
+                srcset="images/PROGRESS/programmeOverview5.jpg"
               />
-              <img className="m-auto" src="images/overview/weight.svg" />
+              <img
+                className="m-auto max-w-420 w-100% rounded"
+                src="images/PROGRESS/programmeOverview5.jpg"
+              />
             </picture>
           </div>
           <div className="bg-gradient-green flex justify-between mt-129 mt-28 sm:pt-80 py-60 mb-100">
