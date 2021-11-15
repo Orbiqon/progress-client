@@ -180,17 +180,24 @@ function LearnMore() {
               <span className="w-50%">{description}</span>
             </div>
           </div>
-          <picture>
-            <source
-              media="(min-width:651px)"
-              srcset="images/learn-more/card-header.svg"
-            />
-            <source
-              media="(max-width:650px)"
-              srcset="images/learn-more/card-header-mbl.svg"
-            />
-            <img className="m-auto" src="images/learn-more/card-header.svg" />
-          </picture>
+          <div className="w-50% md:w-50% sm:w-100% mx-auto mt-120">
+            <div className="relative mx-auto mr-_20">
+              <picture>
+                <source
+                  media="(max-width:650px)"
+                  srcset="images/learn-more/mbl-container.svg"
+                />
+                <img
+                  className="h-100% w-100% relative "
+                  src="images/learn-more/container.svg"
+                />
+              </picture>
+              <img
+                className="object-cover absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-60%"
+                src="images/PROGRESS/LearnMore.PNG"
+              />
+            </div>
+          </div>
         </div>
         <div className="sm:pb-80 pt-100 sm:pt-40 pb-120">
           <BookCallVideo

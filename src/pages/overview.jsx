@@ -211,17 +211,13 @@ function Overview() {
                 </Slider>
               </div>
               <picture>
-                {/* <source
-                  media="(min-width:651px)"
-                  srcset="/images/overview/step3.svg"
-                /> */}
                 <source
                   media="(max-width:768px)"
-                  srcset="/images/overview/step3-mbl.svg"
+                  srcset="/images/PROGRESS/ProgrammeOverview4.jpg"
                 />
                 <img
-                  src="/images/overview/step3.svg"
-                  className="absolute right-_518 lg:left-370 md:left-335 sm:right-_20 sm:bottom-_158  sm:left-auto"
+                  src="/images/PROGRESS/ProgrammeOverview4.jpg"
+                  className="w-68% absolute right-_384 lg:left-455 md:right_75 sm:right-_20 sm:bottom-_158  sm:left-auto"
                 />
               </picture>
 
