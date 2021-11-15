@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BubbleLoading } from 'components/Loading';
 import { Container } from 'Layout';
-import { camelCasetoNormal, colorLoader } from 'utils';
+import { camelCasetoNormal, colorLoader, colorText } from 'utils';
 import { CategoryScore } from 'components/CategoryScore';
 import { useLocation } from 'react-router-dom';
 import BookCallVideo from 'components/BookCallVideo/BookCallVideo';
@@ -32,13 +32,13 @@ function HealthScore() {
               parentClass="maindiv"
               childClass="div2"
               childHeight="22"
-              value={Math.round(scores.health.health_score / 2)}
+              value={Math.round(scores.health.health_score) / 2}
             >
               <div id="maindiv" className="m-auto relative">
                 <div className="centerText text-center flex flex-col justify-center h-100%">
                   <div
-                    className={`text-${colorLoader(
-                      Math.round(scores.health.health_score)
+                    className={`text-${colorText(
+                      Math.round(scores.health.health_score) / 2
                     )} font-display text-56 flex justify-center items-center h-90% w-95%`}
                   >
                     {Math.round(scores.health.health_score)}

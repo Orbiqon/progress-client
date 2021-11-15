@@ -124,7 +124,7 @@ function Overview() {
                     />
                   </picture>
                   <img
-                    className="object-cover absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-60%"
+                    className="object-cover absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-70%"
                     src="images/PROGRESS/overview1.jpg"
                   />
                 </div>

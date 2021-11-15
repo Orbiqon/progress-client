@@ -1,5 +1,5 @@
 import React from 'react';
-import { colorLoader } from 'utils';
+import { colorLoader, colorText } from 'utils';
 import { BubbleLoading } from 'components/Loading';
 
 function CategoryScore({ title, score, description, parentClass, childClass }) {
@@ -14,8 +14,8 @@ function CategoryScore({ title, score, description, parentClass, childClass }) {
       >
         <div id={parentClass} className="m-auto relative">
           <div
-            className={`text-${colorLoader(
-              score
+            className={`text-${colorText(
+              score / 2
             )} font-display text-38 flex justify-center items-center h-90% w-95%`}
           >
             {score}

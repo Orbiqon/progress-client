@@ -10,14 +10,14 @@
 
 #parentdiv {
   position: relative;
-  background-color: white;
+  /* background-color: white; */
   /* border-radius: 80px; */
   margin: auto;
 }
 
 #maindiv {
   position: relative;
-  background-color: white;
+  /* background-color: white; */
   /* border-radius: 80px; */
   margin: auto;
 }

@@ -61,6 +61,21 @@ export const colorLoader = (value) => {
   }
 };
 
+export const colorText = (value) => {
+  switch (true) {
+    case value > 0 && value <= 12:
+      return 'primary-red';
+    case value > 12 && value <= 22:
+      return 'primary-orange';
+    case value > 22 && value <= 32:
+      return 'primary-yellow';
+    case value > 32 && value <= 42:
+      return 'primary-green-light';
+    case value > 42 && value <= 52:
+      return 'primary-green';
+  }
+};
+
 export const partCount = (value) => {
   switch (true) {
     case value >= 7:

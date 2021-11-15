@@ -97,6 +97,8 @@ function Faq() {
 
                     <div className="sm:98% w-270 rounded-lg py-20 max-w-270 w-100% relative">
                       <div className="bg-white p-20 rounded-lg">
+                        <b>{element.name}</b>
+                        <br></br>
                         {element.comment}
                       </div>
                       <img
