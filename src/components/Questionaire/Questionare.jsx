@@ -130,11 +130,14 @@ function Questionare({
             </div>
             <div className="flex justify-center">
               <div className="w-50% content text-center mx-30 pb-40">
-                {(response[currentCategory] &&
-                  response[currentCategory].answers.length == totalQuestions &&
-                  data &&
-                  data.payload[currentCategory].description) ||
-                  ''}
+                {questionType === 'dna'
+                  ? 'To help us prepare for your 20 minute consultation please take this quick questionnaire to give us an insight into your genetic code'
+                  : (response[currentCategory] &&
+                      response[currentCategory].answers.length ==
+                        totalQuestions &&
+                      data &&
+                      data.payload[currentCategory].description) ||
+                    ''}
               </div>
             </div>
           </>

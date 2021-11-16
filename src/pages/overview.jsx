@@ -238,7 +238,7 @@ function Overview() {
                 <div className="text-16 font-display sm:text-base  mb-60 ">
                   {step_4_description}
                 </div>
-                <div className="mb-160 sm:mt-40 sm:pb-398">
+                <div className="mb-160 sm:mt-40">
                   {sub_description.map((item) => (
                     <div className="flex ">
                       <img
