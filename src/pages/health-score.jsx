@@ -32,6 +32,7 @@ function HealthScore() {
               parentClass="maindiv"
               childClass="div2"
               childHeight="22"
+              questionType=""
               value={Math.round(scores.health.health_score) / 2}
             >
               <div id="maindiv" className="m-auto relative">

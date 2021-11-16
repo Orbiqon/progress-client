@@ -7,6 +7,7 @@ function BubbleLoading({
   childClass,
   childHeight,
   parentClass,
+  questionType,
   value,
 }) {
   useEffect(() => {
@@ -16,6 +17,7 @@ function BubbleLoading({
         childClass,
         childHeight,
         parentClass,
+        questionType,
         value,
       });
     }

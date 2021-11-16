@@ -5,6 +5,7 @@ export const bubblesCircle = ({
   noOfBubbles,
   childClass,
   childHeight,
+  questionType,
   value,
 }) => {
   let div = 360 / noOfBubbles;
@@ -15,7 +16,11 @@ export const bubblesCircle = ({
 
   var currentValue = value % 10;
   var parts = Math.floor(value / 10);
-  var circleToBeFilled = parts * 4 + partCount(currentValue);
+
+  var circleToBeFilled =
+    questionType === 'dna'
+      ? dnaCircle(value)
+      : parts * 4 + partCount(currentValue);
   if (parentdiv) {
     for (var i = 1; i <= noOfBubbles; ++i) {
       var childdiv = document.createElement('div');
@@ -84,6 +89,23 @@ export const partCount = (value) => {
       return 2;
     case value >= 2:
       return 1;
+    default:
+      return 0;
+  }
+};
+
+export const dnaCircle = (value) => {
+  switch (true) {
+    case value >= 35:
+      return 20;
+    case value >= 28:
+      return 16;
+    case value >= 21:
+      return 12;
+    case value >= 14:
+      return 8;
+    case value >= 7:
+      return 4;
     default:
       return 0;
   }

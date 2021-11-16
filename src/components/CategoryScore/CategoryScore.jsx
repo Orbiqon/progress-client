@@ -10,6 +10,7 @@ function CategoryScore({ title, score, description, parentClass, childClass }) {
         parentClass={parentClass}
         childClass={childClass}
         childHeight="10"
+        questionType=""
         value={score / 2}
       >
         <div id={parentClass} className="m-auto relative">
