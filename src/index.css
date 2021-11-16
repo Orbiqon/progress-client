@@ -58,8 +58,9 @@
   display: none;
 }
 
-#react-burger-menu-btn .bm-burger-bars {
-  height: 0px;
+.bm-burger-bars {
+  display: none;
+  height: 0px !important;
 }
 
 .child_div {
