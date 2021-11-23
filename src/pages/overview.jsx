@@ -217,7 +217,7 @@ function Overview() {
                 />
                 <img
                   src="/images/PROGRESS/ProgrammeOverview4.jpg"
-                  className="w-68% absolute right-_384 lg:left-455 md:right_75 sm:right-_20 sm:bottom-_158  sm:left-auto"
+                  className="w-68% absolute right-_384 lg:left-455 md:right_75 sm:w-45% sm:right-_40 sm:bottom-_158  sm:left-auto"
                 />
               </picture>
 

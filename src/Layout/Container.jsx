@@ -13,7 +13,6 @@ function Container({ children, questionaire = false }) {
         <div className=" sm:hidden ">
           <DesktopHeader questionaire={questionaire} />
           <div className="">{children}</div>
-
           <DesktopFooter />
         </div>
       ) : (
