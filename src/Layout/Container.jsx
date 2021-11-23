@@ -9,15 +9,15 @@ function Container({ children, questionaire = false }) {
 
   return (
     <>
-      {window.innerWidth > 1024 ? (
-        <div className="sm:hidden ">
+      {window.innerWidth > 1150 ? (
+        <div className=" sm:hidden ">
           <DesktopHeader questionaire={questionaire} />
           <div className="">{children}</div>
 
           <DesktopFooter />
         </div>
       ) : (
-        <div className="xl:hidden 2xl:hidden">
+        <div className="">
           <MobileHeader questionaire={questionaire} />
           {children}
           <MobileFooter />
