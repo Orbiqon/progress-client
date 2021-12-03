@@ -156,7 +156,7 @@ function Form({ title, description }) {
         <div className="flex flex-col items-center justify-center pb-40">
           <div className=" text-white pb-20">{dataSubmit && dataSubmit}</div>
           <ReCAPTCHA
-            sitekey="6LfbEg0dAAAAAAOew7rr_KeodWHzY_bN3usYkzKS"
+            sitekey="6Ldli3UdAAAAAJdAN6HnCOFuj5MtDFkQn0Wyl4Sn"
             onChange={onChange}
           />
           <div className="pt-20">
