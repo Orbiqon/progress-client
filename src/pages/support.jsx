@@ -84,24 +84,23 @@ function Support() {
   const [changeEvent, setChangeEvent] = useState(0);
   const [totalLength, setTotalLength] = useState(0);
   useEffect(() => {
-    let imgSlider =
-      sliderRef.current.children[0].children[1].children[0].children[
-        changeEvent
-      ].children[0].children[0].children[0];
-
-    let containerSlider =
-      sliderRef.current.children[0].children[1].children[0].children[
-        changeEvent
-      ].children[0].children[0];
-
-    imgSlider.style.height = '158px';
-    imgSlider.style.borderRadius = '8px';
-    containerSlider.style.marginTop = '0px';
-
-    setTotalLength(
-      sliderRef.current.children[0].children[1].children[0].children.length
-    );
-  }, [sliderRef]);
+    if (slider1 && sliderRef.current?.children[0]?.children[1]) {
+      let imgSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0].children[0];
+      let containerSlider =
+        sliderRef.current.children[0].children[1].children[0].children[
+          changeEvent
+        ].children[0].children[0];
+      imgSlider.style.height = '158px';
+      imgSlider.style.borderRadius = '8px';
+      containerSlider.style.marginTop = '0px';
+      setTotalLength(
+        sliderRef.current.children[0].children[1].children[0].children.length
+      );
+    }
+  }, [sliderRef, slider1]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -184,9 +183,7 @@ function Support() {
     } else {
     }
   };
-  {
-    console.log('slid', slider);
-  }
+
   return (
     <Container>
       <>
@@ -314,21 +311,20 @@ function Support() {
               ref={sliderRef}
             >
               <Slider ref={(c) => setSlider(c)} {...settings1} className="">
-                {[...Array(4)].map((item, index) => (
+                {slider1.map((item, index) => (
                   <div className="rounded-sm h-200 w-270 text-base mt-18">
                     <img
-                      src="/images/support/slider-pic.jpeg"
-                      className="rounded-sm h-120 my-auto"
+                      src={item.image.url}
+                      className="rounded-sm h-120 my-auto w-217 "
                     />
 
-                    <div className="w-270 mt-20">
+                    <div className="w-217 mt-20">
                       <div>
                         <div className="text-base  font-display text-white font-bold font-display pb-10">
-                          Mike Vincent
+                          {item.name}
                         </div>
-                        <div className="text-sm font-display text-white">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit
+                        <div className="text-sm font-display text-white ">
+                          {item.description}
                         </div>
                       </div>
                     </div>
