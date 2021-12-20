@@ -25,13 +25,18 @@ function Overview() {
   const {
     heading,
     description,
+    header_image,
     step_1 = {},
     step_2 = {},
     step_3 = {},
     step_4 = {},
     step_5 = {},
+    step_1_side_image,
     bottom_section = {},
+    slider_1 = [],
     slider_2 = [],
+    step_4_side_image,
+    step_5_side_image,
     contact = {},
   } = acf;
   const { title: step_1_title, description: step_1_description } = step_1;
@@ -125,7 +130,8 @@ function Overview() {
                   </picture>
                   <img
                     className="object-cover absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-70%"
-                    src="images/PROGRESS/overview1.jpg"
+                    // src="images/PROGRESS/overview1.jpg"
+                    src={header_image}
                   />
                 </div>
               </div>
@@ -156,21 +162,11 @@ function Overview() {
                   </picture>
                   <img
                     className="object-cover bg-white absolute left-50% sm:left-50% md:left-50% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-70%"
-                    src="images/PROGRESS/programmeOverview.PNG"
+                    src={step_1_side_image}
+                    // src="images/PROGRESS/programmeOverview.PNG"
                   />
                 </div>
               </div>
-              {/* <picture>
-                <source
-                  media="(min-width:651px)"
-                  srcset="images/overview/question.svg"
-                />
-                <source
-                  media="(max-width:650px)"
-                  srcset="images/overview/question-mbl.svg"
-                />
-                <img className="m-auto" src="images/overview/question.svg" />
-              </picture> */}
               <div className="pl-100 sm:pl-0 sm:w-100% w-50% sm:pt-20 mt-80 sm:mt-20">
                 <div className="pb-10">
                   <Button
@@ -196,7 +192,10 @@ function Overview() {
             <div className="mt-168 bg-gradient-blue rounded-r-md sm:pt-140 pt-305 w-50% sm:w-90% mr-20 relative">
               <div className="slider5 absolute w-80% sm:w-100% right-0 top-_78 ">
                 <Slider {...settings1}>
-                  <img
+                  {slider_1.map((item) => (
+                    <img src={item.image} className="w--80 h-200" />
+                  ))}
+                  {/* <img
                     src="/images/PROGRESS/programmeOverview3.jpg"
                     className="w--80 h-200"
                   />
@@ -207,16 +206,18 @@ function Overview() {
                   <img
                     src="/images/PROGRESS/programmeOverview3.jpg"
                     className="w--80 h-200"
-                  />
+                  /> */}
                 </Slider>
               </div>
               <picture>
                 <source
                   media="(max-width:768px)"
-                  srcset="/images/PROGRESS/ProgrammeOverview4.jpg"
+                  // srcset="/images/PROGRESS/ProgrammeOverview4.jpg"
+                  srcset={step_4_side_image}
                 />
                 <img
-                  src="/images/PROGRESS/ProgrammeOverview4.jpg"
+                  // src="/images/PROGRESS/ProgrammeOverview4.jpg"
+                  src={step_4_side_image}
                   className="w-68% absolute right-_384 lg:left-455 md:right_75 sm:w-45% sm:right-_40 sm:bottom-_158  sm:left-auto"
                 />
               </picture>
@@ -242,7 +243,8 @@ function Overview() {
                   {sub_description.map((item) => (
                     <div className="flex ">
                       <img
-                        src="./images/home/principle1.svg"
+                        src={item.logo}
+                        // src="./images/home/principle1.svg"
                         className="self-start"
                       />
                       <div className="text-base sm:text-sm sm:ml-20 ml-30 mb-30 w-370">
@@ -294,15 +296,18 @@ function Overview() {
             <picture>
               <source
                 media="(min-width:651px)"
-                srcset="images/PROGRESS/programmeOverview5.jpg"
+                // srcset="images/PROGRESS/programmeOverview5.jpg"
+                srcset={step_5_side_image}
               />
               <source
                 media="(max-width:650px)"
-                srcset="images/PROGRESS/programmeOverview5.jpg"
+                // srcset="images/PROGRESS/programmeOverview5.jpg"
+                srcset={step_5_side_image}
               />
               <img
                 className="m-auto max-w-420 w-100% rounded"
-                src="images/PROGRESS/programmeOverview5.jpg"
+                src={step_5_side_image}
+                // src="images/PROGRESS/programmeOverview5.jpg"
               />
             </picture>
           </div>

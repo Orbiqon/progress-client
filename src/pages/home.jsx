@@ -12,7 +12,13 @@ function Home() {
   const [element = {}] = data || [];
   const { acf = {} } = element;
 
-  const { heading, description, section = [], bottom_description } = acf;
+  const {
+    heading,
+    description,
+    section = [],
+    bottom_description,
+    section_image,
+  } = acf;
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -38,7 +44,8 @@ function Home() {
           <div className="w-74% bg-gradient-green rounded-r-md sm:pl-20 sm:mr-0 relative sm:rounded-r-md h-auto pb-20 sm:h-auto sm:w-95%">
             <div className="max-w-lg m-auto px-100 lg:px-0 sm:px-0">
               <img
-                src="images/PROGRESS/homepage1.jpg"
+                // src="images/PROGRESS/homepage1.jpg"
+                src={section_image}
                 className="max-w-484 rounded sm:rounded-l-sm absolute sm:top-_70 lg:right-_190 lg:w-50% md:w-50% md:h-36% sm:w-58% sm:right-_20 top-85 right-_190 w-50% "
               />
               <div className=" max-w-lg m-auto px-100 sm:px-0 sm:w-100% w-100% pt-80 flex">
@@ -46,6 +53,7 @@ function Home() {
                   {section.map((element) => (
                     <div className="w-90% sm:w-100% mt-8 sm:flex">
                       <div className="w-25% sm:w-auto">
+                        {console.log(element)}
                         <img
                           src={
                             element.logo

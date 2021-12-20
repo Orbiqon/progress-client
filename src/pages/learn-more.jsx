@@ -19,9 +19,11 @@ function LearnMore() {
   const {
     heading,
     description,
+    header_image,
     video_section = {},
     slider: slider1 = {},
     contact = {},
+    section_image,
   } = acf;
   const {
     title: video_section_title,
@@ -44,8 +46,6 @@ function LearnMore() {
     slidesToScroll: 1,
     nextArrow: <Arrow dir="right" icon="Arrow" />,
     prevArrow: <Arrow dir="left" icon="Arrow" />,
-
-    // centerPadding: '25%',
   };
 
   const settings = {
@@ -54,37 +54,12 @@ function LearnMore() {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrow: false,
-    // nextArrow: <Arrow dir="right" />,
-    // prevArrow: <Arrow dir="left" />,
-
-    // centerPadding: '25%',
   };
 
   const [slider, setSlider] = useState();
   const [changeEvent, setChangeEvent] = useState(0);
   const [totalLength, setTotalLength] = useState(0);
   const sliderRef = useRef();
-
-  // useEffect(() => {
-  //   let imgSlider =
-  //     sliderRef.current.children[0].children[1].children[0].children[
-  //       changeEvent
-  //     ].children[0].children[0].children[0];
-
-  //   let containerSlider =
-  //     sliderRef.current.children[0].children[1].children[0].children[
-  //       changeEvent
-  //     ].children[0].children[0];
-
-  //   imgSlider.style.height = '305px';
-  //   imgSlider.style.borderRadius = '8px';
-  //   containerSlider.style.marginTop = '0px';
-
-  //   setTotalLength(
-  //     sliderRef.current.children[0].children[1].children[0].children.length
-  //   );
-  // }, [sliderRef]);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -194,7 +169,8 @@ function LearnMore() {
               </picture>
               <img
                 className="object-cover absolute left-45% sm:left-50% md:left-45% lg:bottom-80 md:bottom-80 sm:bottom-120 lg:rounded rounded-md transform-x bottom-120 h-90% w-60%"
-                src="images/PROGRESS/LearnMore.PNG"
+                // src="images/PROGRESS/LearnMore.PNG"
+                src={header_image}
               />
             </div>
           </div>
@@ -210,60 +186,12 @@ function LearnMore() {
           <div className="bg-gradient-blue  relative rounded-r-md py-40 sm:mr-20 w-50% sm:w-90%">
             <div>
               <img
-                src="/images/PROGRESS/learn.PNG"
+                // src="/images/PROGRESS/learn.PNG"
+                src={section_image}
                 className="w-80% float-right mr-30"
                 alt=""
               />
             </div>
-            {/* <div
-              className="hidden sm:block slider4 sm:ml-20 sm:mr-_20"
-              ref={sliderRef}
-            >
-              <Slider {...settings} ref={(c) => setSlider(c)}>
-                {[...Array(4)].map(() => (
-                  <div className="rounded-sm  text-base sm:pl-20 mt-26">
-                    <img
-                      src="/images/learn-more/final-report1.jpg"
-                      className="rounded-sm h-239"
-                    />
-
-                    <div className="pl-20 mt-10">
-                      <div className="text-base  font-display text-white  font-display pb-10">
-                        Menus / Final report
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-              <div className="flex justify-end mr-40">
-                <div className="mr-10">
-                  <Arrow dir="left" icon="Arrow" onClick={() => prevSlide()} />
-                </div>
-                <Arrow dir="right" icon="Arrow" onClick={() => nextSlide()} />
-              </div>
-            </div>
-            <div className="sm:hidden slider4 lg:ml-20">
-              <Slider {...settings1}>
-                {slider_slider.map((element) => (
-                  <div className="rounded-sm text-base ">
-                    <img
-                      src={
-                        element.image
-                          ? element.image
-                          : '/images/learn-more/final-report1.jpg'
-                      }
-                      className="rounded-sm sm:pl-20"
-                    />
-
-                    <div className="pl-20 mt-10">
-                      <div className="text-base  font-display text-white  font-display pb-10">
-                        {element.acf_fc_layout}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            </div> */}
           </div>
           <div className="ml-100 w-30% sm:w-100% sm:ml-0 sm:mb-100">
             <div className="sub-heading mx-20 text-blue text-2xl sm:text-center pb-20">

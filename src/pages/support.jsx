@@ -24,6 +24,7 @@ function Support() {
     section_1 = {},
     principles = {},
     slider_2 = [],
+    header_image,
   } = acf;
 
   const {
@@ -212,36 +213,9 @@ function Support() {
 
                 <img
                   className="object-cover absolute left-45% md:left-45% sm:left-53% lg:bottom-80 md:bottom-70  sm:w-80% lg:rounded rounded-md transform-x bottom-120 h-100% w-60%"
-                  src="images/PROGRESS/Support.jpg"
+                  // src="images/PROGRESS/Support.jpg"
+                  src={header_image}
                 />
-                {/* <picture>
-                <source
-                  media="(min-width:651px)"
-                  srcset="images/support/container.svg"
-                />
-                <source
-                  media="(max-width:650px)"
-                  srcset="images/support/card-header-mbl.svg"
-                />
-                <img
-                  className="m-auto absolute"
-                  src="images/support/card-header.svg"
-                />
-              </picture>
-              <picture>
-                <source
-                  media="(min-width:651px)"
-                  srcset="images/support/main.png"
-                />
-                <source
-                  media="(max-width:650px)"
-                  srcset="images/support/card-header-mbl.svg"
-                />
-                <img
-                  className="m-auto absolute"
-                  src="images/support/main.png"
-                />
-              </picture> */}
               </div>
             </div>
           </div>
@@ -290,7 +264,8 @@ function Support() {
                 {sub_content.map((element) => (
                   <div className="flex">
                     <img
-                      src="./images/home/principle1.svg"
+                      // src="./images/home/principle1.svg"
+                      src={element.logo}
                       className="w-70 h-70 lg:w-100% md:w-11%"
                     />
                     <div className="mx-20 mt-10">
