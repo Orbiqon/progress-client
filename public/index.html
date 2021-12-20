@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="./images/logo/logo-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -28,28 +28,29 @@
     <div id="fb-root"></div>
 
     <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
     <script>
       var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "110713664742818");
-      chatbox.setAttribute("attribution", "biz_inbox");
+      chatbox.setAttribute('page_id', '110713664742818');
+      chatbox.setAttribute('attribution', 'biz_inbox');
 
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         FB.init({
-          xfbml            : true,
-          version          : 'v12.0'
+          xfbml: true,
+          version: 'v12.0',
         });
       };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      })(document, 'script', 'facebook-jssdk');
     </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
