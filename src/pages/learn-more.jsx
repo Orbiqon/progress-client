@@ -24,6 +24,8 @@ function LearnMore() {
     slider: slider1 = {},
     contact = {},
     section_image,
+    section_heading,
+    section_description,
   } = acf;
   const {
     title: video_section_title,
@@ -195,10 +197,10 @@ function LearnMore() {
           </div>
           <div className="ml-100 w-30% sm:w-100% sm:ml-0 sm:mb-100">
             <div className="sub-heading mx-20 text-blue text-2xl sm:text-center pb-20">
-              {slider_title}
+              {section_heading}
             </div>
             <div className="mx-20 content sm:text-center">
-              {slider_description}
+              {section_description}
             </div>
           </div>
         </div>
