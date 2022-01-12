@@ -297,6 +297,7 @@
 @media screen and (max-width: 557px) {
   .react-responsive-modal-root {
     overflow: auto !important;
+    width: 95%;
     z-index: 0 !important;
   }
 }

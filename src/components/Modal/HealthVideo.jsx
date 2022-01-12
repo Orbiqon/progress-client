@@ -16,15 +16,15 @@ function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
       content="conten"
     >
       <div
-        className="sm:max-w-sm w-100% sm:m-auto sm:mt-100 sm:w-100% bg-backBlack"
+        className="sm:max-w-sm w-100% sm:m-auto sm:mt-100 sm:w-80% bg-backBlack"
         onClick={() => setOpen(false)}
       >
         <ReactPlayer
           url="https://youtu.be/5QsSPNPU0O4"
           style={{ borderRadius: '10px', margin: 'auto' }}
           controls
-          width="700px"
-          height="500px"
+          width="100%"
+          height="400px"
         />
         {/* <video
           id="my-video"
