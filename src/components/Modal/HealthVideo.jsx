@@ -12,7 +12,7 @@ function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
       setOpen={setOpen}
       height="auto"
       display="contents"
-      width="50%"
+      width="100%"
       content="conten"
     >
       <div
