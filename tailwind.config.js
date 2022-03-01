@@ -195,6 +195,7 @@ module.exports = {
       53: '53px',
       54: '54px',
       56: '56px',
+      '56%': '56px',
       59: '59px',
       60: '60px',
       64: '16rem',
@@ -730,6 +731,7 @@ module.exports = {
       sm: '122px',
       md: '200px',
       356: '356px',
+      900: '900px',
       screen: '100vh',
     }),
     maxWidth: (theme, { breakpoints }) => ({
@@ -761,6 +763,7 @@ module.exports = {
     minHeight: {
       0: '0px',
       full: '100%',
+
       screen: '100vh',
     },
     minWidth: {
