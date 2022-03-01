@@ -88,7 +88,7 @@ function Overview() {
     prevArrow: <Arrow dir="left" />,
     responsive: [
       {
-        breakpoint: 550,
+        breakpoint: 912,
         settings: {
           slidesToShow: 1.4,
         },
