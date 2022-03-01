@@ -86,6 +86,14 @@ function Overview() {
     slidesToScroll: 1,
     nextArrow: <Arrow dir="right" />,
     prevArrow: <Arrow dir="left" />,
+    responsive: [
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1.4,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
