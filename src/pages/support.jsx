@@ -49,7 +49,9 @@ function Support() {
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 1.5,
+          centerMode: true,
+          slidesToScroll: 1,
+          slidesToShow: 0.8,
         },
       },
     ],
@@ -287,7 +289,7 @@ function Support() {
             >
               <Slider ref={(c) => setSlider(c)} {...settings1} className="">
                 {slider1.map((item, index) => (
-                  <div className="rounded-sm h-200 w-270 text-base mt-18">
+                  <div className="rounded-sm h-200 w-270 text-base mt-18 mx-auto flex flex-col items-center">
                     <img
                       src={item.image.url}
                       className="rounded-sm h-120 my-auto w-217 "
