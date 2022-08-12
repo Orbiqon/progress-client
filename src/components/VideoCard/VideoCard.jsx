@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
+import { useFetch } from 'hooks';
+import { getVideoService } from 'api';
 
 function VideoCard() {
   const [videoOpen, setVideoOpen] = useState(false);
+  const { data } = useFetch(getVideoService);
   return (
     <>
       <div className="relative">
         {videoOpen ? (
           <div className="absolute left-50% w-87%  pb-20 transform-x">
             <ReactPlayer
-              url="https://youtu.be/5QsSPNPU0O4"
+              url={data?.data?.video_link}
               style={{ borderRadius: '10px', margin: 'auto' }}
               controls
               width="80%"

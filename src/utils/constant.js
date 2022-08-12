@@ -4,6 +4,7 @@ export const END_POINTS = {
   SIGN_IN: 'users',
   ATTEMPT: 'attempts',
   REQUEST: 'requests',
+  VIDEO: 'video',
 };
 
 export const LINKS = {

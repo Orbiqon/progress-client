@@ -4,8 +4,12 @@ import { VideoCard } from 'components/VideoCard';
 import { Button, BackButton } from 'components/Button';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
+import { useFetch } from 'hooks';
+import { getVideoService } from 'api';
 
 function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
+  const { data } = useFetch(getVideoService);
+
   return (
     <Modal
       open={open}
@@ -20,7 +24,7 @@ function HealthVideo({ open, setOpen, onClick, display = 'hidden' }) {
         onClick={() => setOpen(false)}
       >
         <ReactPlayer
-          url="https://youtu.be/5QsSPNPU0O4"
+          url={data?.data?.video_link}
           style={{ borderRadius: '10px', margin: 'auto' }}
           controls
           width="100%"

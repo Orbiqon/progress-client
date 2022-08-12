@@ -7,7 +7,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Arrow from 'components/Arrow/arrow';
-import { staticDataService } from 'api';
+import { staticDataService, getVideoService } from 'api';
 import { EntryPoint } from 'components/Modal';
 import { useFetch } from 'hooks';
 import { BottomSlider } from 'components/Slider';
