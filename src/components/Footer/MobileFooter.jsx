@@ -54,7 +54,7 @@ function MobileFooter() {
           </Link>
           <Link to={PRIVATE}>Privacy Policy</Link>
         </div>
-        <div>Copyright ©Progress Lorem ipsum dolor sit amet</div>
+        <div>Copyright ©Progress</div>
       </div>
     </>
   );

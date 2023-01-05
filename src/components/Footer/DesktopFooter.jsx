@@ -62,7 +62,7 @@ function DesktopFooter() {
             </Link>
           </div>
           <div className="label text-white">
-            Copyright ©Progress Lorem ipsum dolor sit amet
+            Copyright ©Progress
           </div>
         </div>
       </div>

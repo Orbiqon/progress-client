@@ -6,7 +6,7 @@ function QuestionareVideo() {
   return (
     <div className="bg-video bg-cover bg-no-repeat h-656">
       <div className="sub-heading text-white font-medium pl-51 pr-30 pt-72 pb-20">
-        Lorem ipsum derset dolor sit amet
+        Questionnaire Video
       </div>
       <div className="mb-253 ">
         <VideoCard />
