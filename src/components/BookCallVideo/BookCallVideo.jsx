@@ -16,7 +16,7 @@ function BookCallVideo({
       <div className=" bg-video-call-desk bg-cover h-602 bg-no-repeat sm:bg-video-call-mbl sm:h-724">
         <div className="sm:pt-80 pt-50">
           {step ? (
-            <div className="hidden sm:flex sm:justify-center sm:mb-10 ">
+            <div className="flex justify-center mb-10 ">
               <Button
                 value="step 2"
                 color="green"

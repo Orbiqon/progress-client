@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { InitDataCollect } from 'components/Modal';
 import { useFetch, useLazyFetch } from 'hooks';
 import { getCategoriesService, getQuestionsService } from 'api';
-import { Questionare } from 'components/Questionaire';
+import { Questionnaire } from 'components/Questionnaire';
 
-function HealthQuestionare({ mcqs = true }) {
+function HealthQuestionnaire({ mcqs = true }) {
   const [finalResponse, setFinalResponse] = useState();
   const [index, setIndex] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
@@ -47,7 +47,7 @@ function HealthQuestionare({ mcqs = true }) {
   return (
     <>
       {data && (
-        <Questionare
+        <Questionnaire
           response={response}
           setResponse={setResponse}
           setFinalResponse={setFinalResponse}
@@ -72,4 +72,4 @@ function HealthQuestionare({ mcqs = true }) {
   );
 }
 
-export default HealthQuestionare;
+export default HealthQuestionnaire;

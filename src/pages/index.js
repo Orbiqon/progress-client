@@ -1,11 +1,12 @@
 export { default as Booking } from './booking';
 export { default as Private } from './private';
 export { default as Terms } from './terms';
-export { default as HealthQuestionare } from './health-questionare';
-export { default as DnaQuestionare } from './dna-questionare';
+export { default as HealthQuestionnaire } from './health-questionnaire';
+export { default as DnaQuestionnaire } from './dna-questionnaire';
 export { default as Faq } from './faq';
 export { default as HealthScore } from './health-score';
 export { default as Home } from './home';
 export { default as LearnMore } from './learn-more';
 export { default as OverView } from './overview';
 export { default as Support } from './support';
+export { default as OrderDna } from './order-dna';

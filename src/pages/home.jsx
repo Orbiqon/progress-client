@@ -41,7 +41,7 @@ function Home() {
               </span>
             </div>
           </div>
-          <div className="w-74% bg-gradient-green rounded-r-md sm:pl-20 sm:mr-0 relative sm:rounded-r-md h-auto pb-20 sm:h-auto sm:w-95%">
+          <div className="w-74% bg-gradient-blue rounded-r-md sm:pl-20 sm:mr-0 relative sm:rounded-r-md h-auto pb-20 sm:h-auto sm:w-95%">
             <div className="max-w-lg m-auto px-100 lg:px-0 sm:px-0">
               <img
                 // src="images/PROGRESS/homepage1.jpg"

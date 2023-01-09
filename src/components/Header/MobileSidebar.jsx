@@ -22,10 +22,10 @@ function MobileSidebar({ isOpenMenu, setIsOpenMenu, setOpen }) {
       <div className="bg-green pl-20 h-100%">
         <div className="text-18 py-40 font-white font-medium font-display text-white">
           <Link to={OVERVIEW}>
-            <div className="mb-10">Programme Overview</div>
+            <div className="mb-10">Start Making Progress</div>
           </Link>
           <Link to={SUPPORT}>
-            <div className="mb-10">Your Support Team</div>
+            <div className="mb-10">Progress With me</div>
           </Link>
           <Link to={LEARN_MORE}>
             <div className="mb-10">Learn More </div>

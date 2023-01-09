@@ -10,9 +10,10 @@ export const END_POINTS = {
 export const LINKS = {
   FACEBOOK: 'https://www.facebook.com/startmakingprogress',
   INSTA: 'https://www.instagram.com/startmakingprogress/',
-  DNA_QUESTIONARE: '/dna-questionare/:id',
-  QUESTIONARE: '/health-questionare',
+  DNA_QUESTIONNAIRE: '/dna-questionnaire/:id',
+  QUESTIONNAIRE: '/health-questionnaire',
   HEALTH_SCORE: '/health-score',
+  ORDER_DNA: '/order-dna',
   BOOKING: '/booking',
   HOME: '/',
   PRIVATE: '/privacy-policy',
