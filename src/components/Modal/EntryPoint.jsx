@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { LINKS } from 'utils';
 
 function EntryPoint({ open, setOpen }) {
-  const { QUESTIONARE, BOOKING } = LINKS;
+  const { QUESTIONNAIRE, BOOKING } = LINKS;
 
   return (
     <>
@@ -23,9 +23,9 @@ function EntryPoint({ open, setOpen }) {
             help you the most
           </div>
           <div className="flex justify-center mb-40 px-20">
-            <Link to={QUESTIONARE} className="mr-10">
+            <Link to={QUESTIONNAIRE} className="mr-10">
               <Button
-                value="Take Questionaire"
+                value="Take questionnaire"
                 color="green"
                 width="173"
                 height="66"

@@ -23,7 +23,7 @@ function HealthScore() {
   }, [location]);
 
   return (
-    <Container questionaire={true}>
+    <Container questionnaire={true}>
       {scores && (
         <>
           <div className="my-80">

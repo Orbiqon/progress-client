@@ -39,16 +39,18 @@ function BottomSlider({ content = [] }) {
                 className="absolute bottom-_17 left-20"
               />
             </div>
-            <div className="flex mx-20">
-              <img
-                src={element.image ? element.image : '/images/home/slider.svg'}
-                className="w-50 h-100"
+            <div className="flex mx-20 mb-20">
+              <div
+                style={{
+                  backgroundImage: `url(${element.image ? element.image : '/images/home/slider.svg'})` 
+                }}
+                className="w-50 h-50 rounded-full bg-cover bg-center"
               />
               <div className="ml-35">
                 <div className="text-18 sm:text-base font-display text-blue font-display">
                   {element.name}
                 </div>
-                <div className="text-16 sm:text-sm font-display text-light-grey">
+                <div className="leading-3 sm:text-sm font-display text-light-grey ">
                   {element.category}
                 </div>
               </div>

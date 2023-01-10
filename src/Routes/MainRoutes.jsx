@@ -4,8 +4,8 @@ import { LINKS } from 'utils';
 import {
   Faq,
   Home,
-  DnaQuestionare,
-  HealthQuestionare,
+  DnaQuestionnaire,
+  HealthQuestionnaire,
   Booking,
   HealthScore,
   LearnMore,
@@ -13,6 +13,7 @@ import {
   Support,
   Private,
   Terms,
+  OrderDna
 } from 'pages';
 
 function MainRoutes() {
@@ -26,14 +27,15 @@ function MainRoutes() {
     PRIVATE,
     TERMS,
     HEALTH_SCORE,
-    QUESTIONARE,
-    DNA_QUESTIONARE,
+    QUESTIONNAIRE,
+    DNA_QUESTIONNAIRE,
+    ORDER_DNA
   } = LINKS;
 
   return (
     <Router>
       <Switch>
-        <Route exact path={DNA_QUESTIONARE} component={DnaQuestionare} />
+        <Route exact path={DNA_QUESTIONNAIRE} component={DnaQuestionnaire} />
         <Route exact path={FAQ} component={Faq} />
         <Route exact path={LEARN_MORE} component={LearnMore} />
         <Route exact path={SUPPORT} component={Support} />
@@ -42,8 +44,9 @@ function MainRoutes() {
         <Route exact path={PRIVATE} component={Private} />
         <Route exact path={TERMS} component={Terms} />
         <Route exact path={BOOKING} component={Booking} />
-        <Route exact path={QUESTIONARE} component={HealthQuestionare} />
+        <Route exact path={QUESTIONNAIRE} component={HealthQuestionnaire} />
         <Route exact path={HEALTH_SCORE} component={HealthScore} />
+        <Route exact path={ORDER_DNA} component={OrderDna} />
       </Switch>
     </Router>
   );

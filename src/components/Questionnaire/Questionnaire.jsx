@@ -6,7 +6,7 @@ import { Questions } from 'components/Questions';
 import { colorLoader } from 'utils';
 import { motion } from 'framer-motion';
 
-function Questionare({
+function Questionnaire({
   onComplete,
   setFinalResponse,
   data,
@@ -69,7 +69,7 @@ function Questionare({
   };
 
   return (
-    <Container questionaire={true}>
+    <Container questionnaire={true}>
       <div className="sm:hidden tab:block max-w-lg m-auto px-100 lg:pt-60">
         <BubbleLoading
           noOfBubbles="20"
@@ -221,4 +221,4 @@ function Questionare({
   );
 }
 
-export default Questionare;
+export default Questionnaire;

@@ -36,7 +36,8 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "je:deploy": "yarn build && scp -r ./build/* root@144.126.196.244:/var/www/making-progress"
   },
   "eslintConfig": {
     "extends": [

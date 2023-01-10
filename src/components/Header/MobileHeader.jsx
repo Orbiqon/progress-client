@@ -4,12 +4,12 @@ import MobileSidebar from './MobileSidebar';
 import { Link } from 'react-router-dom';
 import { LINKS, ConditionalLink } from 'utils';
 
-function MobileHeader({ questionaire }) {
+function MobileHeader({ questionnaire }) {
   const { HOME } = LINKS;
 
   const [open, setOpen] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  let icon = questionaire ? 'back.svg' : 'menu.svg';
+  let icon = questionnaire ? 'back.svg' : 'menu.svg';
 
   return (
     <>
@@ -17,18 +17,18 @@ function MobileHeader({ questionaire }) {
         <Link to={HOME}>
           <img src="images/logo/logo.svg" />
         </Link>
-        <ConditionalLink to={HOME} condition={questionaire}>
+        <ConditionalLink to={HOME} condition={questionnaire}>
           <div
             className="flex"
             onClick={() => {
-              if (questionaire) {
+              if (questionnaire) {
               } else {
                 setIsOpenMenu(!isOpenMenu);
               }
             }}
           >
             <div className="m-10 uppercase text-xs font-semibold font-display flex items-center text-green">
-              {questionaire ? 'Back' : ' Menu'}
+              {questionnaire ? 'Back' : ' Menu'}
             </div>
             <img src={`images/${icon}`} />
           </div>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Complete } from 'components/Modal';
 import { useFetch, usePost } from 'hooks';
-import { Questionare } from 'components/Questionaire';
+import { Questionnaire } from 'components/Questionnaire';
 import { getQuestionsService, attemptService } from 'api';
 import { useParams } from 'react-router-dom';
 
-function DnaQuestionare() {
+function DnaQuestionnaire() {
   const [finalResponse, setFinalResponse] = useState();
   const [index, setIndex] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
@@ -43,7 +43,7 @@ function DnaQuestionare() {
 
   return (
     <>
-      <Questionare
+      <Questionnaire
         response={response}
         setResponse={setResponse}
         setFinalResponse={setFinalResponse}
@@ -64,4 +64,4 @@ function DnaQuestionare() {
   );
 }
 
-export default DnaQuestionare;
+export default DnaQuestionnaire;
