@@ -6,7 +6,7 @@ import { LINKS } from 'utils';
 
 function DesktopHeader({ questionnaire }) {
   const [open, setOpen] = useState(false);
-  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ } = LINKS;
+  const { HOME, OVERVIEW, SUPPORT, LEARN_MORE, FAQ, ORDER_DNA } = LINKS;
 
   return (
     <>
@@ -39,15 +39,17 @@ function DesktopHeader({ questionnaire }) {
               <div className="mr-40 cursor-pointer">Testimonials & FAQ</div>
             </Link>
             <div>
-              <Button
-                value="Start making progress"
-                width="200"
-                height="66"
-                DeWidth="200"
-                DeHeight="66"
-                color="blue"
-                onClick={() => setOpen(true)}
-              />
+              <Link to={ORDER_DNA}>
+                <Button
+                  value="Order my DNA kit"
+                  width="200"
+                  height="66"
+                  DeWidth="200"
+                  DeHeight="66"
+                  color="blue"
+                  onClick={() => null}
+                />
+              </Link>
             </div>
           </div>
         )}

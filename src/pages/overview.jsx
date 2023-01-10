@@ -11,9 +11,12 @@ import { staticDataService, getVideoService } from 'api';
 import { EntryPoint } from 'components/Modal';
 import { useFetch } from 'hooks';
 import { BottomSlider } from 'components/Slider';
+import { Link } from 'react-router-dom';
+import { LINKS } from 'utils';
 
 function Overview() {
   const [open, setOpen] = useState(false);
+  const { ORDER_DNA } = LINKS;
 
   const { data, status } = useFetch(staticDataService, {
     variables: `overview`,
@@ -321,24 +324,25 @@ function Overview() {
           </div>
           <div className="bg-gradient-green flex justify-between mt-129 mt-28 sm:pt-80 py-60 mb-100">
             <div className="max-w-lg m-auto px-100 sm:px-0 sm:w-100% flex justify-between sm:flex-col">
-              <div className="w-70% sm:w-100%">
+              <div className="w-70% sm:w-100% mr-20">
                 <div className="sub-heading text-36 text-white sm:text-center sm:mx-40 mb-20">
                   {bottom_heading}
                 </div>
-                <div className="footer-label text-16 sm:text-center sm:mx-20 ">
+                <div className="footer-label text-16 sm:text-center sm:mx-20">
                   {bottom_description}
                 </div>
               </div>
               <div className=" sm:pt-40 sm:pb-80 flex justify-center  mt-36">
-                <Button
-                  value="Start making progress"
-                  color="blue"
-                  width="200"
-                  height="66"
-                  DeWidth="200"
-                  DeHeight="66"
-                  onClick={() => setOpen(true)}
-                />
+                <Link to={ORDER_DNA}>
+                  <Button
+                    value="Order now"
+                    color="blue"
+                    width="200"
+                    height="66"
+                    DeWidth="200"
+                    DeHeight="66"
+                  />
+                </Link>
               </div>
             </div>
           </div>

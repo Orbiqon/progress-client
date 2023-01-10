@@ -35,10 +35,10 @@ function MobileFooter() {
         </div>
         <div></div>
         <Link to={OVERVIEW} className="footer-label text-center pb-7 pt-40">
-          Programme Overview
+          Start Making Progress
         </Link>
         <Link to={SUPPORT} className="footer-label text-center pb-7">
-          Your Support Team
+          Progress With me
         </Link>
         <Link to={LEARN_MORE} className="footer-label text-center pb-7">
           Learn More
@@ -54,7 +54,7 @@ function MobileFooter() {
           </Link>
           <Link to={PRIVATE}>Privacy Policy</Link>
         </div>
-        <div>Copyright ©Progress</div>
+        <div>Copyright ©Progress Health and Wellness LTD 2023</div>
       </div>
     </>
   );

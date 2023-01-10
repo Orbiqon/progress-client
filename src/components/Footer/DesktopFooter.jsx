@@ -39,10 +39,10 @@ function DesktopFooter() {
           </div>
           <div className=" mt-14 flex footer-label">
             <Link to={OVERVIEW} className="mr-24 cursor-pointer">
-              Programme Overview
+              Start Making Progress
             </Link>
             <Link to={SUPPORT} className="mr-24 cursor-pointer">
-              Your Support Team
+              Progress With me
             </Link>
             <Link to={LEARN_MORE} className="mr-24 cursor-pointer">
               Learn More
@@ -62,7 +62,7 @@ function DesktopFooter() {
             </Link>
           </div>
           <div className="label text-white">
-            Copyright ©Progress
+            Copyright ©Progress Health and Wellness LTD 2023
           </div>
         </div>
       </div>
